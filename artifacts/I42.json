@@ -1,0 +1,60 @@
+{
+  "id": "I-42",
+  "title": "Δlog 채용률 고관성 조건부 위약 (최종 판별)",
+  "status": "GO",
+  "n": 198,
+  "estimates": {
+    "results": {
+      "T3 고관성": {
+        "actual": 0.4177,
+        "null_mean": 0.0101,
+        "null_ci": [
+          -0.2092,
+          0.2526
+        ],
+        "RI_p": 0.0,
+        "sig": true,
+        "n_reps": 200
+      },
+      "T1 저관성": {
+        "actual": 0.0162,
+        "null_mean": -0.004,
+        "null_ci": [
+          -0.1146,
+          0.1169
+        ],
+        "RI_p": 0.34,
+        "sig": false,
+        "n_reps": 200
+      },
+      "T3−T1 기울기": {
+        "actual": 0.4015,
+        "null_mean": 0.0141,
+        "null_ci": [
+          -0.212,
+          0.2691
+        ],
+        "RI_p": 0.005,
+        "sig": true,
+        "n_reps": 200
+      }
+    },
+    "tercile_cuts": [
+      0.0833,
+      0.3333
+    ],
+    "n_T1": 112,
+    "n_T3": 86,
+    "R": 200
+  },
+  "prediction": "Δlog 채용률에서도 조절자가 위약 귀무 밖이면 로그 평균회귀 인공물이 아니다",
+  "verdict": "실제 T3 0.4177 vs 위약 0.0101 (RI p=0.0) · 기울기 실제 0.4015 vs 위약 0.0141 (RI p=0.005) | **조절자는 로그 평균회귀 인공물이 아니다.** 고관성 never-treated 를 동일 파이프라인에 넣어도 실제만큼의 Δlog 증가도, 기울기도 재현되지 않는다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i42_placebo_lograte.py",
+  "sha256_16": "37c78dabd67610a6",
+  "seed": 42,
+  "runtime_s": 405.8,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "**조절자는 로그 평균회귀 인공물이 아니다.** 고관성 never-treated 를 동일 파이프라인에 넣어도 실제만큼의 Δlog 증가도, 기울기도 재현되지 않는다."
+}

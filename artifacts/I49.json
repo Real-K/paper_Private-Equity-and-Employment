@@ -1,0 +1,216 @@
+{
+  "id": "I-49",
+  "title": "대조 재사용 감사 + 사전 재무제약 (리뷰3 §9.4·§8-4)",
+  "status": "GO",
+  "n": 301,
+  "estimates": {
+    "panelA_reuse": {
+      "n_events": 301,
+      "n_control_slots": 1398,
+      "n_unique_controls": 1328,
+      "mean_reuse": 1.053,
+      "median_reuse": 1,
+      "max_reuse": 2,
+      "p99_reuse": 2,
+      "share_used_once": 0.9473,
+      "share_slots_from_top1pct": 0.1001
+    },
+    "panelB_clustering": {
+      "cluster_event": {
+        "slope": 0.5624,
+        "ci": [
+          0.2236,
+          0.9625
+        ],
+        "n": 301,
+        "sig": true,
+        "half_width": 0.3695
+      },
+      "cluster_control_firm": {
+        "slope": 0.5624,
+        "ci": [
+          0.1828,
+          0.9395
+        ],
+        "n": 301,
+        "sig": true,
+        "half_width": 0.3784
+      }
+    },
+    "panelC_exclusive_controls": {
+      "n_events": 301,
+      "n_controls_used": 1269,
+      "slope": {
+        "slope": 0.5627,
+        "ci": [
+          0.1801,
+          0.9466
+        ],
+        "n": 301,
+        "sig": true,
+        "half_width": 0.3832
+      }
+    },
+    "panelD_conservative": {
+      "conservative_ci": [
+        0.184,
+        0.9408
+      ],
+      "sig": true,
+      "rule": "이벤트 군집과 대조기업 군집 중 넓은 쪽 반폭을 채택(이원 군집 상한 근사)"
+    },
+    "panelE_pre_deal_financials": {
+      "cash_to_assets": {
+        "n": 186,
+        "slope_constraint": {
+          "slope": -0.1713,
+          "ci": [
+            -0.928,
+            0.6399
+          ],
+          "n": 186,
+          "sig": false,
+          "half_width": 0.784
+        },
+        "tercile": {
+          "diff": -0.1157,
+          "ci": [
+            -0.3292,
+            0.1084
+          ],
+          "sig": false
+        },
+        "horserace_state": {
+          "coef": 0.6112,
+          "ci": [
+            0.093,
+            1.1995
+          ]
+        },
+        "horserace_constraint": {
+          "coef": -0.2156,
+          "ci": [
+            -0.9109,
+            0.5559
+          ]
+        }
+      },
+      "leverage": {
+        "n": 186,
+        "slope_constraint": {
+          "slope": 0.0555,
+          "ci": [
+            -0.213,
+            0.304
+          ],
+          "n": 186,
+          "sig": false,
+          "half_width": 0.2585
+        },
+        "tercile": {
+          "diff": -0.0306,
+          "ci": [
+            -0.2419,
+            0.2017
+          ],
+          "sig": false
+        },
+        "horserace_state": {
+          "coef": 0.613,
+          "ci": [
+            0.0893,
+            1.1484
+          ]
+        },
+        "horserace_constraint": {
+          "coef": 0.0748,
+          "ci": [
+            -0.2093,
+            0.3353
+          ]
+        }
+      },
+      "roa": {
+        "n": 184,
+        "slope_constraint": {
+          "slope": 0.0911,
+          "ci": [
+            -0.4148,
+            0.4612
+          ],
+          "n": 184,
+          "sig": false,
+          "half_width": 0.438
+        },
+        "tercile": {
+          "diff": -0.0822,
+          "ci": [
+            -0.2851,
+            0.152
+          ],
+          "sig": false
+        },
+        "horserace_state": {
+          "coef": 0.5952,
+          "ci": [
+            0.0624,
+            1.152
+          ]
+        },
+        "horserace_constraint": {
+          "coef": 0.0345,
+          "ci": [
+            -0.3887,
+            0.4079
+          ]
+        }
+      },
+      "interest_coverage": {
+        "n": 170,
+        "slope_constraint": {
+          "slope": -0.0001,
+          "ci": [
+            -0.0003,
+            0.0002
+          ],
+          "n": 170,
+          "sig": false,
+          "half_width": 0.0003
+        },
+        "tercile": {
+          "diff": 0.0124,
+          "ci": [
+            -0.2249,
+            0.2562
+          ],
+          "sig": false
+        },
+        "horserace_state": {
+          "coef": 0.7487,
+          "ci": [
+            0.2112,
+            1.3009
+          ]
+        },
+        "horserace_constraint": {
+          "coef": -0.0001,
+          "ci": [
+            -0.0002,
+            0.0003
+          ]
+        }
+      }
+    },
+    "state_variable": "-log(1+pre-deal hiring rate[-24,-13])",
+    "n": 301
+  },
+  "prediction": "대조 재사용이 헤드라인 유의성을 만들고 있는가 · 사전 재무제약이 반응을 예측하는가",
+  "verdict": "[재사용] 이벤트 301 · 대조 슬롯 1398 · 고유 대조 1328 (평균 재사용 1.053, 최대 2, 1회만 사용 94.7%). 이벤트 군집 CI [0.2236, 0.9625] vs 대조기업 군집 [0.1828, 0.9395]; 보수적 결합 [0.184, 0.9408] 유의 유지. 배타 배정(이벤트 301) +0.5627[0.1801, 0.9466]✓. [사전 재무제약] 3분위 대비가 유의한 지표 0개 — 사전 재무제약 gradient 부재 주장 지지.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i49_reuse_and_finance.py",
+  "sha256_16": "3896da5bcf05b001",
+  "seed": 42,
+  "runtime_s": 81.2,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

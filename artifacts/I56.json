@@ -1,0 +1,203 @@
+{
+  "id": "I-56",
+  "title": "검정력 제고 — 설계 교정(상태균형·거울위약) + 효율 개선",
+  "status": "GO",
+  "n": 286,
+  "estimates": {
+    "bs0_mirror0": {
+      "observed": 0.3834,
+      "n_treated": 301,
+      "n_placebo": 1373,
+      "null_mean": 0.1342,
+      "null_sd": 0.1718,
+      "null_ci": [
+        -0.2031,
+        0.4835
+      ],
+      "RI_p": 0.0725,
+      "sig": false,
+      "z": 1.45,
+      "excess": 0.2492
+    },
+    "bs0_mirror1": {
+      "observed": 0.3834,
+      "n_treated": 301,
+      "n_placebo": 1374,
+      "null_mean": 0.1505,
+      "null_sd": 0.1662,
+      "null_ci": [
+        -0.1827,
+        0.4769
+      ],
+      "RI_p": 0.0815,
+      "sig": false,
+      "z": 1.4,
+      "excess": 0.2328
+    },
+    "bs1_mirror0": {
+      "observed": 0.5456,
+      "n_treated": 286,
+      "n_placebo": 1295,
+      "null_mean": 0.1505,
+      "null_sd": 0.1809,
+      "null_ci": [
+        -0.1904,
+        0.4942
+      ],
+      "RI_p": 0.0175,
+      "sig": true,
+      "z": 2.18,
+      "excess": 0.3951
+    },
+    "bs1_mirror1": {
+      "observed": 0.5456,
+      "n_treated": 286,
+      "n_placebo": 1205,
+      "null_mean": 0.0886,
+      "null_sd": 0.1451,
+      "null_ci": [
+        -0.1963,
+        0.3805
+      ],
+      "RI_p": 0.001,
+      "sig": true,
+      "z": 3.15,
+      "excess": 0.457
+    },
+    "panelC_state_window": {
+      "12개월 [−24,−13] (기준)": {
+        "observed": 0.5456,
+        "n_treated": 286,
+        "n_placebo": 1205,
+        "null_mean": 0.0941,
+        "null_sd": 0.1503,
+        "null_ci": [
+          -0.1978,
+          0.3935
+        ],
+        "RI_p": 0.0025,
+        "sig": true,
+        "z": 3.0,
+        "excess": 0.4515
+      },
+      "24개월 [−36,−13]": {
+        "observed": 0.3883,
+        "n_treated": 244,
+        "n_placebo": 1055,
+        "null_mean": 0.0727,
+        "null_sd": 0.1356,
+        "null_ci": [
+          -0.1925,
+          0.3396
+        ],
+        "RI_p": 0.0115,
+        "sig": true,
+        "z": 2.33,
+        "excess": 0.3156
+      }
+    },
+    "panelD_split_iv": {
+      "n": 286,
+      "corr_halves": 0.5736,
+      "ols_first_half": 0.556,
+      "ols_second_half": 0.6357,
+      "ols_full_window": 0.5456,
+      "iv": 1.2497,
+      "iv_null_mean": 0.1098,
+      "iv_null_sd": 0.5994,
+      "iv_RI_p": 0.0215,
+      "iv_sig": true,
+      "attenuation_ratio": 0.437
+    },
+    "panelE_weighting": {
+      "unweighted": {
+        "observed": 0.5456,
+        "n_treated": 286,
+        "n_placebo": 1205,
+        "null_mean": 0.0945,
+        "null_sd": 0.1499,
+        "null_ci": [
+          -0.1909,
+          0.3981
+        ],
+        "RI_p": 0.003,
+        "sig": true,
+        "z": 3.01,
+        "excess": 0.4512
+      },
+      "precision_weighted": {
+        "observed": 0.3458,
+        "n_treated": 286,
+        "n_placebo": 1205,
+        "null_mean": -0.21,
+        "null_sd": 0.244,
+        "null_ci": [
+          -0.6226,
+          0.2896
+        ],
+        "RI_p": 0.0155,
+        "sig": true,
+        "z": 2.28,
+        "excess": 0.5558
+      }
+    },
+    "panelF_covariates": {
+      "base": {
+        "observed": 0.5456,
+        "n_treated": 286,
+        "n_placebo": 1205,
+        "null_mean": 0.0945,
+        "null_sd": 0.1499,
+        "null_ci": [
+          -0.1909,
+          0.3981
+        ],
+        "RI_p": 0.003,
+        "sig": true,
+        "z": 3.01,
+        "excess": 0.4512
+      },
+      "plus_year": {
+        "observed": 0.6779,
+        "n_treated": 286,
+        "n_placebo": 1205,
+        "null_mean": 0.0975,
+        "null_sd": 0.1661,
+        "null_ci": [
+          -0.2219,
+          0.4315
+        ],
+        "RI_p": 0.001,
+        "sig": true,
+        "z": 3.5,
+        "excess": 0.5805
+      },
+      "weighted_plus_year": {
+        "observed": 0.349,
+        "n_treated": 286,
+        "n_placebo": 1205,
+        "null_mean": -0.1994,
+        "null_sd": 0.2511,
+        "null_ci": [
+          -0.6414,
+          0.3135
+        ],
+        "RI_p": 0.0185,
+        "sig": true,
+        "z": 2.18,
+        "excess": 0.5484
+      }
+    },
+    "n_draws": 2000,
+    "rationale": "각 레버는 통계이론이 예측하는 이득 — 유의성 사냥 아님. 전건 보고."
+  },
+  "prediction": "설계를 처치 절차와 정합하게 고치고 효율을 올리면 gradient 가 더 선명해지는가",
+  "verdict": "설계 교정 4조합: 현행·LOO +0.3834(귀무 +0.1342, RI p 0.0725) · 현행·거울 +0.3834(+0.1505, p 0.0815) · 상태균형·LOO +0.5456(+0.1505, p 0.0175) · **상태균형·거울 +0.5456(+0.0886, p 0.0010)**. 효율: 역분산 가중 +0.3458 (p 0.0155) · 딜연도 추가 +0.6779 (p 0.0010).",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i56_efficiency.py",
+  "sha256_16": "01c68bf9ee8bf16a",
+  "seed": 42,
+  "runtime_s": 240.4,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

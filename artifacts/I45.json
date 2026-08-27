@@ -1,0 +1,230 @@
+{
+  "id": "I-45",
+  "title": "§8 검정력 재구성 (예측력 대결 + 공변량 조정)",
+  "status": "PARTIAL",
+  "n": 301,
+  "estimates": {
+    "state_variable": "-log(1+pre-deal hiring rate[-24,-13]); I-47 확정 지표",
+    "panelA_composition": {
+      "dorm_buyout_vs_growth": 0.0948,
+      "corr_dorm_stake": 0.0099,
+      "corr_dorm_gpexp": 0.0919
+    },
+    "panelB_covariate_adjusted": {
+      "deal_type": {
+        "label": "Buyout − Growth",
+        "raw": {
+          "diff": 0.1218,
+          "ci": [
+            -0.0494,
+            0.2776
+          ],
+          "n1": 183,
+          "n2": 118,
+          "sig": false,
+          "half_width": 0.1635,
+          "MDE_80": 0.2337,
+          "equiv": {
+            "SESOI": 0.3472,
+            "holds": true,
+            "margin": [
+              0.2978,
+              0.0696
+            ]
+          }
+        },
+        "adjusted": {
+          "diff": 0.0475,
+          "ci": [
+            -0.1062,
+            0.1958
+          ],
+          "n1": 183,
+          "n2": 118,
+          "sig": false,
+          "half_width": 0.151,
+          "MDE_80": 0.2159,
+          "equiv": {
+            "SESOI": 0.3472,
+            "holds": true,
+            "margin": [
+              0.241,
+              0.1514
+            ]
+          }
+        },
+        "ci_shrink": 0.076,
+        "ci_shrink_sign": "양수 = 조정 후 CI 가 더 좁다"
+      },
+      "stake_maj_min": {
+        "label": "다수(≥50%) − 소수",
+        "raw": {
+          "diff": 0.1266,
+          "ci": [
+            -0.1116,
+            0.3508
+          ],
+          "n1": 65,
+          "n2": 116,
+          "sig": false,
+          "half_width": 0.2312,
+          "MDE_80": 0.3305,
+          "equiv": {
+            "SESOI": 0.3472,
+            "holds": false,
+            "margin": [
+              0.2356,
+              -0.0036
+            ]
+          }
+        },
+        "adjusted": {
+          "diff": 0.0397,
+          "ci": [
+            -0.1761,
+            0.2674
+          ],
+          "n1": 65,
+          "n2": 116,
+          "sig": false,
+          "half_width": 0.2218,
+          "MDE_80": 0.317,
+          "equiv": {
+            "SESOI": 0.3472,
+            "holds": true,
+            "margin": [
+              0.1711,
+              0.0798
+            ]
+          }
+        },
+        "ci_shrink": 0.041,
+        "ci_shrink_sign": "양수 = 조정 후 CI 가 더 좁다"
+      },
+      "gp_experience": {
+        "label": "GP경험 상 − 하",
+        "raw": {
+          "diff": 0.0682,
+          "ci": [
+            -0.1391,
+            0.2685
+          ],
+          "n1": 82,
+          "n2": 110,
+          "sig": false,
+          "half_width": 0.2038,
+          "MDE_80": 0.2914,
+          "equiv": {
+            "SESOI": 0.3472,
+            "holds": true,
+            "margin": [
+              0.2081,
+              0.0787
+            ]
+          }
+        },
+        "adjusted": {
+          "diff": 0.0692,
+          "ci": [
+            -0.1278,
+            0.2609
+          ],
+          "n1": 82,
+          "n2": 110,
+          "sig": false,
+          "half_width": 0.1944,
+          "MDE_80": 0.2778,
+          "equiv": {
+            "SESOI": 0.3472,
+            "holds": true,
+            "margin": [
+              0.2194,
+              0.0863
+            ]
+          }
+        },
+        "ci_shrink": 0.046,
+        "ci_shrink_sign": "양수 = 조정 후 CI 가 더 좁다"
+      },
+      "stake_slope": {
+        "label": "지분 기울기 /%p",
+        "raw": {
+          "slope": 0.000715,
+          "ci": [
+            -0.0011,
+            0.003
+          ],
+          "n": 181,
+          "sig": false,
+          "half_width": 0.00205
+        },
+        "adjusted": {
+          "slope": 0.000703,
+          "ci": [
+            -0.0015,
+            0.0027
+          ],
+          "n": 181,
+          "sig": false,
+          "half_width": 0.0021
+        },
+        "ci_shrink": -0.024
+      }
+    },
+    "panelC_joint_test": {
+      "n": 180,
+      "r2_deal": 0.0092,
+      "perm_p_deal": 0.6425,
+      "r2_state": 0.0286,
+      "perm_p_state": 0.025,
+      "r2_both": 0.0354,
+      "incremental_deal_over_state": 0.0068,
+      "incremental_state_over_deal": 0.0261,
+      "perm_null_p95_deal": 0.0433,
+      "n_perm": 2000,
+      "deal_vars": [
+        "buyout",
+        "stake/100",
+        "log1p(GP deals)"
+      ]
+    },
+    "panelD_oos_prediction": {
+      "oos_r2_deal": -0.0269,
+      "oos_r2_state": -0.0168,
+      "oos_r2_both": -0.035,
+      "state_minus_deal": 0.0101,
+      "ci": [
+        -0.0349,
+        0.1173
+      ],
+      "sig": false,
+      "k_folds": 5,
+      "n": 180
+    },
+    "panelE_gp_loo_robustness": {
+      "loo_raw": -0.2675,
+      "loo_winsor_1_99": -0.2659,
+      "loo_winsor_5_95": -0.2387,
+      "loo_drop_top5": -0.1751,
+      "loo_on_adjusted_residual": -0.2496,
+      "n_loo": 189,
+      "n_gp": 164,
+      "median_deals_per_gp": 1.0,
+      "diagnosis": "중복 기업(같은 GP 안에서 한 이벤트의 사후창이 다른 이벤트의 사전창이 되는 경우) 은 배제됨 — 379 이벤트 전부 고유 bn·고유 패널행. 따라서 창 겹침에 의한 기계적 음의 상관은 원인이 아니다. 남은 후보는 소수 극단값과 표본잡음이며, 영향점 5건 제거 시 계수가 약 35% 감쇠한다. 부호는 보고하되 해석하지 않는다."
+    },
+    "covariate_r2": 0.1284,
+    "resid_sd": 0.6415,
+    "raw_sd": 0.6871,
+    "n": 301,
+    "SESOI": 0.3472
+  },
+  "prediction": "거래특성의 낮은 설명력을 개별 저검정력 귀무가 아니라 결합·표본외 예측 대결로 보일 수 있는가",
+  "verdict": "[A] Buyout 대상이 Growth 대상보다 사전 휴면이 +0.0948 높다 — 원 딜유형 차이는 부분적으로 구성효과다. [B] 공변량 조정 후 딜유형 차이가 +0.1218 → +0.0475 로 줄고, CI 폭은 각각 8%·4%·5% 축소. 조정 후 등가성 3/3 성립. [C] 거래특성 3종 결합 R² 0.0092 (순열 p 0.642) vs 사전 휴면 단독 R² 0.0286 (순열 p 0.0250); 휴면 위에 거래특성을 얹으면 +0.0068, 반대는 +0.0261. [D] ★ 표본외: 거래특성 -0.0269 vs 휴면 -0.0168, 차이 +0.0101 [-0.0349, 0.1173] 미검출. [E] GP LOO 음수는 winsorize 로 -0.2387, 영향점 5건 제거로 -0.1751 — 견고성 판단은 이 수치들로.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i45_power_invariance.py",
+  "sha256_16": "c5e11cb7385c698b",
+  "seed": 42,
+  "runtime_s": 37.5,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

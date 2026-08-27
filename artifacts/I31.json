@@ -1,0 +1,190 @@
+{
+  "id": "I-31",
+  "title": "고관성 조건부 위약 + 영구/일시 관성 분해",
+  "status": "GO",
+  "n": 92,
+  "estimates": {
+    "actual_T3": {
+      "DiD": -0.111,
+      "ci": [
+        -0.166,
+        -0.0557
+      ],
+      "n": 92
+    },
+    "actual_T1": {
+      "DiD": -0.0152,
+      "ci": [
+        -0.0434,
+        0.0168
+      ],
+      "n": 112
+    },
+    "panelA_conditional_placebo": {
+      "n_reps_valid": 200,
+      "target_n": 92,
+      "null_mean": -0.0017,
+      "null_sd": 0.0261,
+      "null_p2_5": -0.0581,
+      "null_p50": 0.0008,
+      "null_p97_5": 0.0441,
+      "actual_T3": -0.111,
+      "RI_p": 0.0,
+      "sig": true
+    },
+    "panelB_perm_vs_tran": {
+      "n_obs": 279,
+      "perm_cuts": [
+        0.125,
+        0.375
+      ],
+      "tran_cuts": [
+        -0.0833,
+        0.0417
+      ],
+      "corr_perm_tran": -0.179,
+      "perm": {
+        "저": {
+          "DiD": -0.0213,
+          "ci": [
+            -0.0566,
+            0.0102
+          ],
+          "n": 85,
+          "sig": false
+        },
+        "중": {
+          "DiD": -0.0451,
+          "ci": [
+            -0.0942,
+            0.0059
+          ],
+          "n": 69,
+          "sig": false
+        },
+        "고": {
+          "DiD": -0.0799,
+          "ci": [
+            -0.135,
+            -0.0224
+          ],
+          "n": 81,
+          "sig": true
+        }
+      },
+      "tran": {
+        "저": {
+          "DiD": -0.0405,
+          "ci": [
+            -0.0966,
+            0.0107
+          ],
+          "n": 76,
+          "sig": false
+        },
+        "중": {
+          "DiD": -0.0126,
+          "ci": [
+            -0.049,
+            0.0262
+          ],
+          "n": 74,
+          "sig": false
+        },
+        "고": {
+          "DiD": -0.0549,
+          "ci": [
+            -0.1152,
+            0.0092
+          ],
+          "n": 66,
+          "sig": false
+        }
+      }
+    },
+    "panelC_horse_race": {
+      "n": 260,
+      "perm(처치)": {
+        "coef": -0.1233,
+        "ci": [
+          -0.3008,
+          0.0501
+        ],
+        "sig": false,
+        "sd_x": 0.259,
+        "std_coef_per_SD": -0.0319,
+        "std_ci": [
+          -0.0779,
+          0.013
+        ],
+        "std_sig": false
+      },
+      "tran(처치)": {
+        "coef": -0.1804,
+        "ci": [
+          -0.3385,
+          -0.0103
+        ],
+        "sig": true,
+        "sd_x": 0.1805,
+        "std_coef_per_SD": -0.0326,
+        "std_ci": [
+          -0.0611,
+          -0.0019
+        ],
+        "std_sig": true
+      },
+      "perm(대조평균)": {
+        "coef": -0.0092,
+        "ci": [
+          -0.1978,
+          0.1882
+        ],
+        "sig": false,
+        "sd_x": 0.2261,
+        "std_coef_per_SD": -0.0021,
+        "std_ci": [
+          -0.0447,
+          0.0426
+        ],
+        "std_sig": false
+      },
+      "tran(대조평균)": {
+        "coef": 0.0178,
+        "ci": [
+          -0.3322,
+          0.3223
+        ],
+        "sig": false,
+        "sd_x": 0.1062,
+        "std_coef_per_SD": 0.0019,
+        "std_ci": [
+          -0.0353,
+          0.0342
+        ],
+        "std_sig": false
+      },
+      "dominant_by_std": "tran",
+      "note": "원시계수는 스케일이 달라 비교 불가. 1SD당 효과로 비교한다. Panel B(tercile, 동일bin 대조)와 결론이 갈리면 양쪽 다 보고하고 판별은 Panel A(위약)에 맡긴다 — 위약은 perm/tran 어느 쪽이 실리든 평균회귀 기제 자체를 직접 검정하기 때문이다."
+    },
+    "tercile_cuts_prepre": [
+      0.083333,
+      0.333333
+    ]
+  },
+  "prediction": "고관성 기업만 pseudo-처치해도 파이프라인이 −0.111 을 만드는가 · 효과가 영구 관성에 실리는가 일시 깊이에 실리는가",
+  "verdict": "실제 T3 -0.111 [-0.166, -0.0557] (n=92) | 고관성 위약 귀무 평균 -0.0017 [-0.0581, 0.0441] R=200 → **RI p=0.0** ✓ | 영구관성 고분위 -0.0799✓ vs 일시깊이 고분위 -0.0549✗ | 1SD perm -0.0319✗ vs tran -0.0326✓ → 분해 판별 불가 (1SD 효과가 사실상 동일) | **위약이 평균회귀 해석을 직접 배제한다.** 동일 파이프라인을 고관성 never-treated 에 적용하면 -0.0017 [-0.0581, 0.0441] 로 0 이고, 실제는 -0.111 로 귀무 밖(RI p=0.0). 영구/일시 분해는 **판별 불가 (1SD 효과가 사실상 동일)** — Panel B(tercile)는 영구, Panel C(horse race)는 일시가 유의하나 1SD 효과는 -0.0319 대 -0.0326 로 사실상 같다. 이 분해로는 결론내지 않는다. 판별은 위약이 한다 — 위약은 어느 성분이 실리든 평균회귀 기제 자체를 검정하기 때문이다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i31_inertia_placebo.py",
+  "sha256_16": "a5dcadbac1efd617",
+  "seed": 42,
+  "runtime_s": 206.0,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "**위약이 평균회귀 해석을 직접 배제한다.** 동일 파이프라인을 고관성 never-treated 에 적용하면 -0.0017 [-0.0581, 0.0441] 로 0 이고, 실제는 -0.111 로 귀무 밖(RI p=0.0). 영구/일시 분해는 **판별 불가 (1SD 효과가 사실상 동일)** — Panel B(tercile)는 영구, Panel C(horse race)는 일시가 유의하나 1SD 효과는 -0.0319 대 -0.0326 로 사실상 같다. 이 분해로는 결론내지 않는다. 판별은 위약이 한다 — 위약은 어느 성분이 실리든 평균회귀 기제 자체를 검정하기 때문이다.",
+  "decomposition_verdict": "판별 불가 (1SD 효과가 사실상 동일)",
+  "std_perm_per_SD": -0.0319,
+  "std_tran_per_SD": -0.0326,
+  "panelBC_conflict": "Panel B(tercile, 동일bin)는 perm 고분위만 유의(-0.0799✓ vs -0.0549✗), Panel C(horse race)는 tran 만 유의. 1SD 효과는 거의 동일하므로 **둘 다 보고하고 어느 쪽도 주장하지 않는다.**",
+  "why_placebo_is_decisive": "위약은 perm/tran 어느 성분이 moderation 을 나르든 무관하게 '고관성 기업은 어차피 반등한다'는 기제 자체를 직접 검정한다. 고관성 never-treated 에서 0 이 나온 것이 그 기제의 반증이다."
+}

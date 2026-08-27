@@ -1,0 +1,133 @@
+{
+  "id": "I-62",
+  "title": "검정력 라운드 3 — 결합검정·사전추세 기울기·매칭 변형",
+  "status": "GO",
+  "n": 286,
+  "estimates": {
+    "bin_k5": {
+      "observed": 0.7101,
+      "n": 286,
+      "null_mean": 0.1006,
+      "null_sd": 0.1576,
+      "RI_p": 0.0005,
+      "z": 3.87,
+      "sig": true,
+      "n_placebo": 1246
+    },
+    "dist_k5": {
+      "observed": 0.64,
+      "n": 299,
+      "null_mean": 0.0548,
+      "null_sd": 0.1651,
+      "RI_p": 0.001,
+      "z": 3.54,
+      "sig": true,
+      "n_placebo": 1385
+    },
+    "dist_k10": {
+      "observed": 0.6105,
+      "n": 299,
+      "null_mean": 0.0831,
+      "null_sd": 0.1787,
+      "RI_p": 0.0055,
+      "z": 2.95,
+      "sig": true,
+      "n_placebo": 2601
+    },
+    "dist_k20": {
+      "observed": 0.5812,
+      "n": 299,
+      "null_mean": 0.0782,
+      "null_sd": 0.1898,
+      "RI_p": 0.007,
+      "z": 2.65,
+      "sig": true,
+      "n_placebo": 4646
+    },
+    "bin_k20": {
+      "observed": 0.6778,
+      "n": 286,
+      "null_mean": 0.0271,
+      "null_sd": 0.1581,
+      "RI_p": 0.0005,
+      "z": 4.12,
+      "sig": true,
+      "n_placebo": 3664
+    },
+    "panelB_joint": {
+      "outcomes": [
+        "hire",
+        "churn",
+        "emp"
+      ],
+      "observed": [
+        0.7101,
+        0.3816,
+        -0.058
+      ],
+      "null_mean": [
+        0.0973,
+        0.0151,
+        0.0769
+      ],
+      "null_corr": [
+        [
+          1.0,
+          0.711,
+          0.209
+        ],
+        [
+          0.711,
+          1.0,
+          0.188
+        ],
+        [
+          0.209,
+          0.188,
+          1.0
+        ]
+      ],
+      "mahalanobis_obs": 28.35,
+      "mahalanobis_null_p95": 7.6,
+      "RI_p_joint": 0.0005,
+      "sig": true,
+      "n_draws": 2000
+    },
+    "panelA_pretrend_slope": {
+      "pre_gamma_per_quarter": -0.0125,
+      "pre_gamma_ci": [
+        -0.1999,
+        0.1576
+      ],
+      "pre_drift_over_4q": -0.0375,
+      "pre_drift_ci": [
+        -0.5997,
+        0.4728
+      ],
+      "placebo_pre_gamma": 0.0363,
+      "post_gamma_per_quarter": 0.0851,
+      "placebo_post_gamma": -0.0472,
+      "n_units": 301,
+      "SESOI_post_level": 0.126,
+      "equivalence_holds": false,
+      "margin": [
+        -0.4737,
+        -0.3468
+      ]
+    },
+    "panelE_bias_correction": {
+      "note": "주사양 자체가 FWL 회귀조정을 포함하므로 별도 편의보정은 동일 추정량이 된다",
+      "same_as_primary": 0.7101
+    },
+    "n_draws": 2000
+  },
+  "prediction": "남은 약한 검정들을 더 적합한 추정대상·추정량으로 강화할 수 있는가",
+  "verdict": "[C·D] 매칭 변형 5종 전부 유의: exact bin k=5 3.87 · 거리척도 k=5 3.54 · k=10 2.95 · k=20 2.65 · bin k=20 4.12. [B] ★ 결합 RI: 마할라노비스 28.35 vs 귀무 p95 7.6 → **p = 0.0005** — 이직 단독이 약해도 **패턴 전체는 강하게 검출된다**. [A] 사전추세를 기울기 1개로: 4분기 드리프트 -0.0375 [-0.5997, 0.4728], 등가성 미성립.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i62_power3.py",
+  "sha256_16": "a1f30578a9f1550c",
+  "seed": 42,
+  "runtime_s": 200.7,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

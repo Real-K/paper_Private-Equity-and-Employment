@@ -1,0 +1,68 @@
+{
+ "id": "I-41-RECLASS",
+ "date": "2026-08-25",
+ "supersedes_field": "I41.json :: status, verdict",
+ "recomputed": false,
+ "note": "추정치 재계산 없음. 동일 CI 재분류 (선례: F1_RESULT_RECLASS.json, 규칙 11 적용범위).",
+ "defect": "i41_moderator_defense.py L147-150 의 pass_ 는 bool(...['sig']) 만 세고 부호를 보지 않는다. Panel E 계수 -0.3812 는 조절자 예측과 반대 부호인데 '통과'로 계수되어 4관문 중 3통과 → GO 가 되었다.",
+ "corrected_gate_tally": {
+  "A_linear_slope": {
+   "est": 0.5259,
+   "ci": [
+    0.2436,
+    0.8257
+   ],
+   "pass": true,
+   "reason": "예측 부호로 유의"
+  },
+  "B_residualized": {
+   "est": 0.2433,
+   "ci": [
+    -0.2213,
+    0.7226
+   ],
+   "pass": false,
+   "reason": "부호는 일치하나 미검출. 공변량이 휴면 분산의 63.9% 를 설명해 잔차 변동이 얇다 — 검정력 부족이지 반증은 아니다."
+  },
+  "C_cutoff_sensitivity": {
+   "est": [
+    0.3472,
+    0.3834,
+    0.2724,
+    0.2005
+   ],
+   "pass": true,
+   "reason": "4개 컷 전부 예측 부호로 유의"
+  },
+  "D_transitory_vs_structural": {
+   "current_spell": 0.0403,
+   "historical": 0.559,
+   "pass": true,
+   "reason": "사전등록되지 않은 추가 관문. 구조적 비활동에만 적재 — 일시적 침체 가설과 불일치"
+  },
+  "E_given_pre_volume": {
+   "est": -0.3812,
+   "ci": [
+    -0.7682,
+    -0.047
+   ],
+   "pass": false,
+   "reason": "반대 부호로 유의. 사전 총채용량을 통제하면 기울기가 뒤집힌다."
+  }
+ },
+ "corrected_status": "PARTIAL",
+ "corrected_verdict": "5관문 중 3통과 (A·C·D), 2실패 (B 미검출 · E 부호반전). 조절자는 규모·산업·성장·업력·계절성·컷선택의 대리변수가 아니며 구조적 비활동에 적재된다. 그러나 **사전 총채용량과 분리되지 않는다**: log 사전총채용을 통제하면 계수가 -0.3812 [-0.768, -0.047] 로 반전한다.",
+ "interpretation": "휴면(무채용 월 비중)과 사전 총채용량은 같은 상태의 두 측도이며 상관이 높다. 총채용량을 고정하면 휴면이 담고 있던 변동 자체가 제거되고, 남는 것은 '같은 총량을 어떻게 흩뿌렸는가'라는 집중도 변동인데 I-38/I-39 가 그 변동에 독립적 신호가 없음을 보였다. 따라서 부호반전은 overcontrol 로 읽히지만 그것은 해석이다.",
+ "claim_ceiling": "원고는 '휴면이 사전 채용량을 넘어서는 독립적 설명력을 갖는다'고 주장하지 않는다. 주장은 '반응을 조직하는 것은 거래 특성이 아니라 표적의 사전 채용 상태(휴면 또는 동치로 낮은 사전 채용량)이다' 로 한정한다.",
+ "manuscript_location": "DRAFT_v4_0.md §6.2 마지막 문단 + ONLINE_APPENDIX §I",
+ "registry_action": "registry.csv I-41 status GO → PARTIAL",
+ "superseded_by": {
+  "id": "I-44",
+  "date": "2026-08-25",
+  "what": "게이트 E(사전 총채용 통제)는 유효한 게이트가 아니었다 — 통제변수가 종속변수의 구성요소.",
+  "evidence": "미처치 대조기업 1,339 유사처치(291 셀)에서 조건부 반전 -0.4502 [-0.6766, -0.2440] 재현, 동일 기업의 무조건 기울기는 +0.0189 [-0.0973, +0.1349]. 겹침을 반대편으로 옮기면 +1.4512.",
+  "revised_tally": "유효 4관문 중 3통과 (A·C·D 통과, B 잔차화 미검출). E 는 무효 게이트로 제외.",
+  "claim_ceiling": "§14 가 건 '휴면의 독립 설명력 주장 금지' 제약은 해제. 주장 형태는 '표적의 사전 채용 상태'로 유지(수렴 타당도 4지표).",
+  "status_unchanged": "I-41 은 PARTIAL 유지 — B 는 여전히 미검출."
+ }
+}

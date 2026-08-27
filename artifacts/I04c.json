@@ -1,0 +1,754 @@
+{
+  "id": "I-04c",
+  "title": "실적 앵커 v3 (부가가치 + 등가성)",
+  "status": "PARTIAL",
+  "n": 379,
+  "estimates": {
+    "panelA_value_added": {
+      "log_va|h1": {
+        "DiD": 0.0778,
+        "ci": [
+          0.0296,
+          0.1294
+        ],
+        "n": 147,
+        "sig": true
+      },
+      "log_va|h2": {
+        "DiD": 0.0795,
+        "ci": [
+          0.0022,
+          0.1491
+        ],
+        "n": 117,
+        "sig": true
+      },
+      "log_va|h3": {
+        "DiD": 0.0519,
+        "ci": [
+          -0.0323,
+          0.1385
+        ],
+        "n": 90,
+        "sig": false
+      },
+      "log_va|h4": {
+        "DiD": 0.0634,
+        "ci": [
+          -0.0438,
+          0.1769
+        ],
+        "n": 71,
+        "sig": false
+      },
+      "va_pe|h1": {
+        "DiD": -0.0052,
+        "ci": [
+          -0.0333,
+          0.0261
+        ],
+        "n": 147,
+        "sig": false
+      },
+      "va_pe|h2": {
+        "DiD": -0.003,
+        "ci": [
+          -0.0409,
+          0.0308
+        ],
+        "n": 117,
+        "sig": false
+      },
+      "va_pe|h3": {
+        "DiD": 0.006,
+        "ci": [
+          -0.0448,
+          0.0483
+        ],
+        "n": 90,
+        "sig": false
+      },
+      "va_pe|h4": {
+        "DiD": 0.0213,
+        "ci": [
+          -0.0176,
+          0.0628
+        ],
+        "n": 71,
+        "sig": false
+      },
+      "va_pa|h1": {
+        "DiD": -0.099,
+        "ci": [
+          -0.1774,
+          -0.0203
+        ],
+        "n": 146,
+        "sig": true
+      },
+      "va_pa|h2": {
+        "DiD": -0.0811,
+        "ci": [
+          -0.199,
+          0.0357
+        ],
+        "n": 116,
+        "sig": false
+      },
+      "va_pa|h3": {
+        "DiD": -0.2046,
+        "ci": [
+          -0.3299,
+          -0.0713
+        ],
+        "n": 89,
+        "sig": true
+      },
+      "va_pa|h4": {
+        "DiD": -0.2206,
+        "ci": [
+          -0.3904,
+          -0.0584
+        ],
+        "n": 70,
+        "sig": true
+      },
+      "log_rev|h1": {
+        "DiD": -0.0191,
+        "ci": [
+          -0.1169,
+          0.0707
+        ],
+        "n": 152,
+        "sig": false
+      },
+      "log_rev|h2": {
+        "DiD": 0.0009,
+        "ci": [
+          -0.1153,
+          0.1174
+        ],
+        "n": 121,
+        "sig": false
+      },
+      "log_rev|h3": {
+        "DiD": 0.0622,
+        "ci": [
+          -0.0761,
+          0.2034
+        ],
+        "n": 93,
+        "sig": false
+      },
+      "log_rev|h4": {
+        "DiD": 0.0505,
+        "ci": [
+          -0.1485,
+          0.2493
+        ],
+        "n": 72,
+        "sig": false
+      },
+      "roa|h1": {
+        "DiD": -0.0079,
+        "ci": [
+          -0.0373,
+          0.0236
+        ],
+        "n": 155,
+        "sig": false
+      },
+      "roa|h2": {
+        "DiD": -0.0131,
+        "ci": [
+          -0.0482,
+          0.0217
+        ],
+        "n": 122,
+        "sig": false
+      },
+      "roa|h3": {
+        "DiD": 0.0265,
+        "ci": [
+          -0.0107,
+          0.0684
+        ],
+        "n": 93,
+        "sig": false
+      },
+      "roa|h4": {
+        "DiD": 0.0056,
+        "ci": [
+          -0.0455,
+          0.0631
+        ],
+        "n": 72,
+        "sig": false
+      },
+      "log_asset|h1": {
+        "DiD": 0.2265,
+        "ci": [
+          0.1241,
+          0.3522
+        ],
+        "n": 155,
+        "sig": true
+      },
+      "log_asset|h2": {
+        "DiD": 0.1796,
+        "ci": [
+          0.0643,
+          0.3032
+        ],
+        "n": 123,
+        "sig": true
+      },
+      "log_asset|h3": {
+        "DiD": 0.2396,
+        "ci": [
+          0.0974,
+          0.3811
+        ],
+        "n": 95,
+        "sig": true
+      },
+      "log_asset|h4": {
+        "DiD": 0.259,
+        "ci": [
+          0.0677,
+          0.4438
+        ],
+        "n": 72,
+        "sig": true
+      },
+      "alive|h1": {
+        "DiD": 0.0061,
+        "ci": [
+          -0.0159,
+          0.0266
+        ],
+        "n": 345,
+        "sig": false
+      },
+      "alive|h2": {
+        "DiD": 0.0093,
+        "ci": [
+          -0.0176,
+          0.0374
+        ],
+        "n": 303,
+        "sig": false
+      },
+      "alive|h3": {
+        "DiD": 0.0068,
+        "ci": [
+          -0.0289,
+          0.0385
+        ],
+        "n": 253,
+        "sig": false
+      },
+      "alive|h4": {
+        "DiD": 0.0192,
+        "ci": [
+          -0.0264,
+          0.0624
+        ],
+        "n": 200,
+        "sig": false
+      }
+    },
+    "panelB_equivalence": {
+      "log_va|h3": {
+        "SESOI": 0.15,
+        "ci": [
+          -0.0323,
+          0.1385
+        ],
+        "holds": true,
+        "margin": [
+          0.1177,
+          0.0115
+        ],
+        "knife": false,
+        "n": 90
+      },
+      "log_va|h4": {
+        "SESOI": 0.15,
+        "ci": [
+          -0.0438,
+          0.1769
+        ],
+        "holds": false,
+        "margin": [
+          0.1062,
+          -0.0269
+        ],
+        "knife": true,
+        "n": 71
+      },
+      "va_pe|h1": {
+        "SESOI": 0.1,
+        "ci": [
+          -0.0333,
+          0.0261
+        ],
+        "holds": true,
+        "margin": [
+          0.0667,
+          0.0739
+        ],
+        "knife": false,
+        "n": 147
+      },
+      "va_pe|h2": {
+        "SESOI": 0.1,
+        "ci": [
+          -0.0409,
+          0.0308
+        ],
+        "holds": true,
+        "margin": [
+          0.0591,
+          0.0692
+        ],
+        "knife": false,
+        "n": 117
+      },
+      "va_pe|h3": {
+        "SESOI": 0.1,
+        "ci": [
+          -0.0448,
+          0.0483
+        ],
+        "holds": true,
+        "margin": [
+          0.0552,
+          0.0517
+        ],
+        "knife": false,
+        "n": 90
+      },
+      "va_pe|h4": {
+        "SESOI": 0.1,
+        "ci": [
+          -0.0176,
+          0.0628
+        ],
+        "holds": true,
+        "margin": [
+          0.0824,
+          0.0372
+        ],
+        "knife": false,
+        "n": 71
+      },
+      "log_rev|h1": {
+        "SESOI": 0.15,
+        "ci": [
+          -0.1169,
+          0.0707
+        ],
+        "holds": true,
+        "margin": [
+          0.0331,
+          0.0793
+        ],
+        "knife": false,
+        "n": 152
+      },
+      "log_rev|h2": {
+        "SESOI": 0.15,
+        "ci": [
+          -0.1153,
+          0.1174
+        ],
+        "holds": true,
+        "margin": [
+          0.0347,
+          0.0326
+        ],
+        "knife": false,
+        "n": 121
+      },
+      "log_rev|h3": {
+        "SESOI": 0.15,
+        "ci": [
+          -0.0761,
+          0.2034
+        ],
+        "holds": false,
+        "margin": [
+          0.0739,
+          -0.0534
+        ],
+        "knife": true,
+        "n": 93
+      },
+      "log_rev|h4": {
+        "SESOI": 0.15,
+        "ci": [
+          -0.1485,
+          0.2493
+        ],
+        "holds": false,
+        "margin": [
+          0.0015,
+          -0.0993
+        ],
+        "knife": true,
+        "n": 72
+      },
+      "roa|h1": {
+        "SESOI": 0.03,
+        "ci": [
+          -0.0373,
+          0.0236
+        ],
+        "holds": false,
+        "margin": [
+          -0.0073,
+          0.0064
+        ],
+        "knife": true,
+        "n": 155
+      },
+      "roa|h2": {
+        "SESOI": 0.03,
+        "ci": [
+          -0.0482,
+          0.0217
+        ],
+        "holds": false,
+        "margin": [
+          -0.0182,
+          0.0083
+        ],
+        "knife": true,
+        "n": 122
+      },
+      "roa|h3": {
+        "SESOI": 0.03,
+        "ci": [
+          -0.0107,
+          0.0684
+        ],
+        "holds": false,
+        "margin": [
+          0.0193,
+          -0.0384
+        ],
+        "knife": true,
+        "n": 93
+      },
+      "roa|h4": {
+        "SESOI": 0.03,
+        "ci": [
+          -0.0455,
+          0.0631
+        ],
+        "holds": false,
+        "margin": [
+          -0.0155,
+          -0.0331
+        ],
+        "knife": true,
+        "n": 72
+      },
+      "alive|h1": {
+        "SESOI": 0.05,
+        "ci": [
+          -0.0159,
+          0.0266
+        ],
+        "holds": true,
+        "margin": [
+          0.0341,
+          0.0234
+        ],
+        "knife": false,
+        "n": 345
+      },
+      "alive|h2": {
+        "SESOI": 0.05,
+        "ci": [
+          -0.0176,
+          0.0374
+        ],
+        "holds": true,
+        "margin": [
+          0.0324,
+          0.0126
+        ],
+        "knife": false,
+        "n": 303
+      },
+      "alive|h3": {
+        "SESOI": 0.05,
+        "ci": [
+          -0.0289,
+          0.0385
+        ],
+        "holds": true,
+        "margin": [
+          0.0211,
+          0.0115
+        ],
+        "knife": false,
+        "n": 253
+      },
+      "alive|h4": {
+        "SESOI": 0.05,
+        "ci": [
+          -0.0264,
+          0.0624
+        ],
+        "holds": false,
+        "margin": [
+          0.0236,
+          -0.0124
+        ],
+        "knife": true,
+        "n": 200
+      }
+    },
+    "panelC_by_inertia": {
+      "T1저관성": {
+        "log_va|h1": {
+          "DiD": 0.0261,
+          "ci": [
+            -0.0475,
+            0.0967
+          ],
+          "n": 69,
+          "sig": false
+        },
+        "log_va|h2": {
+          "DiD": 0.039,
+          "ci": [
+            -0.0682,
+            0.1448
+          ],
+          "n": 54,
+          "sig": false
+        },
+        "log_va|h3": {
+          "DiD": 0.0406,
+          "ci": [
+            -0.0695,
+            0.1484
+          ],
+          "n": 49,
+          "sig": false
+        },
+        "va_pe|h1": {
+          "DiD": 0.0081,
+          "ci": [
+            -0.0302,
+            0.045
+          ],
+          "n": 69,
+          "sig": false
+        },
+        "va_pe|h2": {
+          "DiD": 0.0129,
+          "ci": [
+            -0.0374,
+            0.0623
+          ],
+          "n": 54,
+          "sig": false
+        },
+        "va_pe|h3": {
+          "DiD": 0.0333,
+          "ci": [
+            -0.0151,
+            0.0803
+          ],
+          "n": 49,
+          "sig": false
+        }
+      },
+      "T3고관성": {
+        "log_va|h1": {
+          "DiD": 0.1342,
+          "ci": [
+            0.0122,
+            0.2761
+          ],
+          "n": 30,
+          "sig": true
+        },
+        "log_va|h2": {
+          "DiD": 0.0142,
+          "ci": [
+            -0.1877,
+            0.2027
+          ],
+          "n": 22,
+          "sig": false
+        },
+        "log_va|h3": {
+          "DiD": null,
+          "ci": null,
+          "n": 14,
+          "sig": false
+        },
+        "va_pe|h1": {
+          "DiD": -0.0238,
+          "ci": [
+            -0.1096,
+            0.0466
+          ],
+          "n": 30,
+          "sig": false
+        },
+        "va_pe|h2": {
+          "DiD": -0.0543,
+          "ci": [
+            -0.2102,
+            0.0511
+          ],
+          "n": 22,
+          "sig": false
+        },
+        "va_pe|h3": {
+          "DiD": null,
+          "ci": null,
+          "n": 14,
+          "sig": false
+        }
+      }
+    },
+    "panelD_survival": {
+      "T1": {
+        "alive|h1": {
+          "DiD": -0.003,
+          "ci": [
+            -0.0386,
+            0.0289
+          ],
+          "n": 126,
+          "sig": false
+        },
+        "alive|h2": {
+          "DiD": 0.0177,
+          "ci": [
+            -0.0317,
+            0.0659
+          ],
+          "n": 108,
+          "sig": false
+        },
+        "alive|h3": {
+          "DiD": 0.0204,
+          "ci": [
+            -0.0339,
+            0.0669
+          ],
+          "n": 94,
+          "sig": false
+        },
+        "alive|h4": {
+          "DiD": 0.0623,
+          "ci": [
+            -0.0051,
+            0.1217
+          ],
+          "n": 76,
+          "sig": false
+        }
+      },
+      "T3": {
+        "alive|h1": {
+          "DiD": -0.0102,
+          "ci": [
+            -0.0531,
+            0.0286
+          ],
+          "n": 98,
+          "sig": false
+        },
+        "alive|h2": {
+          "DiD": -0.0302,
+          "ci": [
+            -0.086,
+            0.0234
+          ],
+          "n": 86,
+          "sig": false
+        },
+        "alive|h3": {
+          "DiD": -0.0301,
+          "ci": [
+            -0.1068,
+            0.0358
+          ],
+          "n": 73,
+          "sig": false
+        },
+        "alive|h4": {
+          "DiD": -0.0737,
+          "ci": [
+            -0.1651,
+            0.007
+          ],
+          "n": 57,
+          "sig": false
+        }
+      },
+      "T3-T1|h1": {
+        "diff": -0.0072,
+        "ci": [
+          -0.0598,
+          0.0468
+        ],
+        "sig": false
+      },
+      "T3-T1|h2": {
+        "diff": -0.048,
+        "ci": [
+          -0.1275,
+          0.0292
+        ],
+        "sig": false
+      },
+      "T3-T1|h3": {
+        "diff": -0.0505,
+        "ci": [
+          -0.1391,
+          0.0358
+        ],
+        "sig": false
+      },
+      "T3-T1|h4": {
+        "diff": -0.136,
+        "ci": [
+          -0.2563,
+          -0.0289
+        ],
+        "sig": true
+      }
+    },
+    "labels": {
+      "log_va": "log 부가가치",
+      "va_pe": "log VA/인원",
+      "va_pa": "log VA/자산",
+      "log_rev": "log 매출",
+      "roa": "ROA",
+      "log_asset": "log 자산",
+      "alive": "생존"
+    },
+    "va_def": "영업이익 + NPS 고지금액 연합(총인건비)"
+  },
+  "prediction": "부가가치(영업이익+인건비)로 관성 제거의 가치를 검정하고, null 에는 등가성 경계를 붙인다",
+  "verdict": "log VA: h+1 0.0778✓ h+2 0.0795✓ h+3 0.0519✗ h+4 0.0634✗ | VA/인원: h+1 -0.0052✗ h+2 -0.003✗ h+3 0.006✗ h+4 0.0213✗ | 등가성 성립 ['log_va|h3', 'va_pe|h1', 'va_pe|h2', 'va_pe|h3', 'va_pe|h4', 'log_rev|h1', 'log_rev|h2', 'alive|h1', 'alive|h2', 'alive|h3'] | 부가가치 혼재: +['log_va|h1', 'log_va|h2'] / −['va_pa|h1', 'va_pa|h3', 'va_pa|h4']",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i04c_valueadded.py",
+  "sha256_16": "9d14728ca1e8278f",
+  "seed": 42,
+  "runtime_s": 59.3,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "부가가치 혼재: +['log_va|h1', 'log_va|h2'] / −['va_pa|h1', 'va_pa|h3', 'va_pa|h4']"
+}

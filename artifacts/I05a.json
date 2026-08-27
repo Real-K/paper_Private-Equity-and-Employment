@@ -1,0 +1,39 @@
+{
+  "id": "I-05a",
+  "title": "exit 후보 정제 (스폰서 단위 추적)",
+  "status": "PARTIAL",
+  "n": 25,
+  "estimates": {
+    "n_candidates": 25,
+    "v1_candidates": 44,
+    "sponsor_min_stake": 10.0,
+    "auto_verdict_counts": {
+      "AMBIGUOUS": 11,
+      "SUSPECT_SPC_MERGER": 6,
+      "CONFIRMED_STRONG": 5,
+      "EXCL_NO_POST_PANEL": 2,
+      "LIKELY_ARTIFACT": 1
+    },
+    "n_usable_auto": 5,
+    "n_needs_manual": 18,
+    "stake_at_exit_median": 20.63,
+    "hold_yr_median": 2.0,
+    "post_months_median": 37.0
+  },
+  "prediction": "스폰서 주주 1인을 특정해 그 주주의 소멸만 exit 로 세고, 지분율·후속딜·신규주주·사후패널로 정제",
+  "verdict": "v1 44건 → v2 25건 (오탐 제거). 자동확정 5 · 수동 18 · 패널부족 2",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i05a_exit_refine.py",
+  "sha256_16": "a1b0cbead2081f1a",
+  "seed": 42,
+  "runtime_s": 34.8,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "v1_defects_fixed": [
+    "연도내 복수기준일 합산(180% 발생)",
+    "국민연금기금 오탐",
+    "진입 2~13% VC조합을 스폰서로 오인"
+  ],
+  "work_package": "work/I05_EXIT_ADJUDICATION.csv",
+  "spc_merger_guard": "스폰서(홀딩스 SPC) 소멸 후 다른 PE 주주가 >=10% 남거나, 홀딩스가 1년 내 소멸+후속딜 없음 → SUSPECT_SPC_MERGER (한국 LBO 인수목적법인 합병 전형). exit 으로 세면 안 된다."
+}

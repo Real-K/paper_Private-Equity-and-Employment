@@ -1,0 +1,95 @@
+{
+  "id": "I-17",
+  "title": "GP 고정효과 / 스폰서 스타일",
+  "status": "KILL",
+  "n": 213,
+  "estimates": {
+    "panelA_coverage": {
+      "n_with_gp": 346,
+      "n_events": 379,
+      "n_unique_gp": 189,
+      "n_gp_multi": 56,
+      "n_events_multi": 213,
+      "gp_deals_median": 1.0,
+      "gp_deals_max": 13,
+      "top_gps": {
+        "anchor equity partners": 13,
+        "imm investment": 12,
+        "affirma capital": 11,
+        "keistone partners": 7,
+        "unison capital": 6,
+        "e-um private equity": 6,
+        "aves partners": 6,
+        "hahn &": 6
+      }
+    },
+    "panelB_variance": {
+      "between_share": 0.2875,
+      "null_p50": 0.2571,
+      "null_p95": 0.336,
+      "perm_p": 0.2605,
+      "sig": false,
+      "n_perm": 2000
+    },
+    "panelC_loo_prediction": {
+      "loo_beta": 0.0703,
+      "n": 213,
+      "boot_ci_gpcluster": [
+        -0.3711,
+        0.3426
+      ],
+      "boot_note": "GP 군집 부트스트랩. 이벤트 단위 재표본은 LOO 구조를 깨 무효(실측 CI가 점추정 미포함).",
+      "null_mean": -0.0185,
+      "null_p95": 0.2079,
+      "perm_p": 0.2785,
+      "sig": false,
+      "n_perm": 2000
+    },
+    "panelD_gp_experience": {
+      "E1 저경험": {
+        "n": 72,
+        "mean": -0.0324,
+        "ci": [
+          -0.0836,
+          0.0141
+        ],
+        "sig": false
+      },
+      "E2": {
+        "n": 98,
+        "mean": -0.0577,
+        "ci": [
+          -0.1001,
+          -0.0212
+        ],
+        "sig": true
+      },
+      "E3 고경험": {
+        "n": 43,
+        "mean": -0.0481,
+        "ci": [
+          -0.1024,
+          0.013
+        ],
+        "sig": false
+      },
+      "cuts_deals": [
+        3.0,
+        6.0
+      ]
+    }
+  },
+  "prediction": "효과가 소유주가 하는 일이라면 같은 GP 포트폴리오에서 일관되고 GP 정체가 보류 딜을 예측해야 한다",
+  "verdict": "GP 부착 346/379 · 검정표본 213(GP 56) | GP간 분산비중 0.2875 순열p 0.2605✗ | ★LOO β 0.0703 [-0.3711, 0.3426] 순열p 0.2785✗ (귀무 p95 0.2079) | GP 성분 부재 — 효과는 소유주 정체로 설명되지 않는다",
+  "kill_met": true,
+  "code": "P014_upgrade_package/harness30/i17_gp_style.py",
+  "sha256_16": "b632c3fba784d71b",
+  "seed": 42,
+  "runtime_s": 38.0,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "GP 성분 부재 — 효과는 소유주 정체로 설명되지 않는다",
+  "outcome": "무채용비중 DiD (외연마진)",
+  "gp_def": "PitchBook Investors 첫 기재 투자자, 법인격 접미사 제거 후 소문자",
+  "null": "GP 라벨 순열 2000회"
+}

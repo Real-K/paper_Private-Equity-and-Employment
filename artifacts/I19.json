@@ -1,0 +1,228 @@
+{
+  "id": "I-19",
+  "title": "비-PE 지배구조 변화 대조 (최대주주 변경)",
+  "status": "GO",
+  "n": 1790,
+  "estimates": {
+    "panelA_samples": {
+      "PE(연간)": {
+        "n": 365,
+        "year_median": 2021.0,
+        "size_median": 79.2,
+        "pre_inertia_mean": 0.2882,
+        "T3_share": 0.324
+      },
+      "OWN": {
+        "n": 1425,
+        "year_median": 2021.0,
+        "size_median": 74.7,
+        "pre_inertia_mean": 0.3127,
+        "T3_share": 0.377
+      },
+      "PE(월정밀)": {
+        "n": 363,
+        "year_median": 2021.0,
+        "size_median": 79.0,
+        "pre_inertia_mean": 0.2898,
+        "T3_share": 0.333
+      }
+    },
+    "panelB_by_type": {
+      "PE(연간)": {
+        "DiD": -0.0335,
+        "ci": [
+          -0.0543,
+          -0.0118
+        ],
+        "n": 317,
+        "sig": true
+      },
+      "OWN": {
+        "DiD": 0.005,
+        "ci": [
+          -0.0066,
+          0.0176
+        ],
+        "n": 1191,
+        "sig": false
+      },
+      "PE(월정밀)": {
+        "DiD": -0.0519,
+        "ci": [
+          -0.0757,
+          -0.0298
+        ],
+        "n": 332,
+        "sig": true
+      },
+      "PE(연간)|hire": {
+        "n": 355,
+        "DiD": 0.0633,
+        "DiD_ci": [
+          0.0331,
+          0.0951
+        ],
+        "P1": -0.099,
+        "P1_ci": [
+          -0.1567,
+          -0.0366
+        ],
+        "rel": 0.07,
+        "rel_ci": [
+          0.0281,
+          0.1114
+        ]
+      },
+      "OWN|hire": {
+        "n": 1384,
+        "DiD": -0.0091,
+        "DiD_ci": [
+          -0.0247,
+          0.0065
+        ],
+        "P1": 0.0096,
+        "P1_ci": [
+          -0.0164,
+          0.0365
+        ],
+        "rel": -0.0136,
+        "rel_ci": [
+          -0.0344,
+          0.0066
+        ]
+      }
+    },
+    "panelC_inertia_moderator": {
+      "PE(연간)": {
+        "T1": {
+          "DiD": -0.0004,
+          "ci": [
+            -0.0371,
+            0.0345
+          ],
+          "n": 107,
+          "sig": false
+        },
+        "T3": {
+          "DiD": -0.0769,
+          "ci": [
+            -0.1251,
+            -0.0312
+          ],
+          "n": 91,
+          "sig": true
+        },
+        "T3-T1": {
+          "diff": -0.0764,
+          "ci": [
+            -0.1369,
+            -0.0211
+          ],
+          "sig": true
+        }
+      },
+      "OWN": {
+        "T1": {
+          "DiD": 0.0015,
+          "ci": [
+            -0.0126,
+            0.0166
+          ],
+          "n": 351,
+          "sig": false
+        },
+        "T3": {
+          "DiD": 0.0032,
+          "ci": [
+            -0.0214,
+            0.0267
+          ],
+          "n": 389,
+          "sig": false
+        },
+        "T3-T1": {
+          "diff": 0.0017,
+          "ci": [
+            -0.0253,
+            0.0292
+          ],
+          "sig": false
+        }
+      },
+      "PE(월정밀)": {
+        "T1": {
+          "DiD": -0.0183,
+          "ci": [
+            -0.0457,
+            0.0103
+          ],
+          "n": 118,
+          "sig": false
+        },
+        "T3": {
+          "DiD": -0.1133,
+          "ci": [
+            -0.1655,
+            -0.065
+          ],
+          "n": 98,
+          "sig": true
+        },
+        "T3-T1": {
+          "diff": -0.095,
+          "ci": [
+            -0.1509,
+            -0.0405
+          ],
+          "sig": true
+        }
+      }
+    },
+    "panelD_pe_minus_own": {
+      "diff": -0.0385,
+      "ci": [
+        -0.0637,
+        -0.0136
+      ],
+      "sig": true,
+      "n_pe": 317,
+      "n_own": 1191,
+      "equivalence": {
+        "SESOI": 0.046,
+        "holds": false,
+        "margin": [
+          -0.0177,
+          0.0596
+        ],
+        "knife": true
+      }
+    },
+    "tercile_cuts": [
+      0.0833,
+      0.362
+    ],
+    "own_universe": {
+      "all_changes": 28493,
+      "nonPE": 27747,
+      "after_PEpattern_filter": 27081,
+      "firms": 13863,
+      "sampled": 1516,
+      "strat_multiple": 4
+    },
+    "control_pool_excluded": 14789
+  },
+  "prediction": "비-PE 최대주주 변경이 같은 효과와 같은 관성 조절을 내면 '주인 교체 일반', 아니면 'PE 고유'",
+  "verdict": "PE(연간) -0.0335[-0.0543, -0.0118]✓ vs OWN 0.005[-0.0066, 0.0176]✗ | PE−OWN -0.0385[-0.0637, -0.0136]✓ 등가성 미성립 | T3−T1: PE -0.0764 vs OWN 0.0017✗ | PE_SPEC: OWN 무효과 + PE−OWN 유의 — **PE 고유** 메커니즘",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i19_succession.py",
+  "sha256_16": "6abc4b895b41058a",
+  "seed": 42,
+  "runtime_s": 58.7,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "prespecified_verdict": "GENERIC: OWN 효과가 PE 와 등가(δ=0.046) & OWN 에서도 T3−T1 유의 | PE_SPEC: OWN 무유의 & PE−OWN 차이 유의 | PARTIAL: 그 외",
+  "prespec_outcome": "PE_SPEC",
+  "conclusion": "OWN 무효과 + PE−OWN 유의 — **PE 고유** 메커니즘",
+  "ceo_arm_killed": "재무 대표이사 비결측 2018-19 0.5%/2020 19.2%(형식변경 인공물, 변경건 8.7%가 공백차이)/이후 2~6% → 탐지 불가. IROS 는 PDF 11장.",
+  "timing_note": "PE·OWN 모두 연도→6월 로 통일해 타이밍 정밀도 이점을 제거. PE(월정밀)은 참고용."
+}

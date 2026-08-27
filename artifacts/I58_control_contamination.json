@@ -1,0 +1,26 @@
+{
+ "id": "I-58-CONTAM",
+ "title": "반사실 오염 진단",
+ "status": "OK",
+ "estimates": {
+  "현행": {
+   "n_control_obs": 1337,
+   "corr_St_So": 0.3659,
+   "sd_control_S": 0.22,
+   "slope_on_treated_S": 0.3782,
+   "slope_on_own_S": 0.2804,
+   "joint_treated_S": 0.3106,
+   "joint_own_S": 0.1736
+  },
+  "상태균형": {
+   "n_control_obs": 1235,
+   "corr_St_So": 0.7614,
+   "sd_control_S": 0.2269,
+   "slope_on_treated_S": 0.2188,
+   "slope_on_own_S": 0.2484,
+   "joint_treated_S": 0.0351,
+   "joint_own_S": 0.2237
+  }
+ },
+ "note": "대조군 Δ 를 처치기업 S 와 대조군 자기 S 에 동시투입. 유효 반사실이면 처치 S 계수가 0."
+}

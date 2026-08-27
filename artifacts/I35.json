@@ -1,0 +1,224 @@
+{
+  "id": "I-35",
+  "title": "정본 수치 전수 재계산",
+  "status": "PARTIAL",
+  "n": 379,
+  "estimates": {
+    "canonical": {
+      "A1_hire_DiD": {
+        "est": 0.0485,
+        "ci": [
+          0.0163,
+          0.0814
+        ],
+        "n": 367
+      },
+      "A2_rel12": {
+        "est": 0.0878,
+        "ci": [
+          0.0462,
+          0.13
+        ],
+        "n": 367
+      },
+      "A3_P1": {
+        "est": -0.1049,
+        "ci": [
+          -0.1562,
+          -0.0541
+        ],
+        "n": 367
+      },
+      "A4_zero_share": {
+        "est": -0.046,
+        "ci": [
+          -0.0665,
+          -0.0246
+        ],
+        "n": 348,
+        "sig": true
+      },
+      "A5_separation": {
+        "est": 0.0007,
+        "ci": [
+          -0.0353,
+          0.0398
+        ],
+        "n": 367,
+        "sig": false,
+        "equiv": {
+          "SESOI": 0.046,
+          "holds": true,
+          "margin": [
+            0.0107,
+            0.0062
+          ],
+          "knife": false
+        }
+      },
+      "B1_dp": {
+        "est": 0.0443,
+        "ci": [
+          0.0247,
+          0.0645
+        ],
+        "n": 364,
+        "sig": true
+      },
+      "B2_di": {
+        "est": 0.0048,
+        "ci": [
+          -0.0001,
+          0.0102
+        ],
+        "n": 364,
+        "sig": false,
+        "equiv": {
+          "SESOI": 0.0055,
+          "holds": false,
+          "margin": [
+            0.0054,
+            -0.0047
+          ],
+          "knife": true
+        }
+      },
+      "B3_dlogp": {
+        "est": 0.1011,
+        "ci": [
+          0.0544,
+          0.1496
+        ],
+        "n": 358,
+        "sig": true
+      },
+      "B4_dlogi": {
+        "est": 0.0652,
+        "ci": [
+          0.0074,
+          0.1242
+        ],
+        "n": 358,
+        "sig": true
+      },
+      "B5_extensive_share_log": 0.608,
+      "C1_samebin": {
+        "T1": {
+          "est": -0.0152,
+          "ci": [
+            -0.0459,
+            0.0149
+          ],
+          "n": 112,
+          "sig": false
+        },
+        "T3": {
+          "est": -0.111,
+          "ci": [
+            -0.159,
+            -0.0567
+          ],
+          "n": 92,
+          "sig": true
+        },
+        "T3_T1": {
+          "est": -0.0958,
+          "ci": [
+            -0.1566,
+            -0.0357
+          ],
+          "sig": true
+        }
+      },
+      "C2_allctrl": {
+        "T1": {
+          "est": -0.0182,
+          "ci": [
+            -0.0446,
+            0.009
+          ],
+          "n": 128,
+          "sig": false
+        },
+        "T3": {
+          "est": -0.1026,
+          "ci": [
+            -0.1491,
+            -0.0551
+          ],
+          "n": 100,
+          "sig": true
+        },
+        "T3_T1": {
+          "est": -0.0844,
+          "ci": [
+            -0.1404,
+            -0.031
+          ],
+          "sig": true
+        }
+      }
+    },
+    "ledger_crosscheck": {
+      "A1_hire_DiD": {
+        "ledger": 0.0485,
+        "canonical": 0.0485,
+        "abs_diff": 0.0,
+        "rel_diff": 0.0,
+        "match_5pct": true
+      },
+      "A2_rel12": {
+        "ledger": 0.0878,
+        "canonical": 0.0878,
+        "abs_diff": 0.0,
+        "rel_diff": 0.0,
+        "match_5pct": true
+      },
+      "A3_P1": {
+        "ledger": -0.1049,
+        "canonical": -0.1049,
+        "abs_diff": 0.0,
+        "rel_diff": 0.0,
+        "match_5pct": true
+      },
+      "A4_zero_share": {
+        "ledger": -0.046,
+        "canonical": -0.046,
+        "abs_diff": 0.0,
+        "rel_diff": 0.0,
+        "match_5pct": true
+      },
+      "B5_extensive_share_log": {
+        "ledger": 0.71,
+        "canonical": 0.608,
+        "abs_diff": 0.102,
+        "rel_diff": 0.144,
+        "match_5pct": false
+      },
+      "C1_samebin.T3_T1": {
+        "ledger": -0.0958,
+        "canonical": -0.0958,
+        "abs_diff": 0.0,
+        "rel_diff": 0.0,
+        "match_5pct": true
+      }
+    },
+    "tercile_cuts": [
+      0.083333,
+      0.333333
+    ]
+  },
+  "prediction": "원고에 들어갈 모든 수치를 하나의 정의로 재계산하고 기존 기록과 전수 대조한다",
+  "verdict": "대조 6건 중 불일치 1건: ['B5_extensive_share_log']. 관성 조절 표류 원인 확정 — 동일bin -0.0958 vs 전체대조 -0.0844",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i35_canonical.py",
+  "sha256_16": "829ec3501911b2de",
+  "seed": 42,
+  "runtime_s": 23.1,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "canonical_definitions": "표본 379 · 창 [−12,−1]v[1,12] · 셀5NN never-PE · 관성컷 사전-사전 33.33/66.67 백분위 · 부트 999 seed 42 · 조절은 동일bin 정본",
+  "mismatches": [
+    "B5_extensive_share_log"
+  ]
+}

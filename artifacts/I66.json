@@ -1,0 +1,115 @@
+{
+  "id": "I-66",
+  "title": "비중첩 사전추세와 0 채용 창을 살린 강건성",
+  "status": "PARTIAL",
+  "n": 238,
+  "estimates": {
+    "panelA_pretrend_early_state": {
+      "observed": -0.0777,
+      "n": 250,
+      "n_placebo": 1097,
+      "null_mean": 0.0993,
+      "null_sd": 0.1339,
+      "null_ci": [
+        -0.1573,
+        0.3721
+      ],
+      "p_two_sided": 0.1919,
+      "z": -1.32,
+      "excess": -0.177,
+      "sig": false,
+      "excess_ci": [
+        -0.4394,
+        0.0854
+      ],
+      "equiv_vs_effect_0710": true,
+      "equiv_vs_half_effect_0355": false,
+      "one_sided_upper_below_effect": true
+    },
+    "panelB_post_early_state": {
+      "observed": 0.2675,
+      "n": 238,
+      "n_placebo": 1024,
+      "null_mean": 0.1406,
+      "null_sd": 0.1382,
+      "null_ci": [
+        -0.1335,
+        0.4058
+      ],
+      "p_two_sided": 0.3578,
+      "z": 0.92,
+      "excess": 0.1269,
+      "sig": false,
+      "excess_ci": [
+        -0.144,
+        0.3977
+      ],
+      "equiv_vs_effect_0710": true,
+      "equiv_vs_half_effect_0355": false,
+      "one_sided_upper_below_effect": true
+    },
+    "panelC_asinh": {
+      "observed": 0.2062,
+      "n": 289,
+      "n_placebo": 1244,
+      "null_mean": 0.0259,
+      "null_sd": 0.0586,
+      "null_ci": [
+        -0.0887,
+        0.1432
+      ],
+      "p_two_sided": 0.002,
+      "z": 3.08,
+      "excess": 0.1802,
+      "sig": true,
+      "excess_ci": [
+        0.0654,
+        0.2951
+      ],
+      "equiv_vs_effect_0710": true,
+      "equiv_vs_half_effect_0355": true,
+      "one_sided_upper_below_effect": true
+    },
+    "panelD_log1p": {
+      "observed": 0.1623,
+      "n": 289,
+      "n_placebo": 1244,
+      "null_mean": 0.0167,
+      "null_sd": 0.0449,
+      "null_ci": [
+        -0.0686,
+        0.1073
+      ],
+      "p_two_sided": 0.004,
+      "z": 3.24,
+      "excess": 0.1456,
+      "sig": true,
+      "excess_ci": [
+        0.0575,
+        0.2336
+      ],
+      "equiv_vs_effect_0710": true,
+      "equiv_vs_half_effect_0355": true,
+      "one_sided_upper_below_effect": true
+    },
+    "panelE_positivity_selection": {
+      "n_log": 286,
+      "n_asinh": 289,
+      "n_dropped_by_positivity": 3,
+      "share_dropped": 0.0104,
+      "n_placebo_log": 1205,
+      "n_placebo_asinh": 1244
+    },
+    "n_draws": 2000,
+    "design": "I-60 과 동일 매칭·FWL. state 창과 결과 변환만 바꾼다."
+  },
+  "prediction": "state 창을 결과와 분리해도 사전추세는 없고 본 gradient 는 남는가; 0 채용 창을 살려도 남는가",
+  "verdict": "사전추세 -0.0777 (p2 0.1919); 초기 state 본 추정 0.2675 (p2 0.3578); asinh 0.2062, log1p 0.1623; 양수요건 탈락 3건.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i66_pretrend_zeros.py",
+  "sha256_16": "9d5e0ff1b4d5e0a1",
+  "seed": 42,
+  "runtime_s": 57.8,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

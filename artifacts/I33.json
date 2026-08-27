@@ -1,0 +1,202 @@
+{
+  "id": "I-33",
+  "title": "핵심축 검증 — 수준 vs 빈도 식별력",
+  "status": "GO",
+  "n": 379,
+  "estimates": {
+    "baseline": {
+      "frequency(무채용비중)": {
+        "est": -0.046,
+        "ci": [
+          -0.0678,
+          -0.0255
+        ],
+        "sig": true,
+        "n": 348
+      },
+      "level(rel12 log고용)": {
+        "est": 0.0878,
+        "ci": [
+          0.0466,
+          0.1278
+        ],
+        "sig": true,
+        "n": 359
+      }
+    },
+    "T1_quarterly_ES": {
+      "level(rel12)": {
+        "n": 261,
+        "path": [
+          0.0364,
+          0.0536,
+          0.0765,
+          0.1017,
+          0.1351,
+          0.1531,
+          0.1705,
+          0.187,
+          0.2023,
+          0.2207,
+          0.2073,
+          0.188
+        ],
+        "sig": [
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "first_sig_month": 3,
+        "q1_over_q12": 0.194
+      },
+      "frequency": {
+        "n": 251,
+        "path": [
+          -0.0167,
+          -0.0419,
+          -0.0552,
+          -0.0532,
+          -0.0649,
+          -0.0653,
+          -0.0585,
+          -0.0833,
+          -0.0691,
+          -0.0802,
+          -0.0615,
+          -0.0522
+        ],
+        "sig": [
+          false,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "first_sig_month": 6,
+        "q1_over_q12": 0.319
+      }
+    },
+    "T2_inertia_moderator": {
+      "level(rel12)": {
+        "T1": {
+          "est": 0.0355,
+          "ci": [
+            -0.0498,
+            0.1237
+          ],
+          "sig": false,
+          "n": 128
+        },
+        "T3": {
+          "est": 0.1423,
+          "ci": [
+            0.0707,
+            0.2194
+          ],
+          "sig": true,
+          "n": 100
+        },
+        "T3_T1": {
+          "diff": 0.1068,
+          "ci": [
+            -0.0023,
+            0.2146
+          ],
+          "sig": false
+        }
+      },
+      "frequency": {
+        "T1": {
+          "est": -0.0182,
+          "ci": [
+            -0.0453,
+            0.0103
+          ],
+          "sig": false,
+          "n": 128
+        },
+        "T3": {
+          "est": -0.1026,
+          "ci": [
+            -0.1483,
+            -0.0547
+          ],
+          "sig": true,
+          "n": 100
+        },
+        "T3_T1": {
+          "diff": -0.0844,
+          "ci": [
+            -0.1431,
+            -0.0281
+          ],
+          "sig": true
+        }
+      }
+    },
+    "T3_conditional_placebo": {
+      "frequency": {
+        "actual_T3": -0.1026,
+        "null_mean": -0.0046,
+        "null_ci": [
+          -0.0509,
+          0.0419
+        ],
+        "RI_p": 0.0,
+        "sig": true,
+        "n_reps": 200
+      },
+      "level(rel12)": {
+        "actual_T3": 0.1423,
+        "null_mean": -0.0002,
+        "null_ci": [
+          -0.0602,
+          0.0613
+        ],
+        "RI_p": 0.0,
+        "sig": true,
+        "n_reps": 200
+      }
+    },
+    "panelE_extensive_share": {
+      "extensive_share": -4.3487,
+      "ci": [
+        -23.648,
+        19.2469
+      ],
+      "n": 363
+    },
+    "tercile_cuts": [
+      0.0833,
+      0.3333
+    ]
+  },
+  "prediction": "빈도가 통과한 세 검정(점진 onset·관성 조절·고관성 위약)에 수준을 넣어 어느 쪽이 더 잘 식별되는지 판정",
+  "verdict": "**빈도가 더 잘 식별된다** (3/3 vs 2/3) — 주 결과로 빈도 채택, 근거는 '선택 여부'가 아니라 '설계 방어 범위'",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i33_linchpin.py",
+  "sha256_16": "f8ab8e22b0db866c",
+  "seed": 42,
+  "runtime_s": 232.5,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "why": "v3 의 '수준=선택' 판정은 재매칭 ARM-2 근거인데 H18 이 그 arm 을 인공물로 판정했다. 따라서 수준/빈도 구분을 재확립해야 논문을 쓸 수 있다.",
+  "frequency_score": 3,
+  "level_score": 2
+}

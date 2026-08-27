@@ -1,0 +1,305 @@
+{
+  "id": "I-02",
+  "title": "hazard 전환 (이산시간 cloglog)",
+  "status": "GO",
+  "n": 379,
+  "estimates": {
+    "panelA_hazard_by_duration": {
+      "d=1": {
+        "n_obs": 34596,
+        "min_cell": 3194,
+        "t_pre": 0.82,
+        "t_post": 0.8443,
+        "c_pre": 0.8044,
+        "c_post": 0.7978,
+        "DiD_pp": 0.0309,
+        "ci_pp": [
+          0.0118,
+          0.0497
+        ],
+        "sig_pp": true,
+        "DiD_ratio": 0.0381,
+        "ci_ratio": [
+          0.015,
+          0.062
+        ],
+        "sig_ratio": true
+      },
+      "d=2": {
+        "n_obs": 6735,
+        "min_cell": 533,
+        "t_pre": 0.6395,
+        "t_post": 0.6266,
+        "c_pre": 0.5857,
+        "c_post": 0.5848,
+        "DiD_pp": -0.0119,
+        "ci_pp": [
+          -0.0732,
+          0.0389
+        ],
+        "sig_pp": false,
+        "DiD_ratio": -0.0185,
+        "ci_ratio": [
+          -0.111,
+          0.063
+        ],
+        "sig_ratio": false
+      },
+      "d=3": {
+        "n_obs": 2745,
+        "min_cell": 201,
+        "t_pre": 0.4739,
+        "t_post": 0.5522,
+        "c_pre": 0.4819,
+        "c_post": 0.4654,
+        "DiD_pp": 0.0948,
+        "ci_pp": [
+          -0.0099,
+          0.1993
+        ],
+        "sig_pp": false,
+        "DiD_ratio": 0.2066,
+        "ci_ratio": [
+          -0.02,
+          0.494
+        ],
+        "sig_ratio": false
+      },
+      "d=4-5": {
+        "n_obs": 2319,
+        "min_cell": 144,
+        "t_pre": 0.3439,
+        "t_post": 0.4167,
+        "c_pre": 0.383,
+        "c_post": 0.3786,
+        "DiD_pp": 0.0771,
+        "ci_pp": [
+          -0.0399,
+          0.1983
+        ],
+        "sig_pp": false,
+        "DiD_ratio": 0.2256,
+        "ci_ratio": [
+          -0.107,
+          0.65
+        ],
+        "sig_ratio": false
+      },
+      "d=6-11": {
+        "n_obs": 1750,
+        "min_cell": 108,
+        "t_pre": 0.2297,
+        "t_post": 0.3241,
+        "c_pre": 0.2364,
+        "c_post": 0.2606,
+        "DiD_pp": 0.0701,
+        "ci_pp": [
+          -0.0441,
+          0.2011
+        ],
+        "sig_pp": false,
+        "DiD_ratio": 0.2797,
+        "ci_ratio": [
+          -0.153,
+          0.963
+        ],
+        "sig_ratio": false
+      },
+      "d>=12": {
+        "n_obs": 708,
+        "min_cell": 52,
+        "t_pre": 0.1731,
+        "t_post": 0.1579,
+        "c_pre": 0.1763,
+        "c_post": 0.1308,
+        "DiD_pp": 0.0302,
+        "ci_pp": [
+          -0.2083,
+          0.2838
+        ],
+        "sig_pp": false,
+        "DiD_ratio": 0.229,
+        "ci_ratio": [
+          -0.675,
+          3.504
+        ],
+        "sig_ratio": false
+      }
+    },
+    "panelB_cloglog": {
+      "treated": {
+        "coef": 0.0661,
+        "se": 0.0294,
+        "HR": 1.0684,
+        "HR_ci": [
+          1.0085,
+          1.1318
+        ],
+        "p": 0.0245
+      },
+      "post": {
+        "coef": -0.0496,
+        "se": 0.015,
+        "HR": 0.9516,
+        "HR_ci": [
+          0.9239,
+          0.9801
+        ],
+        "p": 0.000971
+      },
+      "tp": {
+        "coef": 0.1478,
+        "se": 0.0347,
+        "HR": 1.1593,
+        "HR_ci": [
+          1.083,
+          1.2409
+        ],
+        "p": 2.07e-05
+      },
+      "n_cells": 4686,
+      "n_firm_months": 48853,
+      "n_ev_fe": 379,
+      "baseline_duration_HR": {
+        "d=2": 0.7546,
+        "d=3": 0.6295,
+        "d=4-5": 0.5245,
+        "d=6-11": 0.4029,
+        "d>=12": 0.2951
+      }
+    },
+    "panelB2_shape": {
+      "treated": {
+        "coef": 0.0678,
+        "se": 0.0308,
+        "HR": 1.0701,
+        "HR_ci": [
+          1.0074,
+          1.1367
+        ],
+        "p": 0.0278
+      },
+      "post": {
+        "coef": -0.0435,
+        "se": 0.0162,
+        "HR": 0.9574,
+        "HR_ci": [
+          0.9276,
+          0.9883
+        ],
+        "p": 0.00712
+      },
+      "tp": {
+        "coef": 0.1314,
+        "se": 0.0381,
+        "HR": 1.1405,
+        "HR_ci": [
+          1.0584,
+          1.2289
+        ],
+        "p": 0.00056
+      },
+      "t_lng": {
+        "coef": -0.0138,
+        "se": 0.0858,
+        "HR": 0.9863,
+        "HR_ci": [
+          0.8336,
+          1.167
+        ],
+        "p": 0.873
+      },
+      "p_lng": {
+        "coef": -0.0547,
+        "se": 0.0476,
+        "HR": 0.9468,
+        "HR_ci": [
+          0.8624,
+          1.0394
+        ],
+        "p": 0.251
+      },
+      "tp_lng": {
+        "coef": 0.1685,
+        "se": 0.1222,
+        "HR": 1.1836,
+        "HR_ci": [
+          0.9315,
+          1.5039
+        ],
+        "p": 0.168
+      },
+      "HR_short_dle2": 1.1405,
+      "HR_long_dge3": 1.3497,
+      "diff_sig": false,
+      "long_defined_as": "d>=3"
+    },
+    "panelC_spell_length": {
+      "n": 343,
+      "DiD_months": -0.1505,
+      "ci": [
+        -0.3067,
+        0.0176
+      ],
+      "sig": false,
+      "knife_edge": true
+    },
+    "panelD_hazard_profile": {
+      "처치_사전": [
+        0.82,
+        0.6395,
+        0.4739,
+        0.3439,
+        0.2297,
+        0.1731
+      ],
+      "처치_사후": [
+        0.8443,
+        0.6266,
+        0.5522,
+        0.4167,
+        0.3241,
+        0.1579
+      ],
+      "대조_사전": [
+        0.8044,
+        0.5857,
+        0.4819,
+        0.383,
+        0.2364,
+        0.1763
+      ],
+      "대조_사후": [
+        0.7978,
+        0.5848,
+        0.4654,
+        0.3786,
+        0.2606,
+        0.1308
+      ]
+    },
+    "duration_labels": [
+      "d=1",
+      "d=2",
+      "d=3",
+      "d=4-5",
+      "d=6-11",
+      "d>=12"
+    ]
+  },
+  "prediction": "채용 hazard의 treated×post HR>1 유의. 지속기간별 형태가 '균일 수준이동'인지 '장기 무행동 집중'인지 판별",
+  "verdict": "cloglog treated×post HR=1.1593 [1.083, 1.2409] p=2.07e-05 ✓ | 형태: 균일 수준이동 (지속기간별 차이 비유의) (단기 1.1405 vs 장기 1.3497, 차이 HR 1.1836 [0.9315, 1.5039]) | 비율DiD 유의 버킷 ['d=1'] | 평균 spell DiD -0.1505개월 ✗",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i02_hazard.py",
+  "sha256_16": "9bec5b3c6d1a92d8",
+  "seed": 42,
+  "runtime_s": 33.8,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "shape": "균일 수준이동 (지속기간별 차이 비유의)",
+  "sig_ratio_buckets": [
+    "d=1"
+  ],
+  "estimator_note": "초판 Panel A(이벤트별 층화)는 장기버킷 표본기아로 폐기, 풀링으로 교체",
+  "memory_note": "grouped binomial: 48,853 기업-월 -> 4,686 셀, 설계행렬 float32"
+}

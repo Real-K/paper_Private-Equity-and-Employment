@@ -1,0 +1,201 @@
+{
+  "id": "I-52",
+  "title": "헤드라인 확정 — 처치−위약 gradient 대비",
+  "status": "GO",
+  "n": 321,
+  "estimates": {
+    "panelA_main": {
+      "n_treated": 301,
+      "n_placebo": 1373,
+      "n_cells": 321,
+      "treated": 0.4827,
+      "treated_ci": [
+        0.1368,
+        0.8355
+      ],
+      "placebo": 0.1202,
+      "placebo_ci": [
+        -0.0527,
+        0.2836
+      ],
+      "diff": 0.3626,
+      "diff_ci": [
+        0.0042,
+        0.7631
+      ],
+      "diff_sig": true,
+      "diff_half_width": 0.3795,
+      "winsor": [
+        5,
+        95
+      ],
+      "cut_values": [
+        -0.8803,
+        1.3404
+      ]
+    },
+    "panelB_spec_curve": {
+      "main_winsor_5_95": {
+        "n_treated": 301,
+        "n_placebo": 1373,
+        "n_cells": 321,
+        "treated": 0.4827,
+        "treated_ci": [
+          0.1368,
+          0.8355
+        ],
+        "placebo": 0.1202,
+        "placebo_ci": [
+          -0.0527,
+          0.2836
+        ],
+        "diff": 0.3626,
+        "diff_ci": [
+          0.0042,
+          0.7631
+        ],
+        "diff_sig": true,
+        "diff_half_width": 0.3795,
+        "winsor": [
+          5,
+          95
+        ],
+        "cut_values": [
+          -0.8803,
+          1.3404
+        ]
+      },
+      "raw": {
+        "n_treated": 301,
+        "n_placebo": 1373,
+        "n_cells": 321,
+        "treated": 0.565,
+        "treated_ci": [
+          0.1936,
+          0.938
+        ],
+        "placebo": 0.1402,
+        "placebo_ci": [
+          -0.0626,
+          0.3624
+        ],
+        "diff": 0.4248,
+        "diff_ci": [
+          -0.0206,
+          0.85
+        ],
+        "diff_sig": false,
+        "diff_half_width": 0.4353,
+        "winsor": null,
+        "cut_values": null
+      },
+      "winsor_(1, 99)": {
+        "n_treated": 301,
+        "n_placebo": 1373,
+        "n_cells": 321,
+        "treated": 0.5468,
+        "treated_ci": [
+          0.1794,
+          0.9379
+        ],
+        "placebo": 0.126,
+        "placebo_ci": [
+          -0.0603,
+          0.3232
+        ],
+        "diff": 0.4207,
+        "diff_ci": [
+          -0.0096,
+          0.8654
+        ],
+        "diff_sig": false,
+        "diff_half_width": 0.4375,
+        "winsor": [
+          1,
+          99
+        ],
+        "cut_values": [
+          -1.3164,
+          2.1711
+        ]
+      },
+      "winsor_(10, 90)": {
+        "n_treated": 301,
+        "n_placebo": 1373,
+        "n_cells": 321,
+        "treated": 0.4282,
+        "treated_ci": [
+          0.1541,
+          0.7193
+        ],
+        "placebo": 0.1026,
+        "placebo_ci": [
+          -0.0354,
+          0.2465
+        ],
+        "diff": 0.3256,
+        "diff_ci": [
+          0.0128,
+          0.6427
+        ],
+        "diff_sig": true,
+        "diff_half_width": 0.315,
+        "winsor": [
+          10,
+          90
+        ],
+        "cut_values": [
+          -0.5936,
+          0.9517
+        ]
+      },
+      "implied_hires": {
+        "n_treated": 303,
+        "n_placebo": 1391,
+        "n_cells": 321,
+        "treated": 0.2786,
+        "treated_ci": [
+          -0.0121,
+          0.5626
+        ],
+        "placebo": 0.0567,
+        "placebo_ci": [
+          -0.0631,
+          0.1918
+        ],
+        "diff": 0.222,
+        "diff_ci": [
+          -0.0778,
+          0.5388
+        ],
+        "diff_sig": false,
+        "diff_half_width": 0.3083,
+        "winsor": [
+          5,
+          95
+        ],
+        "cut_values": [
+          -0.8449,
+          1.1278
+        ]
+      }
+    },
+    "panelC_mde": {
+      "diff_half_width": 0.3795,
+      "MDE_80": 0.5425,
+      "observed_diff": 0.3626,
+      "observed_over_mde": 0.67
+    },
+    "estimand": "beta_treated - beta_placebo (동일 사양·동일 구성)",
+    "primary_spec": "matched difference, Δlog hiring rate, winsor 5/95, FWL adj (log size, pre-growth, age, industry), cell-cluster bootstrap"
+  },
+  "prediction": "사양별 기계적 기준선을 제거한 처치−위약 대비가 유의하고 견고한가",
+  "verdict": "추정대상을 **처치−위약 gradient 대비**로 재정의. 주 사양(winsor 5/95, 절단점 처치표본 산출) 차이 **+0.3626 [0.0042, 0.7631]** ✓ (처치 +0.4827[0.1368, 0.8355] · 위약 +0.1202[-0.0527, 0.2836]; 셀 321, 유사처치 1373). 사양 5종 중 2종에서 차이가 유의하고 **전부 양수**. MDE 0.542, 관측치는 그 0.67배.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i52_headline_final.py",
+  "sha256_16": "088ae91853a4ca3f",
+  "seed": 42,
+  "runtime_s": 48.7,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

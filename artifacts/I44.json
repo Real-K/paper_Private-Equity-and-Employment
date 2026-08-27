@@ -1,0 +1,227 @@
+{
+  "id": "I-44",
+  "title": "상태변수 방어 (I-41 Panel E 정체 규명)",
+  "status": "GO",
+  "n": 301,
+  "estimates": {
+    "panelA_mechanical": {
+      "y_on_near": {
+        "coef": -0.205,
+        "ci": [
+          -0.2753,
+          -0.1386
+        ],
+        "sig": true
+      },
+      "y_on_far": {
+        "coef": -0.1275,
+        "ci": [
+          -0.1883,
+          -0.0649
+        ],
+        "sig": true
+      },
+      "yt_on_near": {
+        "coef": -0.2537,
+        "ci": [
+          -0.3221,
+          -0.1929
+        ],
+        "sig": true
+      }
+    },
+    "panelB_untreated_replication": {
+      "n_pseudo": 1339,
+      "n_clusters": 291,
+      "se_note": "이벤트(셀) 군집 부트스트랩 — 유사처치는 셀당 최대 5건으로 독립이 아니다",
+      "dorm_alone": {
+        "coef": 0.0189,
+        "ci": [
+          -0.0973,
+          0.1349
+        ],
+        "sig": false
+      },
+      "dorm_given_preN": {
+        "coef": -0.4502,
+        "ci": [
+          -0.6766,
+          -0.244
+        ],
+        "sig": true
+      },
+      "preN_coef": {
+        "coef": -0.1542,
+        "ci": [
+          -0.2106,
+          -0.1073
+        ],
+        "sig": true
+      },
+      "dormant_minus_active": {
+        "diff": 0.0137,
+        "ci": [
+          -0.0648,
+          0.0872
+        ],
+        "sig": false,
+        "n_dormant": 364,
+        "n_active": 465
+      }
+    },
+    "panelC_convergent_validity": {
+      "dorm": {
+        "coef": 0.5259,
+        "ci": [
+          0.2348,
+          0.817
+        ],
+        "sig": true,
+        "n": 301,
+        "expected_sign": "+",
+        "as_predicted": true,
+        "dormant_minus_active": {
+          "diff": 0.3472,
+          "ci": [
+            0.1607,
+            0.5313
+          ],
+          "sig": true,
+          "n_dormant": 94,
+          "n_active": 128
+        }
+      },
+      "lN": {
+        "coef": -0.1275,
+        "ci": [
+          -0.1926,
+          -0.0714
+        ],
+        "sig": true,
+        "n": 301,
+        "expected_sign": "−",
+        "as_predicted": true,
+        "dormant_minus_active": {
+          "diff": 0.3713,
+          "ci": [
+            0.1669,
+            0.5622
+          ],
+          "sig": true,
+          "n_dormant": 102,
+          "n_active": 99
+        }
+      },
+      "lr": {
+        "coef": -0.4964,
+        "ci": [
+          -0.8756,
+          -0.1392
+        ],
+        "sig": true,
+        "n": 301,
+        "expected_sign": "−",
+        "as_predicted": true,
+        "dormant_minus_active": {
+          "diff": 0.1676,
+          "ci": [
+            -0.0052,
+            0.3573
+          ],
+          "sig": false,
+          "n_dormant": 100,
+          "n_active": 100
+        }
+      },
+      "mspell": {
+        "coef": 0.0511,
+        "ci": [
+          0.0141,
+          0.0975
+        ],
+        "sig": true,
+        "n": 301,
+        "expected_sign": "+",
+        "as_predicted": true,
+        "dormant_minus_active": {
+          "diff": 0.2605,
+          "ci": [
+            0.0671,
+            0.4451
+          ],
+          "sig": true,
+          "n_dormant": 81,
+          "n_active": 171
+        }
+      }
+    },
+    "panelD_scale_vs_release": {
+      "dorm": {
+        "coef": 0.4099,
+        "ci": [
+          0.0778,
+          0.7534
+        ],
+        "sig": true
+      },
+      "pre_growth": {
+        "coef": -0.2488,
+        "ci": [
+          -0.7125,
+          0.2656
+        ],
+        "sig": false
+      },
+      "n": 256,
+      "growth_alone": {
+        "coef": -0.3663,
+        "ci": [
+          -0.8015,
+          0.0994
+        ],
+        "sig": false
+      }
+    },
+    "panelE_rebased_outcome": {
+      "n": 296,
+      "dorm_alone": {
+        "coef": 1.1238,
+        "ci": [
+          0.8181,
+          1.4466
+        ],
+        "sig": true
+      },
+      "dorm_given_preN_near": {
+        "coef": 1.4512,
+        "ci": [
+          1.0093,
+          1.8666
+        ],
+        "sig": true
+      },
+      "preN_coef": {
+        "coef": 0.0966,
+        "ci": [
+          0.0051,
+          0.1867
+        ],
+        "sig": true
+      }
+    },
+    "corr_dorm_lpreN_near": -0.7235,
+    "n": 301,
+    "SESOI": 0.3472
+  },
+  "prediction": "I-41 Panel E 의 부호반전이 (a) 종속변수 구성요소를 우변에 넣은 산술 인공물인가 (b) 상태변수는 지표 선택에 견고한가",
+  "verdict": "[A] 결과를 겹치는 창의 log 사전총채용에 회귀하면 -0.2050 — 겹치지 않는 창에서는 -0.1275. 대조 차감 전 처치 자체변화는 -0.2537 (산술적 −1 방향). [B] **미처치 대조기업 1339건에서 동일 회귀를 돌리면 휴면 계수가 -0.4502** — 처치표본의 −0.3812 와 같은 방향·유사 크기. 아무 일도 일어나지 않은 기업에서 재현되므로 **부호반전은 PE 에 대해 아무것도 말하지 않는다.** [C] 상태변수 4종 중 3종이 예측 방향으로 유의 — 지표가 달라도 같은 기울기. [D] 사전 고용성장 동시투입 후에도 휴면 +0.4099. [E] 겹침을 반대편으로 옮기면(결과 기준창 = 상태변수 창) 휴면 계수가 +1.4512 로 **과대** 쪽 인공물이 된다 — 부호가 어느 변수가 기준창과 겹치는지에 따라 뒤집히므로 산술 인공물임이 이중으로 확인된다. Panel E 는 방어 근거가 아니라 인공물의 2차 증명이다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i44_state_variable.py",
+  "sha256_16": "0b60364cce3e4ae0",
+  "seed": 42,
+  "runtime_s": 21.2,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "supersedes_interpretation_of": "I41.json panelE_given_preN",
+  "note": "추정치 재계산 아님 — I-41 Panel E 는 그대로 두고 그 해석을 확정한다."
+}

@@ -1,0 +1,113 @@
+{
+  "id": "I-54",
+  "title": "남은 한계 보완 — 2차 결과대상 · 층화 RI · RI 기준 검정력",
+  "status": "GO",
+  "n": 301,
+  "estimates": {
+    "panelAB_ri": {
+      "hire_rate": {
+        "observed": 0.4827,
+        "n_treated": 301,
+        "n_draws": 2000,
+        "null_mean": 0.1173,
+        "null_sd": 0.1664,
+        "null_ci": [
+          -0.2041,
+          0.4592
+        ],
+        "RI_p": 0.0175,
+        "sig": true,
+        "z": 2.2,
+        "excess_over_null": 0.3655,
+        "MDE_RI_80": 0.4138,
+        "observed_excess_over_MDE": 0.88
+      },
+      "employment": {
+        "observed": -0.0292,
+        "n_treated": 305,
+        "n_draws": 2000,
+        "null_mean": 0.0838,
+        "null_sd": 0.051,
+        "null_ci": [
+          -0.0198,
+          0.1769
+        ],
+        "RI_p": 0.983,
+        "sig": false,
+        "z": -2.22,
+        "excess_over_null": -0.113,
+        "MDE_RI_80": 0.1267,
+        "observed_excess_over_MDE": -0.89
+      },
+      "hire_rate_stratified": {
+        "observed": 0.4827,
+        "n_treated": 301,
+        "n_draws": 2000,
+        "null_mean": 0.1278,
+        "null_sd": 0.1888,
+        "null_ci": [
+          -0.2373,
+          0.5184
+        ],
+        "RI_p": 0.0355,
+        "sig": true,
+        "z": 1.88,
+        "excess_over_null": 0.355,
+        "MDE_RI_80": 0.4696,
+        "observed_excess_over_MDE": 0.76
+      },
+      "employment_stratified": {
+        "observed": -0.0292,
+        "n_treated": 305,
+        "n_draws": 2000,
+        "null_mean": 0.0836,
+        "null_sd": 0.0567,
+        "null_ci": [
+          -0.0256,
+          0.1933
+        ],
+        "RI_p": 0.9785,
+        "sig": false,
+        "z": -1.99,
+        "excess_over_null": -0.1128,
+        "MDE_RI_80": 0.1411,
+        "observed_excess_over_MDE": -0.8
+      }
+    },
+    "panelC_power": {
+      "bootstrap_MDE_from_I52": 0.5425,
+      "bootstrap_observed_diff": 0.3626,
+      "RI_MDE": 0.4138,
+      "RI_excess": 0.3655,
+      "RI_power_ratio": 0.88,
+      "RI_MDE_stratified": 0.4696,
+      "stratified_null_sd_reduction": -0.135
+    },
+    "panelD_placebo_source": {
+      "상태창 [−24,−13] (기준)": {
+        "n_treated": 301,
+        "n_placebo": 1373,
+        "treated": 0.4827,
+        "placebo": 0.1202,
+        "diff": 0.3626
+      },
+      "상태창 [−36,−25]": {
+        "n_treated": 256,
+        "n_placebo": 1198,
+        "treated": 0.36,
+        "placebo": 0.1171,
+        "diff": 0.2429
+      }
+    },
+    "n_draws": 2000
+  },
+  "prediction": "고용 결과대상에서도 gradient 가 나타나는가 · 층화로 귀무 분산을 줄일 수 있는가",
+  "verdict": "[A] 두 번째 결과대상 **Δlog 고용**: 관측 -0.0292 vs 귀무 +0.0838 (SD 0.0510), RI p = 0.9830 ✗ — 고용에서는 미검출 — 채용률에 국한된다. [B] 층화 RI 로 귀무 SD 0.1664 → 0.1888 (-14%), RI p 0.0175 → 0.0355. [C] **RI 기준 MDE 는 0.414 이고 관측초과는 그 0.88배** — 부트스트랩 기준(0.67배)보다 낫다. 원고는 두 기준을 구분해 보고해야 한다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i54_limits.py",
+  "sha256_16": "1d943a939fe53318",
+  "seed": 42,
+  "runtime_s": 35.9,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

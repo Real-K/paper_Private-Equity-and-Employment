@@ -1,0 +1,278 @@
+{
+  "id": "I-36",
+  "title": "hazard 회귀표 (중첩 사양 + 적합통계)",
+  "status": "GO",
+  "n": 379,
+  "estimates": {
+    "n_firm_months": 48853,
+    "n_cells": 4686,
+    "n_events": 379,
+    "tercile_cut_inaction": 0.3333,
+    "pressure_cut_years": 2.42,
+    "specs": {
+      "(1)": {
+        "fe_event": false,
+        "fe_duration": true,
+        "cluster": "event",
+        "n_clusters": 379,
+        "n_cells": 4686,
+        "n_firm_months": 48853,
+        "pseudo_r2_mcfadden": 0.2468,
+        "loglik": -9809.0,
+        "deviance": 12631.3,
+        "df_model": 8,
+        "terms": {
+          "treated": {
+            "coef": 0.0525,
+            "se": 0.0203,
+            "z": 2.58,
+            "p": 0.0098,
+            "HR": 1.0539,
+            "ci": [
+              1.0127,
+              1.0968
+            ]
+          },
+          "post": {
+            "coef": -0.0183,
+            "se": 0.0114,
+            "z": -1.6,
+            "p": 0.11,
+            "HR": 0.9819,
+            "ci": [
+              0.9602,
+              1.0041
+            ]
+          },
+          "treated x post": {
+            "coef": 0.0986,
+            "se": 0.0242,
+            "z": 4.07,
+            "p": 4.69e-05,
+            "HR": 1.1036,
+            "ci": [
+              1.0524,
+              1.1572
+            ]
+          }
+        }
+      },
+      "(2)": {
+        "fe_event": true,
+        "fe_duration": true,
+        "cluster": "event",
+        "n_clusters": 379,
+        "n_cells": 4686,
+        "n_firm_months": 48853,
+        "pseudo_r2_mcfadden": 0.5055,
+        "loglik": -6440.0,
+        "deviance": 5893.3,
+        "df_model": 386,
+        "terms": {
+          "treated": {
+            "coef": 0.0661,
+            "se": 0.0294,
+            "z": 2.25,
+            "p": 0.0245,
+            "HR": 1.0684,
+            "ci": [
+              1.0085,
+              1.1318
+            ]
+          },
+          "post": {
+            "coef": -0.0496,
+            "se": 0.015,
+            "z": -3.3,
+            "p": 0.000971,
+            "HR": 0.9516,
+            "ci": [
+              0.9239,
+              0.9801
+            ]
+          },
+          "treated x post": {
+            "coef": 0.1478,
+            "se": 0.0347,
+            "z": 4.26,
+            "p": 2.07e-05,
+            "HR": 1.1593,
+            "ci": [
+              1.083,
+              1.2409
+            ]
+          }
+        }
+      },
+      "(3)": {
+        "fe_event": true,
+        "fe_duration": true,
+        "cluster": "event",
+        "n_clusters": 379,
+        "n_cells": 4686,
+        "n_firm_months": 48853,
+        "pseudo_r2_mcfadden": 0.5073,
+        "loglik": -6415.7,
+        "deviance": 5844.7,
+        "df_model": 389,
+        "terms": {
+          "treated": {
+            "coef": 0.1531,
+            "se": 0.0343,
+            "z": 4.46,
+            "p": 8.29e-06,
+            "HR": 1.1655,
+            "ci": [
+              1.0896,
+              1.2466
+            ]
+          },
+          "post": {
+            "coef": -0.0651,
+            "se": 0.0174,
+            "z": -3.74,
+            "p": 0.000188,
+            "HR": 0.937,
+            "ci": [
+              0.9055,
+              0.9695
+            ]
+          },
+          "treated x post": {
+            "coef": 0.0918,
+            "se": 0.0405,
+            "z": 2.27,
+            "p": 0.0235,
+            "HR": 1.0962,
+            "ci": [
+              1.0125,
+              1.1868
+            ]
+          },
+          "treated x high inaction": {
+            "coef": -0.3204,
+            "se": 0.0677,
+            "z": -4.73,
+            "p": 2.2e-06,
+            "HR": 0.7259,
+            "ci": [
+              0.6357,
+              0.8288
+            ]
+          },
+          "post x high inaction": {
+            "coef": 0.0607,
+            "se": 0.0344,
+            "z": 1.76,
+            "p": 0.0777,
+            "HR": 1.0626,
+            "ci": [
+              0.9933,
+              1.1367
+            ]
+          },
+          "treated x post x high inaction": {
+            "coef": 0.2054,
+            "se": 0.0818,
+            "z": 2.51,
+            "p": 0.0121,
+            "HR": 1.2281,
+            "ci": [
+              1.0461,
+              1.4417
+            ]
+          }
+        }
+      },
+      "(4)": {
+        "fe_event": true,
+        "fe_duration": true,
+        "cluster": "event",
+        "n_clusters": 379,
+        "n_cells": 4686,
+        "n_firm_months": 48853,
+        "pseudo_r2_mcfadden": 0.5059,
+        "loglik": -6433.8,
+        "deviance": 5880.8,
+        "df_model": 389,
+        "terms": {
+          "treated": {
+            "coef": 0.0742,
+            "se": 0.0322,
+            "z": 2.3,
+            "p": 0.0212,
+            "HR": 1.077,
+            "ci": [
+              1.0112,
+              1.1471
+            ]
+          },
+          "post": {
+            "coef": -0.0528,
+            "se": 0.0164,
+            "z": -3.22,
+            "p": 0.00129,
+            "HR": 0.9486,
+            "ci": [
+              0.9186,
+              0.9796
+            ]
+          },
+          "treated x post": {
+            "coef": 0.1106,
+            "se": 0.0366,
+            "z": 3.02,
+            "p": 0.00254,
+            "HR": 1.117,
+            "ci": [
+              1.0396,
+              1.2002
+            ]
+          },
+          "treated x pressure": {
+            "coef": -0.0509,
+            "se": 0.0804,
+            "z": -0.63,
+            "p": 0.526,
+            "HR": 0.9503,
+            "ci": [
+              0.8118,
+              1.1125
+            ]
+          },
+          "post x pressure": {
+            "coef": 0.0192,
+            "se": 0.0415,
+            "z": 0.46,
+            "p": 0.644,
+            "HR": 1.0194,
+            "ci": [
+              0.9397,
+              1.1058
+            ]
+          },
+          "treated x post x pressure": {
+            "coef": 0.2532,
+            "se": 0.1026,
+            "z": 2.47,
+            "p": 0.0136,
+            "HR": 1.2881,
+            "ci": [
+              1.0535,
+              1.575
+            ]
+          }
+        }
+      }
+    }
+  },
+  "prediction": "저널 표 형식에 필요한 중첩 사양별 계수·군집SE·FE·N·클러스터·pseudo-R² 를 산출한다",
+  "verdict": "4개 사양. 주 사양(2) treated×post HR=1.1593, pseudo-R²=0.5055, clusters=379",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i36_regression_table.py",
+  "sha256_16": "9cf5cee515dd099d",
+  "seed": 42,
+  "runtime_s": 54.9,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

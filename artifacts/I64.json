@@ -1,0 +1,78 @@
+{
+  "id": "I-64",
+  "title": "사전추세 — 12개월 해상도 · 위약 상대 RI · gradient HonestDiD",
+  "status": "GO",
+  "n": 283,
+  "estimates": {
+    "pre_12m": {
+      "observed": 0.1068,
+      "n": 283,
+      "null_mean": 0.391,
+      "null_sd": 0.1359,
+      "null_ci": [
+        0.1073,
+        0.6584
+      ],
+      "RI_p_two_sided": 0.051,
+      "RI_p_upper": 0.975,
+      "z": -2.09,
+      "boot_ci": [
+        -0.1955,
+        0.4351
+      ]
+    },
+    "post_12m": {
+      "observed": 0.725,
+      "n": 283,
+      "null_mean": 0.0862,
+      "null_sd": 0.1517,
+      "null_ci": [
+        -0.2017,
+        0.3844
+      ],
+      "RI_p_two_sided": 0.001,
+      "RI_p_upper": 0.0005,
+      "z": 4.21,
+      "boot_ci": [
+        0.3259,
+        1.1081
+      ]
+    },
+    "equivalence_12m": {
+      "SESOI": 0.725,
+      "pre_ci": [
+        -0.1955,
+        0.4351
+      ],
+      "holds": true,
+      "margin": [
+        0.5295,
+        0.2899
+      ]
+    },
+    "honestdid": {
+      "resolution_12m": {
+        "post": 0.725,
+        "post_se": 0.1995,
+        "max_pre_abs": 0.1068,
+        "Mbar": 3.126
+      },
+      "resolution_quarterly": {
+        "post_mean": 0.1259,
+        "post_se_approx": 0.0711,
+        "max_pre_abs": 0.0871,
+        "Mbar": 0.0
+      }
+    },
+    "n_draws": 2000
+  },
+  "prediction": "분기 해상도의 등가성 미성립을 더 적합한 질문으로 바꿀 수 있는가",
+  "verdict": "[A] 12개월 해상도 사전 gradient +0.1068 [-0.1955, 0.4351] vs 사후 +0.7250. 등가성 성립. [B] 위약 귀무 대비 사전 gradient z=-2.09, RI p(양측) 0.051. [C] HonestDiD M̄: 12개월 3.126 · 분기 0.000.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i64_pretrend_honest.py",
+  "sha256_16": "c40984e3e110919e",
+  "seed": 42,
+  "runtime_s": 38.8,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

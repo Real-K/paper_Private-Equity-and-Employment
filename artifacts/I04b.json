@@ -1,0 +1,714 @@
+{
+  "id": "I-04b",
+  "title": "실적 앵커 v2 (분모오염·커버리지·지평 수정)",
+  "status": "PARTIAL",
+  "n": 379,
+  "estimates": {
+    "panelA_decomposition": {
+      "log_rev|h1": {
+        "DiD": -0.0191,
+        "ci": [
+          -0.1242,
+          0.0773
+        ],
+        "n": 152,
+        "sig": false
+      },
+      "log_rev|h2": {
+        "DiD": 0.0009,
+        "ci": [
+          -0.1242,
+          0.125
+        ],
+        "n": 121,
+        "sig": false
+      },
+      "log_rev|h3": {
+        "DiD": 0.0622,
+        "ci": [
+          -0.0726,
+          0.2183
+        ],
+        "n": 93,
+        "sig": false
+      },
+      "log_emp|h1": {
+        "DiD": 0.1518,
+        "ci": [
+          0.1068,
+          0.1972
+        ],
+        "n": 328,
+        "sig": true
+      },
+      "log_emp|h2": {
+        "DiD": 0.1841,
+        "ci": [
+          0.12,
+          0.2489
+        ],
+        "n": 283,
+        "sig": true
+      },
+      "log_emp|h3": {
+        "DiD": 0.1638,
+        "ci": [
+          0.0845,
+          0.2556
+        ],
+        "n": 232,
+        "sig": true
+      },
+      "log_rev_pe|h1": {
+        "DiD": -0.1207,
+        "ci": [
+          -0.2116,
+          -0.0297
+        ],
+        "n": 151,
+        "sig": true
+      },
+      "log_rev_pe|h2": {
+        "DiD": -0.0895,
+        "ci": [
+          -0.1951,
+          0.0186
+        ],
+        "n": 121,
+        "sig": false
+      },
+      "log_rev_pe|h3": {
+        "DiD": 0.0218,
+        "ci": [
+          -0.0962,
+          0.147
+        ],
+        "n": 92,
+        "sig": false
+      }
+    },
+    "panelB_employment_free": {
+      "roa|h1": {
+        "DiD": -0.0079,
+        "ci": [
+          -0.0367,
+          0.0206
+        ],
+        "n": 155,
+        "sig": false
+      },
+      "roa|h2": {
+        "DiD": -0.0131,
+        "ci": [
+          -0.0482,
+          0.0252
+        ],
+        "n": 122,
+        "sig": false
+      },
+      "roa|h3": {
+        "DiD": 0.0265,
+        "ci": [
+          -0.0109,
+          0.0728
+        ],
+        "n": 93,
+        "sig": false
+      },
+      "turn|h1": {
+        "DiD": -0.287,
+        "ci": [
+          -0.604,
+          -0.0503
+        ],
+        "n": 152,
+        "sig": true
+      },
+      "turn|h2": {
+        "DiD": -0.0874,
+        "ci": [
+          -0.2714,
+          0.0687
+        ],
+        "n": 120,
+        "sig": false
+      },
+      "turn|h3": {
+        "DiD": -0.0335,
+        "ci": [
+          -0.2036,
+          0.1253
+        ],
+        "n": 92,
+        "sig": false
+      },
+      "log_rev|h1": {
+        "DiD": -0.0191,
+        "ci": [
+          -0.1219,
+          0.0812
+        ],
+        "n": 152,
+        "sig": false
+      },
+      "log_rev|h2": {
+        "DiD": 0.0009,
+        "ci": [
+          -0.1138,
+          0.1161
+        ],
+        "n": 121,
+        "sig": false
+      },
+      "log_rev|h3": {
+        "DiD": 0.0622,
+        "ci": [
+          -0.0747,
+          0.2126
+        ],
+        "n": 93,
+        "sig": false
+      },
+      "log_asset|h1": {
+        "DiD": 0.2265,
+        "ci": [
+          0.1195,
+          0.3395
+        ],
+        "n": 155,
+        "sig": true
+      },
+      "log_asset|h2": {
+        "DiD": 0.1796,
+        "ci": [
+          0.0701,
+          0.2972
+        ],
+        "n": 123,
+        "sig": true
+      },
+      "log_asset|h3": {
+        "DiD": 0.2396,
+        "ci": [
+          0.0974,
+          0.3855
+        ],
+        "n": 95,
+        "sig": true
+      }
+    },
+    "panelC_nps_full": {
+      "log_wage|h1": {
+        "DiD": 0.0184,
+        "ci": [
+          0.0097,
+          0.0269
+        ],
+        "n": 315,
+        "sig": true
+      },
+      "log_wage|h2": {
+        "DiD": 0.018,
+        "ci": [
+          0.0065,
+          0.0297
+        ],
+        "n": 273,
+        "sig": true
+      },
+      "log_wage|h3": {
+        "DiD": 0.0179,
+        "ci": [
+          0.003,
+          0.0327
+        ],
+        "n": 225,
+        "sig": true
+      },
+      "log_payroll|h1": {
+        "DiD": 0.1166,
+        "ci": [
+          0.0813,
+          0.1493
+        ],
+        "n": 315,
+        "sig": true
+      },
+      "log_payroll|h2": {
+        "DiD": 0.1742,
+        "ci": [
+          0.1218,
+          0.2316
+        ],
+        "n": 273,
+        "sig": true
+      },
+      "log_payroll|h3": {
+        "DiD": 0.1861,
+        "ci": [
+          0.104,
+          0.2625
+        ],
+        "n": 225,
+        "sig": true
+      },
+      "alive|h1": {
+        "DiD": 0.0061,
+        "ci": [
+          -0.0149,
+          0.0288
+        ],
+        "n": 345,
+        "sig": false
+      },
+      "alive|h2": {
+        "DiD": 0.0093,
+        "ci": [
+          -0.0198,
+          0.0376
+        ],
+        "n": 303,
+        "sig": false
+      },
+      "alive|h3": {
+        "DiD": 0.0068,
+        "ci": [
+          -0.0284,
+          0.0418
+        ],
+        "n": 253,
+        "sig": false
+      }
+    },
+    "panelD_by_inertia": {
+      "T1저관성": {
+        "roa|h1": {
+          "DiD": -0.014,
+          "ci": [
+            -0.0608,
+            0.0283
+          ],
+          "n": 68,
+          "sig": false
+        },
+        "roa|h2": {
+          "DiD": -0.0105,
+          "ci": [
+            -0.0775,
+            0.0504
+          ],
+          "n": 53,
+          "sig": false
+        },
+        "roa|h3": {
+          "DiD": 0.0345,
+          "ci": [
+            -0.0307,
+            0.1132
+          ],
+          "n": 49,
+          "sig": false
+        },
+        "turn|h1": {
+          "DiD": -0.124,
+          "ci": [
+            -0.2961,
+            0.0275
+          ],
+          "n": 68,
+          "sig": false
+        },
+        "turn|h2": {
+          "DiD": -0.0103,
+          "ci": [
+            -0.1958,
+            0.1859
+          ],
+          "n": 53,
+          "sig": false
+        },
+        "turn|h3": {
+          "DiD": 0.0019,
+          "ci": [
+            -0.2648,
+            0.2842
+          ],
+          "n": 49,
+          "sig": false
+        },
+        "log_rev|h1": {
+          "DiD": -0.0539,
+          "ci": [
+            -0.1817,
+            0.0752
+          ],
+          "n": 68,
+          "sig": false
+        },
+        "log_rev|h2": {
+          "DiD": -0.0099,
+          "ci": [
+            -0.1517,
+            0.138
+          ],
+          "n": 54,
+          "sig": false
+        },
+        "log_rev|h3": {
+          "DiD": 0.0924,
+          "ci": [
+            -0.0643,
+            0.265
+          ],
+          "n": 49,
+          "sig": false
+        },
+        "log_wage|h1": {
+          "DiD": 0.0201,
+          "ci": [
+            0.0071,
+            0.0321
+          ],
+          "n": 121,
+          "sig": true
+        },
+        "log_wage|h2": {
+          "DiD": 0.022,
+          "ci": [
+            0.004,
+            0.04
+          ],
+          "n": 102,
+          "sig": true
+        },
+        "log_wage|h3": {
+          "DiD": 0.029,
+          "ci": [
+            0.0082,
+            0.0485
+          ],
+          "n": 89,
+          "sig": true
+        },
+        "alive|h1": {
+          "DiD": -0.003,
+          "ci": [
+            -0.041,
+            0.0299
+          ],
+          "n": 126,
+          "sig": false
+        },
+        "alive|h2": {
+          "DiD": 0.0177,
+          "ci": [
+            -0.0346,
+            0.0676
+          ],
+          "n": 108,
+          "sig": false
+        },
+        "alive|h3": {
+          "DiD": 0.0204,
+          "ci": [
+            -0.0316,
+            0.0701
+          ],
+          "n": 94,
+          "sig": false
+        }
+      },
+      "T3고관성": {
+        "roa|h1": {
+          "DiD": -0.0137,
+          "ci": [
+            -0.0683,
+            0.0492
+          ],
+          "n": 33,
+          "sig": false
+        },
+        "roa|h2": {
+          "DiD": -0.045,
+          "ci": [
+            -0.0984,
+            0.013
+          ],
+          "n": 24,
+          "sig": false
+        },
+        "roa|h3": {
+          "DiD": null,
+          "ci": null,
+          "n": 14,
+          "sig": false
+        },
+        "turn|h1": {
+          "DiD": -0.2411,
+          "ci": [
+            -0.8854,
+            0.2401
+          ],
+          "n": 32,
+          "sig": false
+        },
+        "turn|h2": {
+          "DiD": -0.1215,
+          "ci": [
+            -0.7414,
+            0.3332
+          ],
+          "n": 24,
+          "sig": false
+        },
+        "turn|h3": {
+          "DiD": null,
+          "ci": null,
+          "n": 14,
+          "sig": false
+        },
+        "log_rev|h1": {
+          "DiD": -0.1426,
+          "ci": [
+            -0.445,
+            0.1189
+          ],
+          "n": 32,
+          "sig": false
+        },
+        "log_rev|h2": {
+          "DiD": -0.1367,
+          "ci": [
+            -0.5309,
+            0.2509
+          ],
+          "n": 24,
+          "sig": false
+        },
+        "log_rev|h3": {
+          "DiD": null,
+          "ci": null,
+          "n": 15,
+          "sig": false
+        },
+        "log_wage|h1": {
+          "DiD": 0.0138,
+          "ci": [
+            -0.0046,
+            0.03
+          ],
+          "n": 91,
+          "sig": false
+        },
+        "log_wage|h2": {
+          "DiD": 0.0148,
+          "ci": [
+            -0.0109,
+            0.0385
+          ],
+          "n": 79,
+          "sig": false
+        },
+        "log_wage|h3": {
+          "DiD": 0.0012,
+          "ci": [
+            -0.0322,
+            0.0324
+          ],
+          "n": 65,
+          "sig": false
+        },
+        "alive|h1": {
+          "DiD": -0.0102,
+          "ci": [
+            -0.0531,
+            0.0265
+          ],
+          "n": 98,
+          "sig": false
+        },
+        "alive|h2": {
+          "DiD": -0.0302,
+          "ci": [
+            -0.0907,
+            0.0233
+          ],
+          "n": 86,
+          "sig": false
+        },
+        "alive|h3": {
+          "DiD": -0.0301,
+          "ci": [
+            -0.1068,
+            0.0411
+          ],
+          "n": 73,
+          "sig": false
+        }
+      },
+      "diff": {
+        "roa|h1": {
+          "diff": 0.0003,
+          "ci": [
+            -0.0747,
+            0.0825
+          ],
+          "sig": false,
+          "n1": 68,
+          "n3": 33
+        },
+        "roa|h2": {
+          "diff": -0.0345,
+          "ci": [
+            -0.1248,
+            0.0604
+          ],
+          "sig": false,
+          "n1": 53,
+          "n3": 24
+        },
+        "turn|h1": {
+          "diff": -0.1172,
+          "ci": [
+            -0.9249,
+            0.3991
+          ],
+          "sig": false,
+          "n1": 68,
+          "n3": 32
+        },
+        "turn|h2": {
+          "diff": -0.1111,
+          "ci": [
+            -0.7786,
+            0.389
+          ],
+          "sig": false,
+          "n1": 53,
+          "n3": 24
+        },
+        "log_rev|h1": {
+          "diff": -0.0886,
+          "ci": [
+            -0.408,
+            0.2037
+          ],
+          "sig": false,
+          "n1": 68,
+          "n3": 32
+        },
+        "log_rev|h2": {
+          "diff": -0.1268,
+          "ci": [
+            -0.5494,
+            0.3004
+          ],
+          "sig": false,
+          "n1": 54,
+          "n3": 24
+        },
+        "log_rev|h3": {
+          "diff": -0.1938,
+          "ci": [
+            -0.5613,
+            0.2421
+          ],
+          "sig": false,
+          "n1": 49,
+          "n3": 15
+        },
+        "log_wage|h1": {
+          "diff": -0.0064,
+          "ci": [
+            -0.0284,
+            0.0142
+          ],
+          "sig": false,
+          "n1": 121,
+          "n3": 91
+        },
+        "log_wage|h2": {
+          "diff": -0.0072,
+          "ci": [
+            -0.0376,
+            0.0222
+          ],
+          "sig": false,
+          "n1": 102,
+          "n3": 79
+        },
+        "log_wage|h3": {
+          "diff": -0.0278,
+          "ci": [
+            -0.0639,
+            0.0102
+          ],
+          "sig": false,
+          "n1": 89,
+          "n3": 65
+        },
+        "alive|h1": {
+          "diff": -0.0072,
+          "ci": [
+            -0.06,
+            0.0448
+          ],
+          "sig": false,
+          "n1": 126,
+          "n3": 98
+        },
+        "alive|h2": {
+          "diff": -0.048,
+          "ci": [
+            -0.1246,
+            0.0255
+          ],
+          "sig": false,
+          "n1": 108,
+          "n3": 86
+        },
+        "alive|h3": {
+          "diff": -0.0505,
+          "ci": [
+            -0.1389,
+            0.0321
+          ],
+          "sig": false,
+          "n1": 94,
+          "n3": 73
+        }
+      }
+    },
+    "labels": {
+      "log_rev": "log 매출",
+      "log_emp": "log 고용",
+      "log_rev_pe": "log 매출/인원",
+      "roa": "ROA(영업이익/자산)",
+      "turn": "자산회전율",
+      "log_asset": "log 자산",
+      "log_wage": "log 인당임금",
+      "log_payroll": "log 총임금",
+      "alive": "생존"
+    },
+    "tercile_cuts": [
+      0.0833,
+      0.3333
+    ]
+  },
+  "prediction": "고용이 분모에 들어가지 않는 지표로 관성 제거의 가치를 검정하고, 사전 관성으로 가른다",
+  "verdict": "[분해] log매출 h+1 -0.0191✗ · log고용 0.1518✓ · 매출/인원 -0.1207✓ → v1 하락은 분모(고용) 기계효과 | [고용무관] 개선 ['log_asset|h1', 'log_asset|h2', 'log_asset|h3', 'log_wage|h1', 'log_wage|h2', 'log_wage|h3', 'log_payroll|h1', 'log_payroll|h2', 'log_payroll|h3'] / 악화 ['turn|h1'] | 혼재: 개선 ['log_asset|h1', 'log_asset|h2', 'log_asset|h3', 'log_wage|h1', 'log_wage|h2', 'log_wage|h3', 'log_payroll|h1', 'log_payroll|h2', 'log_payroll|h3'] / 악화 ['turn|h1']",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i04b_performance_v2.py",
+  "sha256_16": "2bc7f48fc67a40b0",
+  "seed": 42,
+  "runtime_s": 60.8,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "혼재: 개선 ['log_asset|h1', 'log_asset|h2', 'log_asset|h3', 'log_wage|h1', 'log_wage|h2', 'log_wage|h3', 'log_payroll|h1', 'log_payroll|h2', 'log_payroll|h3'] / 악화 ['turn|h1']",
+  "v1_defects_fixed": [
+    "분모 오염(매출/인원의 분모가 처치대상)",
+    "재무 커버리지 부족(T3 h+1 n=32) → NPS 전수지표 병행",
+    "지평 h+1,+2만 → h+3 추가"
+  ],
+  "v1_result_kept": "v1 의 매출/인원 하락(전체 -0.1207✓, T3 -0.3232✓)은 폐기가 아니라 Panel A 에서 분해해 해석한다."
+}

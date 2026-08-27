@@ -1,0 +1,500 @@
+{
+  "id": "I-46",
+  "title": "휴면 vs 사전 물량 — 동일 비겹침 창 경마 (리뷰3 MC1)",
+  "status": "PARTIAL",
+  "n": 301,
+  "estimates": {
+    "panelA_horserace": {
+      "dorm": {
+        "coef": 0.0354,
+        "ci": [
+          -0.466,
+          0.5789
+        ],
+        "n": 301,
+        "sig": false
+      },
+      "logN": {
+        "coef": -0.1515,
+        "ci": [
+          -0.3037,
+          0.0117
+        ],
+        "n": 301,
+        "sig": false
+      },
+      "corr": -0.8542,
+      "dorm_alone": {
+        "coef": 0.3522,
+        "ci": [
+          -0.1251,
+          0.8337
+        ],
+        "n": 301,
+        "sig": false
+      },
+      "logN_alone": {
+        "coef": -0.1578,
+        "ci": [
+          -0.2849,
+          -0.0073
+        ],
+        "n": 301,
+        "sig": true
+      }
+    },
+    "panelB_excess_dormancy": {
+      "slope": {
+        "coef": -0.3026,
+        "ci": [
+          -0.9505,
+          0.4003
+        ],
+        "n": 301,
+        "sig": false
+      },
+      "slope_raw": {
+        "coef": -0.3518,
+        "ci": [
+          -0.9671,
+          0.3358
+        ],
+        "n": 301,
+        "sig": false
+      },
+      "corr_with_logN": -0.0133,
+      "mean": 0.0532,
+      "tercile": {
+        "diff": 0.0031,
+        "ci": [
+          -0.1756,
+          0.1904
+        ],
+        "n_hi": 100,
+        "n_lo": 100,
+        "sig": false
+      },
+      "slope_given_logN": {
+        "coef": -0.2092,
+        "ci": [
+          -0.8593,
+          0.4526
+        ],
+        "n": 301,
+        "sig": false
+      }
+    },
+    "panelC_free_N12": {
+      "n": 225,
+      "dorm_alone": {
+        "coef": 0.0101,
+        "ci": [
+          -0.5924,
+          0.5935
+        ],
+        "n": 225,
+        "sig": false
+      },
+      "dorm_given_logN": {
+        "coef": -0.3426,
+        "ci": [
+          -0.9833,
+          0.2373
+        ],
+        "n": 225,
+        "sig": false
+      },
+      "tercile": {
+        "diff": 0.0816,
+        "ci": [
+          -0.1247,
+          0.2766
+        ],
+        "n_hi": 66,
+        "n_lo": 85,
+        "sig": false
+      }
+    },
+    "panelC_free_N24": {
+      "n": 169,
+      "dorm_alone": {
+        "coef": 0.0752,
+        "ci": [
+          -0.9626,
+          1.2255
+        ],
+        "n": 169,
+        "sig": false
+      },
+      "dorm_given_logN": {
+        "coef": -0.1039,
+        "ci": [
+          -1.1215,
+          1.101
+        ],
+        "n": 169,
+        "sig": false
+      },
+      "tercile": {
+        "diff": 0.177,
+        "ci": [
+          -0.046,
+          0.4114
+        ],
+        "n_hi": 45,
+        "n_lo": 84,
+        "sig": false
+      }
+    },
+    "panelD_within_volume_quintile": {
+      "Q1": {
+        "n": 58,
+        "slope": {
+          "coef": 0.2338,
+          "ci": [
+            -1.6046,
+            2.0685
+          ],
+          "n": 58,
+          "sig": false
+        },
+        "mean_N": 4.4
+      },
+      "Q2": {
+        "n": 61,
+        "slope": {
+          "coef": 0.3936,
+          "ci": [
+            -0.4765,
+            1.3106
+          ],
+          "n": 61,
+          "sig": false
+        },
+        "mean_N": 14.5
+      },
+      "Q3": {
+        "n": 61,
+        "slope": {
+          "coef": -0.5341,
+          "ci": [
+            -1.5963,
+            0.6034
+          ],
+          "n": 61,
+          "sig": false
+        },
+        "mean_N": 28.7
+      },
+      "Q4": {
+        "n": 59,
+        "slope": {
+          "coef": -0.4109,
+          "ci": [
+            -1.7145,
+            0.9295
+          ],
+          "n": 59,
+          "sig": false
+        },
+        "mean_N": 51.2
+      },
+      "Q5": {
+        "n": 62,
+        "slope": {
+          "coef": -0.4254,
+          "ci": [
+            -1.4545,
+            1.9379
+          ],
+          "n": 62,
+          "sig": false
+        },
+        "mean_N": 366.5
+      },
+      "pooled_within_quintile": {
+        "coef": -0.0657,
+        "ci": [
+          -0.6601,
+          0.5381
+        ],
+        "n": 301,
+        "sig": false
+      }
+    },
+    "panelE_2d_bins": {
+      "저물량×저휴면": {
+        "n": 22,
+        "mean": 0.2863
+      },
+      "저물량×고휴면": {
+        "n": 131,
+        "mean": 0.3255
+      },
+      "고물량×저휴면": {
+        "n": 137,
+        "mean": 0.0519
+      },
+      "고물량×고휴면": {
+        "n": 11,
+        "mean": -0.1999
+      },
+      "휴면효과|저물량": {
+        "diff": 0.0391,
+        "ci": [
+          -0.2514,
+          0.2728
+        ],
+        "n_hi": 131,
+        "n_lo": 22,
+        "sig": false
+      },
+      "휴면효과|고물량": {
+        "diff": -0.2518,
+        "ci": [
+          -0.4727,
+          0.0136
+        ],
+        "n_hi": 11,
+        "n_lo": 137,
+        "sig": false
+      }
+    },
+    "panelF_residualized": {
+      "r2_explained_by_volume_size": 0.7303,
+      "slope": {
+        "coef": 0.0627,
+        "ci": [
+          -0.4188,
+          0.6015
+        ],
+        "n": 301,
+        "sig": false
+      },
+      "tercile": {
+        "diff": 0.0974,
+        "ci": [
+          -0.0919,
+          0.2861
+        ],
+        "n_hi": 100,
+        "n_lo": 100,
+        "sig": false
+      }
+    },
+    "panelG_within_size_industry": {
+      "slope": {
+        "coef": 0.4083,
+        "ci": [
+          0.1177,
+          0.8141
+        ],
+        "n": 301,
+        "sig": true
+      },
+      "n_cells": 26
+    },
+    "panelH_influence": {
+      "raw": 0.3522,
+      "w1_99": 0.3477,
+      "w5_95": 0.2444,
+      "drop_top5": 0.2579
+    },
+    "panelI_state_definition": {
+      "dormancy": {
+        "slope_raw": {
+          "coef": 0.5259,
+          "ci": [
+            0.2362,
+            0.8298
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "slope_adj": {
+          "coef": 0.3522,
+          "ci": [
+            -0.1564,
+            0.8328
+          ],
+          "n": 301,
+          "sig": false
+        },
+        "tercile_raw": {
+          "diff": 0.3472,
+          "ci": [
+            0.1551,
+            0.5489
+          ],
+          "n_hi": 94,
+          "n_lo": 128,
+          "sig": true
+        },
+        "tercile_adj": {
+          "diff": 0.121,
+          "ci": [
+            -0.0686,
+            0.2941
+          ],
+          "n_hi": 94,
+          "n_lo": 128,
+          "sig": false
+        }
+      },
+      "neg_log_volume": {
+        "slope_raw": {
+          "coef": 0.1275,
+          "ci": [
+            0.069,
+            0.1921
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "slope_adj": {
+          "coef": 0.1578,
+          "ci": [
+            0.0176,
+            0.2909
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "tercile_raw": {
+          "diff": 0.384,
+          "ci": [
+            0.1842,
+            0.5802
+          ],
+          "n_hi": 96,
+          "n_lo": 101,
+          "sig": true
+        },
+        "tercile_adj": {
+          "diff": 0.1198,
+          "ci": [
+            -0.0668,
+            0.321
+          ],
+          "n_hi": 96,
+          "n_lo": 101,
+          "sig": false
+        }
+      },
+      "neg_log_rate": {
+        "slope_raw": {
+          "coef": 0.4964,
+          "ci": [
+            0.1435,
+            0.8641
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "slope_adj": {
+          "coef": 0.565,
+          "ci": [
+            0.1839,
+            0.9578
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "tercile_raw": {
+          "diff": 0.1676,
+          "ci": [
+            -0.0176,
+            0.3641
+          ],
+          "n_hi": 100,
+          "n_lo": 100,
+          "sig": false
+        },
+        "tercile_adj": {
+          "diff": 0.1038,
+          "ci": [
+            -0.0908,
+            0.2893
+          ],
+          "n_hi": 100,
+          "n_lo": 100,
+          "sig": false
+        }
+      }
+    },
+    "panelJ_untreated_placebo_by_state": {
+      "n_pseudo": 1339,
+      "n_clusters": 291,
+      "dormancy": {
+        "slope": 0.0189,
+        "ci": [
+          -0.1116,
+          0.1412
+        ],
+        "sig": false,
+        "tercile": 0.0137,
+        "tercile_ci": [
+          -0.0666,
+          0.0912
+        ],
+        "tercile_sig": false
+      },
+      "neg_log_volume": {
+        "slope": 0.004,
+        "ci": [
+          -0.0181,
+          0.0263
+        ],
+        "sig": false,
+        "tercile": -0.009,
+        "tercile_ci": [
+          -0.0751,
+          0.062
+        ],
+        "tercile_sig": false
+      },
+      "neg_log_rate": {
+        "slope": -0.0072,
+        "ci": [
+          -0.1694,
+          0.1501
+        ],
+        "sig": false,
+        "tercile": 0.0082,
+        "tercile_ci": [
+          -0.0749,
+          0.1006
+        ],
+        "tercile_sig": false
+      },
+      "excess_dormancy": {
+        "slope": -0.0343,
+        "ci": [
+          -0.4685,
+          0.3578
+        ],
+        "sig": false,
+        "tercile": -0.0135,
+        "tercile_ci": [
+          -0.1049,
+          0.0767
+        ],
+        "tercile_sig": false
+      }
+    },
+    "n": 301,
+    "SESOI": 0.3472,
+    "state_window": "[-24,-13]",
+    "outcome_base_window": "[-12,-1]",
+    "note": "두 변수 모두 결과 기준창 밖 — regression fallacy 없음"
+  },
+  "prediction": "동일 비겹침 창에서 사전 물량을 통제해도 휴면이 반응을 예측하는가",
+  "verdict": "동일 [−24,−13] 창 경마: 휴면 단독 +0.3522[-0.1251, 0.8337], logN 통제 시 +0.0354[-0.466, 0.5789] (corr -0.854). ★물량 정화 휴면 기울기 -0.3026[-0.9505, 0.4003]. 물량5분위 FE 하 -0.0657. size×industry 셀 FE 하 +0.4083. 6개 강한버전 관문 중 1 통과.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i46_state_vs_volume.py",
+  "sha256_16": "e4da972b6286c6d8",
+  "seed": 42,
+  "runtime_s": 26.9,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

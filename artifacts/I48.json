@@ -1,0 +1,146 @@
+{
+  "id": "I-48",
+  "title": "결과대상 construct validity + 표본 flow (리뷰3 MC3)",
+  "status": "PARTIAL",
+  "n": 379,
+  "estimates": {
+    "panelA_sample_flow": {
+      "canonical_treated_file": 752,
+      "deal_rows_entering_build": 752,
+      "drop_no_nps_link": 168,
+      "drop_insufficient_pre_window": 120,
+      "drop_employment_lt5": 75,
+      "drop_no_control_cell": 10,
+      "matched_events": 379,
+      "reconciles": true
+    },
+    "panelB_stock_flow": {
+      "n_firm_months": 227339,
+      "mean_abs_error": 3.7414,
+      "median_abs_error": 1.0,
+      "exact_zero_share": 0.2434,
+      "abs_error_p90": 6.0,
+      "abs_error_p99": 40.0,
+      "rel_error_median": 0.01418,
+      "rel_error_p90": 0.07143,
+      "rel_error_p99": 0.23358,
+      "share_rel_gt_5pct": 0.1448,
+      "treated_profile": {
+        "pre[-12,-1]": {
+          "n": 378,
+          "mean_rel_error": 0.02771
+        },
+        "deal[0,0]": {
+          "n": 374,
+          "mean_rel_error": 0.0358
+        },
+        "post[1,12]": {
+          "n": 372,
+          "mean_rel_error": 0.03132
+        }
+      }
+    },
+    "panelC_exclusions": {
+      "baseline": {
+        "n": 301,
+        "slope_adj": 0.5624,
+        "ci": [
+          0.2236,
+          0.9625
+        ],
+        "sig": true,
+        "tercile_adj": 0.2137,
+        "tercile_ci": [
+          0.0414,
+          0.3957
+        ],
+        "tercile_sig": true
+      },
+      "exclude_rel_gt_10pct": {
+        "n": 288,
+        "slope_adj": 0.3118,
+        "ci": [
+          -0.0784,
+          0.7155
+        ],
+        "sig": false,
+        "tercile_adj": 0.0704,
+        "tercile_ci": [
+          -0.0957,
+          0.2361
+        ],
+        "tercile_sig": false
+      },
+      "exclude_rel_gt_5pct": {
+        "n": 231,
+        "slope_adj": 0.5441,
+        "ci": [
+          -0.1059,
+          1.1829
+        ],
+        "sig": false,
+        "tercile_adj": 0.1153,
+        "tercile_ci": [
+          -0.1113,
+          0.3422
+        ],
+        "tercile_sig": false
+      },
+      "exclude_churn_gt_50pct": {
+        "n": 300,
+        "slope_adj": 0.4883,
+        "ci": [
+          0.1017,
+          0.8502
+        ],
+        "sig": true,
+        "tercile_adj": 0.1778,
+        "tercile_ci": [
+          0.0112,
+          0.3472
+        ],
+        "tercile_sig": true
+      }
+    },
+    "panelD_site_change": {
+      "n_treated_with_site_change": 3,
+      "n_treated": 379,
+      "excluded": {
+        "n": 299,
+        "slope_adj": 0.5571,
+        "ci": [
+          0.1596,
+          0.9299
+        ],
+        "sig": true,
+        "tercile_adj": 0.2181,
+        "tercile_ci": [
+          0.033,
+          0.3945
+        ],
+        "tercile_sig": true
+      }
+    },
+    "panelE_in_vs_out": {
+      "included": {
+        "n": 379,
+        "n_linked": 379,
+        "median_employment": 79.8
+      },
+      "excluded": {
+        "n": 373,
+        "n_linked": 205,
+        "median_employment": 135.6
+      }
+    }
+  },
+  "prediction": "NPS 신규가 행정 재등록이 아니라 경제적 채용인가 · 표본 flow 가 재현 가능한가",
+  "verdict": "[A] flow 정합 ✓: 진입 752 = 미연결 168 + 창부족 120 + 고용<5 75 + 대조셀없음 10 + 매칭 379. [B] stock-flow 상대오차 중앙값 0.01418 · p90 0.07143 · >5% 월 비중 14.5%. 처치기업 사전 0.02771 → 딜월 0.03580 → 사후 0.03132. [C] 기준 기울기 +0.5624[0.2236, 0.9625]; 배제 후 +0.3118✗ · +0.5441✗ · +0.4883✓. 일부 배제에서 미검출 — 한계로 보고.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i48_construct_validity.py",
+  "sha256_16": "95fb36dd76f6f715",
+  "seed": 42,
+  "runtime_s": 25.0,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

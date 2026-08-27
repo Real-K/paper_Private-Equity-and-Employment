@@ -1,0 +1,106 @@
+{
+  "id": "I-37",
+  "title": "균형표 (Table 1 Panel D)",
+  "status": "GO",
+  "n": 366,
+  "estimates": {
+    "rows": [
+      {
+        "var": "Employees",
+        "treated": 218.2,
+        "treated_sd": 854.5,
+        "matched": 228.1,
+        "nd_matched": -0.012,
+        "pool": 97.2,
+        "nd_pool": 0.175,
+        "dec": 1
+      },
+      {
+        "var": "Log employees",
+        "treated": 4.42,
+        "treated_sd": 1.174,
+        "matched": 4.421,
+        "nd_matched": -0.0,
+        "pool": 3.531,
+        "nd_pool": 0.753,
+        "dec": 3
+      },
+      {
+        "var": "Pre-deal employment growth",
+        "treated": 0.142,
+        "treated_sd": 0.349,
+        "matched": 0.13,
+        "nd_matched": 0.032,
+        "pool": 0.063,
+        "nd_pool": 0.116,
+        "dec": 3
+      },
+      {
+        "var": "Firm age (years)",
+        "treated": 15.5,
+        "treated_sd": 9.3,
+        "matched": 16.4,
+        "nd_matched": -0.091,
+        "pool": 17.7,
+        "nd_pool": -0.229,
+        "dec": 1
+      },
+      {
+        "var": "Hiring rate, prior 12 months",
+        "treated": 0.444,
+        "treated_sd": 0.346,
+        "matched": 0.428,
+        "nd_matched": 0.051,
+        "pool": 0.379,
+        "nd_pool": 0.184,
+        "dec": 3
+      },
+      {
+        "var": "Separation rate, prior 12 months",
+        "treated": 0.358,
+        "treated_sd": 0.269,
+        "matched": 0.367,
+        "nd_matched": -0.037,
+        "pool": 0.371,
+        "nd_pool": -0.041,
+        "dec": 3
+      },
+      {
+        "var": "Share of no-hire months, −12 to −1",
+        "treated": 0.269,
+        "treated_sd": 0.275,
+        "matched": 0.288,
+        "nd_matched": -0.076,
+        "pool": 0.5,
+        "nd_pool": -0.786,
+        "dec": 3
+      },
+      {
+        "var": "Share of no-hire months, −24 to −13",
+        "treated": 0.282,
+        "treated_sd": 0.283,
+        "matched": 0.306,
+        "nd_matched": -0.095,
+        "pool": 0.496,
+        "nd_pool": -0.724,
+        "dec": 3
+      }
+    ],
+    "n_events": 366,
+    "n_pool_obs": 45980,
+    "pool_draws_per_event": 200,
+    "max_abs_nd_matched": 0.095,
+    "imbens_rubin_threshold": 0.25,
+    "n_industries": 44,
+    "nd_definition": "(mean_t - mean_c) / sqrt((var_t + var_c)/2)"
+  },
+  "prediction": "매칭 전/후 표준화 차이로 매칭 품질을 제시한다",
+  "verdict": "매칭 후 최대 |ND| 0.095 (기준 0.25) · 이벤트 366 · 산업 44개",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i37_balance.py",
+  "sha256_16": "fc5c797def23f711",
+  "seed": 42,
+  "runtime_s": 29.7,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

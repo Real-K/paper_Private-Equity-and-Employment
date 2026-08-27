@@ -1,0 +1,104 @@
+{
+  "id": "I-65",
+  "title": "교정 설계 gradient 의 부트스트랩 CI 와 대조군 공유 진단",
+  "status": "GO",
+  "n": 286,
+  "estimates": {
+    "panelA_firm_cluster": {
+      "observed": 0.7101,
+      "n_events": 286,
+      "n_firms": 286,
+      "ci95": [
+        0.3187,
+        1.1254
+      ],
+      "boot_sd": 0.2039,
+      "n_boot": 2000,
+      "excludes_zero": true
+    },
+    "panelB_fixed_cuts": {
+      "observed": 0.7101,
+      "ci95": [
+        0.3162,
+        1.1008
+      ],
+      "boot_sd": 0.1979,
+      "n_boot": 2000,
+      "note": "winsor cuts fixed at full-sample 5/95"
+    },
+    "panelC_reuse": {
+      "n_events": 286,
+      "n_unique_controls": 1144,
+      "controls_per_event_mean": 4.2,
+      "share_used_once": 0.9502,
+      "max_reuse": 3,
+      "reuse_hist": {
+        "1": 1087,
+        "2": 56,
+        "3": 1
+      }
+    },
+    "panelD_control_cluster": {
+      "ci95": [
+        0.4595,
+        0.8771
+      ],
+      "boot_sd": 0.1059,
+      "n_boot": 2000,
+      "excludes_zero": true
+    },
+    "panelE_one_to_one": {
+      "observed": 0.7036,
+      "n_events": 286,
+      "note": "each control firm assigned to at most one event, first-come by event month"
+    },
+    "panelF_magnitude": {
+      "S_q25": -0.4761,
+      "S_q75": -0.1938,
+      "S_iqr": 0.2823,
+      "S_sd": 0.2181,
+      "effect_iqr": 0.2005,
+      "ci95_iqr": [
+        0.09,
+        0.3177
+      ],
+      "effect_per_sd": 0.1549,
+      "note": "gradient x IQR of the pre-deal state among the 286 treated events"
+    },
+    "panelG_period": {
+      "panel_first": "2015-11",
+      "panel_last": "2026-05",
+      "gradient_first_deal_month": "2017-11",
+      "gradient_last_deal_month": "2025-05",
+      "gradient_by_year": {
+        "2017": 3,
+        "2018": 33,
+        "2019": 34,
+        "2020": 36,
+        "2021": 44,
+        "2022": 44,
+        "2023": 39,
+        "2024": 37,
+        "2025": 16
+      },
+      "baseline_first_deal_month": "2016-12",
+      "baseline_last_deal_month": "2026-06",
+      "n_baseline_events": 379
+    },
+    "conservative_union_ci": [
+      0.3187,
+      1.1254
+    ],
+    "n_boot": 2000,
+    "design": "I-60 과 동일 (상태균형 매칭 + FWL), 위약 대신 클러스터 부트스트랩"
+  },
+  "prediction": "주 gradient 의 표본변동 구간이 0 을 배제하는가, 대조군 공유가 구간을 좌우하는가",
+  "verdict": "관측 +0.7101; 처치기업 클러스터 CI [0.3187, 1.1254], 대조기업 클러스터 CI [0.4595, 0.8771]; 사건 286건이 distinct 대조 1144개를 쓰고 95.0%는 1회만 쓰인다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i65_bootci_reuse.py",
+  "sha256_16": "7375940003805922",
+  "seed": 42,
+  "runtime_s": 42.9,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

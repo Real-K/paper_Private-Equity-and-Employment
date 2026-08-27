@@ -1,0 +1,102 @@
+{
+  "id": "I-53",
+  "title": "무작위화 추론 — 위약 분포를 귀무로 직접 사용",
+  "status": "GO",
+  "n": 301,
+  "estimates": {
+    "specs": {
+      "main_winsor_5_95": {
+        "observed": 0.4827,
+        "n_treated": 301,
+        "n_draws": 2000,
+        "null_mean": 0.1173,
+        "null_sd": 0.1664,
+        "null_p95": 0.3961,
+        "null_ci": [
+          -0.2041,
+          0.4592
+        ],
+        "RI_p": 0.017,
+        "RI_p_corrected": 0.0175,
+        "sig": true,
+        "z": 2.2
+      },
+      "raw": {
+        "observed": 0.565,
+        "n_treated": 301,
+        "n_draws": 2000,
+        "null_mean": 0.1388,
+        "null_sd": 0.2117,
+        "null_p95": 0.4935,
+        "null_ci": [
+          -0.2697,
+          0.5697
+        ],
+        "RI_p": 0.027,
+        "RI_p_corrected": 0.0275,
+        "sig": true,
+        "z": 2.01
+      },
+      "winsor_1_99": {
+        "observed": 0.5468,
+        "n_treated": 301,
+        "n_draws": 2000,
+        "null_mean": 0.1256,
+        "null_sd": 0.197,
+        "null_p95": 0.448,
+        "null_ci": [
+          -0.2618,
+          0.5149
+        ],
+        "RI_p": 0.0185,
+        "RI_p_corrected": 0.019,
+        "sig": true,
+        "z": 2.14
+      },
+      "winsor_10_90": {
+        "observed": 0.4282,
+        "n_treated": 301,
+        "n_draws": 2000,
+        "null_mean": 0.1064,
+        "null_sd": 0.1445,
+        "null_p95": 0.349,
+        "null_ci": [
+          -0.1721,
+          0.4008
+        ],
+        "RI_p": 0.0155,
+        "RI_p_corrected": 0.016,
+        "sig": true,
+        "z": 2.23
+      },
+      "implied_hires": {
+        "observed": 0.2786,
+        "n_treated": 303,
+        "n_draws": 2000,
+        "null_mean": 0.055,
+        "null_sd": 0.139,
+        "null_p95": 0.2882,
+        "null_ci": [
+          -0.2116,
+          0.3416
+        ],
+        "RI_p": 0.056,
+        "RI_p_corrected": 0.0565,
+        "sig": false,
+        "z": 1.61
+      }
+    },
+    "n_draws": 2000,
+    "design": "위약 pseudo-event 를 셀 단위로 추출해 처치 표본크기에 맞춘 귀무분포",
+    "estimand": "state gradient in Δlog hiring rate, FWL-adjusted"
+  },
+  "prediction": "위약 분포를 귀무로 직접 쓰면 상태 gradient 가 유의한가",
+  "verdict": "위약 pseudo-event 풀을 귀무분포로 직접 사용한 무작위화 검정. 주 사양(winsor 5/95): 관측 기울기 **+0.4827** vs 귀무 평균 +0.1173 (SD 0.1664, 95% 범위 [-0.2041, 0.4592]), **RI p = 0.0175** ✓, z = 2.2. 사양 5종 중 4종 유의. 부트스트랩 차이 검정(I-52, +0.3626 [0.004, 0.763])보다 정밀한 이유는 귀무분포를 추정하지 않고 **직접 구성**하기 때문이다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i53_randomization.py",
+  "sha256_16": "8a0d17843ae7b963",
+  "seed": 42,
+  "runtime_s": 33.9,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

@@ -1,0 +1,338 @@
+{
+  "id": "I-14",
+  "title": "주주명부 진입시점 검증 + 지분율 dose",
+  "status": "GO",
+  "n": 379,
+  "estimates": {
+    "panelA_coverage": {
+      "n_rows": 46727,
+      "n_firms_sh": 587,
+      "n_treated_sample": 752,
+      "coverage": 0.781,
+      "n_in_matched_design": 359,
+      "broad_firms": 427,
+      "precise_firms": 91
+    },
+    "panelB_timing_validation": {
+      "status_counts": {
+        "no_pe_observed": 128,
+        "confirmed": 67,
+        "pb_early": 65,
+        "left_censored": 62,
+        "pb_late": 23,
+        "late_first_obs": 14
+      },
+      "confirm_rate": 0.187,
+      "n": 359,
+      "jan_confirm": 0.205,
+      "nonjan_confirm": 0.181,
+      "n_jan": 78,
+      "interval_median_yr": 1.0,
+      "interval_eq1_share": 0.806
+    },
+    "panelC_dose": {
+      "n_with_dose": 231,
+      "dose_median": 26.81,
+      "cuts": [
+        14.31,
+        53.03
+      ],
+      "D1 저지분": {
+        "n": 76,
+        "DiD": 0.0434,
+        "DiD_ci": [
+          -0.03,
+          0.109
+        ],
+        "P1": -0.1266,
+        "P1_ci": [
+          -0.2374,
+          -0.0048
+        ],
+        "rel": 0.0695,
+        "rel_ci": [
+          -0.0392,
+          0.161
+        ],
+        "zero_DiD": -0.0483,
+        "zero_ci": [
+          -0.0964,
+          -0.0063
+        ],
+        "zero_n": 73,
+        "zero_sig": true
+      },
+      "D2 중간": {
+        "n": 72,
+        "DiD": 0.085,
+        "DiD_ci": [
+          0.0093,
+          0.1612
+        ],
+        "P1": -0.1389,
+        "P1_ci": [
+          -0.2572,
+          -0.0179
+        ],
+        "rel": 0.1178,
+        "rel_ci": [
+          0.0431,
+          0.1874
+        ],
+        "zero_DiD": -0.0294,
+        "zero_ci": [
+          -0.0663,
+          0.0118
+        ],
+        "zero_n": 64,
+        "zero_sig": false
+      },
+      "D3 고지분": {
+        "n": 75,
+        "DiD": 0.0722,
+        "DiD_ci": [
+          0.0128,
+          0.1377
+        ],
+        "P1": -0.1228,
+        "P1_ci": [
+          -0.2402,
+          -0.0099
+        ],
+        "rel": 0.0773,
+        "rel_ci": [
+          0.0159,
+          0.1405
+        ],
+        "zero_DiD": -0.0738,
+        "zero_ci": [
+          -0.1186,
+          -0.0295
+        ],
+        "zero_n": 72,
+        "zero_sig": true
+      },
+      "n_다수>=50%": 84,
+      "다수>=50%": {
+        "n": 81,
+        "DiD": 0.0786,
+        "DiD_ci": [
+          0.0188,
+          0.1409
+        ],
+        "P1": -0.1169,
+        "P1_ci": [
+          -0.2389,
+          0.0013
+        ],
+        "rel": 0.0788,
+        "rel_ci": [
+          0.0201,
+          0.1368
+        ],
+        "zero_DiD": -0.0634,
+        "zero_ci": [
+          -0.1102,
+          -0.018
+        ],
+        "zero_n": 78,
+        "zero_sig": true
+      },
+      "n_소수<50%": 147,
+      "소수<50%": {
+        "n": 142,
+        "DiD": 0.0596,
+        "DiD_ci": [
+          0.0083,
+          0.1101
+        ],
+        "P1": -0.1363,
+        "P1_ci": [
+          -0.2197,
+          -0.0531
+        ],
+        "rel": 0.0928,
+        "rel_ci": [
+          0.0265,
+          0.1549
+        ],
+        "zero_DiD": -0.044,
+        "zero_ci": [
+          -0.0769,
+          -0.0134
+        ],
+        "zero_n": 131,
+        "zero_sig": true
+      },
+      "diff_major_minor": {
+        "diff": -0.0194,
+        "ci": [
+          -0.0777,
+          0.0333
+        ],
+        "sig": false,
+        "n1": 78,
+        "n2": 131,
+        "equivalence": {
+          "SESOI": 0.046,
+          "holds": false,
+          "margin": [
+            -0.0317,
+            0.0127
+          ],
+          "knife_edge": true
+        }
+      },
+      "diff_D3_D1": {
+        "diff": -0.0256,
+        "ci": [
+          -0.0902,
+          0.0455
+        ],
+        "sig": false,
+        "n1": 72,
+        "n2": 73,
+        "equivalence": {
+          "SESOI": 0.046,
+          "holds": false,
+          "margin": [
+            -0.0442,
+            0.0005
+          ],
+          "knife_edge": true
+        }
+      },
+      "continuous_slope": {
+        "slope_per_pct": -5.3e-05,
+        "ci": [
+          -0.0005,
+          0.0003
+        ],
+        "sig": false,
+        "n": 209
+      }
+    },
+    "panelD_exit_gate": {
+      "n_exit": 44,
+      "gate_40": true,
+      "hold_median_yr": 2.0,
+      "exit_year_counts": {
+        "2018": 2,
+        "2020": 2,
+        "2021": 7,
+        "2022": 7,
+        "2023": 4,
+        "2024": 10,
+        "2025": 7,
+        "2026": 5
+      }
+    },
+    "panelE_validated_subsample": {
+      "전체": {
+        "n": 367,
+        "DiD": 0.0485,
+        "DiD_ci": [
+          0.0166,
+          0.0785
+        ],
+        "P1": -0.1049,
+        "P1_ci": [
+          -0.1538,
+          -0.0519
+        ],
+        "rel": 0.0878,
+        "rel_ci": [
+          0.0448,
+          0.1295
+        ],
+        "zero_DiD": -0.046,
+        "zero_ci": [
+          -0.0673,
+          -0.0262
+        ],
+        "zero_n": 348,
+        "zero_sig": true
+      },
+      "confirmed": {
+        "n": 65,
+        "DiD": 0.0501,
+        "DiD_ci": [
+          -0.0068,
+          0.1084
+        ],
+        "P1": -0.1342,
+        "P1_ci": [
+          -0.2512,
+          -0.0086
+        ],
+        "rel": 0.1115,
+        "rel_ci": [
+          0.0466,
+          0.184
+        ],
+        "zero_DiD": -0.0645,
+        "zero_ci": [
+          -0.1145,
+          -0.0163
+        ],
+        "zero_n": 62,
+        "zero_sig": true
+      },
+      "non-confirmed": {
+        "n": 283,
+        "DiD": 0.0494,
+        "DiD_ci": [
+          0.0126,
+          0.0873
+        ],
+        "P1": -0.0945,
+        "P1_ci": [
+          -0.158,
+          -0.0351
+        ],
+        "rel": 0.0814,
+        "rel_ci": [
+          0.0287,
+          0.1296
+        ],
+        "zero_DiD": -0.041,
+        "zero_ci": [
+          -0.0663,
+          -0.0172
+        ],
+        "zero_n": 269,
+        "zero_sig": true
+      },
+      "diff_conf_vs_nonconf": {
+        "diff": -0.0235,
+        "ci": [
+          -0.0823,
+          0.0288
+        ],
+        "sig": false,
+        "n1": 62,
+        "n2": 269,
+        "equivalence": {
+          "SESOI": 0.046,
+          "holds": false,
+          "margin": [
+            -0.0363,
+            0.0172
+          ],
+          "knife_edge": true
+        }
+      }
+    }
+  },
+  "prediction": "주주명부로 (1) PitchBook 딜연도 독립검증 (2) 전표본 지분율 dose (3) exit 탐지",
+  "verdict": "커버리지 78% (359/379 매칭설계) | PitchBook 연도 검증률 19% (1월 0.205 vs 비1월 0.181) | dose 부여 231건, 소수지분 147건 | exit 소멸 44건 → I-05 통과",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i14_shareholder_dose.py",
+  "sha256_16": "ba4a2d7b3f3126fd",
+  "seed": 42,
+  "runtime_s": 37.4,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "resolution_limit": "기준일이 사실상 연 1회 — 월 단위 시점 확정 불가. 연도 검증과 구간 확정만 가능.",
+  "pe_detection": "광의=패턴(우리사주 등 제외), 정밀=PitchBook Investors 영문명 대조"
+}

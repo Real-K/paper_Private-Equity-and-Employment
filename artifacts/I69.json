@@ -1,0 +1,52 @@
+{
+  "id": "I-69",
+  "title": "표본 흐름과 날짜 사실의 정본",
+  "status": "OK",
+  "n": 379,
+  "estimates": {
+    "panelA_flow": {
+      "baseline_matched_events": 379,
+      "note": "탈락 분해는 I-63 estimates.attrition 이 정본 (state_window 53 · emp_lt5 1 · no_cell 17 · outcome 22 · ok 286; 합 379)."
+    },
+    "panelB_windows": {
+      "post_window_complete": 364,
+      "post_window_incomplete": 15,
+      "last_deal_month_with_post_window": "2025-05",
+      "incomplete_by_month": {
+        "2025-06": 1,
+        "2025-08": 1,
+        "2025-09": 3,
+        "2025-10": 1,
+        "2026-01": 1,
+        "2026-03": 3,
+        "2026-04": 2,
+        "2026-05": 2,
+        "2026-06": 1
+      },
+      "pre_window_complete": 379,
+      "state_window_complete": 353,
+      "windows_ge6_both": 370,
+      "windows_ge6_dropped": 9,
+      "last_deal_month_ge6": "2025-10",
+      "rule_note": "average effects (h39_common.flow) require >=6 observed months in each window; the gradient (blk) requires all 12. Table 2 n=367 also drops windows with zero hires/NaN."
+    },
+    "panelC_dates": {
+      "panel_first": "2015-11",
+      "panel_last": "2026-05",
+      "baseline_first_deal_month": "2016-12",
+      "baseline_last_deal_month": "2026-06",
+      "conventional_design_n": 301,
+      "conventional_design_source": "harness30/out/I58.json estimates.panelA_common_sample.current_full.n",
+      "conventional_design_note": "301 은 흐름의 단계가 아니라 상태 비균형(종전) 설계의 표본. 그 중 286 이 상태균형 셀도 찾는다 (차이 15)."
+    }
+  },
+  "prediction": "Table 1 의 301 이 흐름의 단계인가, 그리고 딜월 상한이 패널 상한을 넘는 것이 오류인가",
+  "verdict": "301 은 흐름 단계가 아니라 종전 설계의 표본이다. 기준 379 는 매칭 수이므로 사후창이 없는 최근 딜 15건을 포함하며, 사후창이 완전한 마지막 딜월은 2025-05 이다 — 오타가 아니다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i69_sample_flow.py",
+  "sha256_16": "44729d87d1d671cd",
+  "seed": 42,
+  "runtime_s": 21.7,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

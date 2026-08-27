@@ -1,0 +1,96 @@
+{
+  "id": "I-60",
+  "title": "교정 설계 사양곡선",
+  "status": "GO",
+  "n": 286,
+  "estimates": {
+    "specs": {
+      "winsor_5_95": {
+        "observed": 0.7101,
+        "n": 286,
+        "null_mean": 0.101,
+        "null_sd": 0.1538,
+        "null_ci": [
+          -0.1835,
+          0.4082
+        ],
+        "RI_p": 0.0005,
+        "z": 3.96,
+        "excess": 0.6091,
+        "sig": true,
+        "MDE_RI_80": 0.3826
+      },
+      "raw": {
+        "observed": 0.837,
+        "n": 286,
+        "null_mean": 0.1216,
+        "null_sd": 0.1808,
+        "null_ci": [
+          -0.2198,
+          0.4836
+        ],
+        "RI_p": 0.0005,
+        "z": 3.96,
+        "excess": 0.7153,
+        "sig": true,
+        "MDE_RI_80": 0.4495
+      },
+      "winsor_1_99": {
+        "observed": 0.8157,
+        "n": 286,
+        "null_mean": 0.1141,
+        "null_sd": 0.1712,
+        "null_ci": [
+          -0.2145,
+          0.4484
+        ],
+        "RI_p": 0.001,
+        "z": 4.1,
+        "excess": 0.7016,
+        "sig": true,
+        "MDE_RI_80": 0.4257
+      },
+      "winsor_10_90": {
+        "observed": 0.6339,
+        "n": 286,
+        "null_mean": 0.0959,
+        "null_sd": 0.1359,
+        "null_ci": [
+          -0.1611,
+          0.3791
+        ],
+        "RI_p": 0.0005,
+        "z": 3.96,
+        "excess": 0.5381,
+        "sig": true,
+        "MDE_RI_80": 0.338
+      },
+      "implied_hires": {
+        "observed": 0.365,
+        "n": 288,
+        "null_mean": 0.0601,
+        "null_sd": 0.1388,
+        "null_ci": [
+          -0.2041,
+          0.3334
+        ],
+        "RI_p": 0.0125,
+        "z": 2.2,
+        "excess": 0.3048,
+        "sig": true,
+        "MDE_RI_80": 0.3452
+      }
+    },
+    "n_draws": 2000,
+    "design": "상태균형 매칭 + 거울 위약 + FWL(log규모[−24,−13]·사전성장·업력·산업)"
+  },
+  "prediction": "교정 설계에서 사양 선택이 결론을 바꾸는가",
+  "verdict": "주사양 +0.7101 (귀무 +0.1010, z 3.96, RI p 0.0005). 5사양 중 5종 유의.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i60_speccurve.py",
+  "sha256_16": "e0629d8634e450c1",
+  "seed": 42,
+  "runtime_s": 40.1,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

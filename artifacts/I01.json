@@ -1,0 +1,150 @@
+{
+  "id": "I-01",
+  "title": "시간집계 정리 검정",
+  "status": "GO",
+  "n": 379,
+  "estimates": {
+    "panelA_inaction_by_block": {
+      "1": {
+        "label": "월",
+        "n": 348,
+        "DiD": -0.046,
+        "ci": [
+          -0.0678,
+          -0.0255
+        ],
+        "sig": true,
+        "post_mean_treated": 0.2364
+      },
+      "2": {
+        "label": "2개월",
+        "n": 348,
+        "DiD": -0.0299,
+        "ci": [
+          -0.0493,
+          -0.009
+        ],
+        "sig": true,
+        "post_mean_treated": 0.1164
+      },
+      "3": {
+        "label": "분기",
+        "n": 348,
+        "DiD": -0.0264,
+        "ci": [
+          -0.0448,
+          -0.0086
+        ],
+        "sig": true,
+        "post_mean_treated": 0.0675
+      },
+      "4": {
+        "label": "4개월",
+        "n": 348,
+        "DiD": -0.0349,
+        "ci": [
+          -0.0548,
+          -0.0155
+        ],
+        "sig": true,
+        "post_mean_treated": 0.0421
+      },
+      "6": {
+        "label": "반기",
+        "n": 348,
+        "DiD": -0.0122,
+        "ci": [
+          -0.0272,
+          0.0026
+        ],
+        "sig": false,
+        "post_mean_treated": 0.0259
+      },
+      "12": {
+        "label": "연간",
+        "n": 348,
+        "DiD": 0.003,
+        "ci": [
+          -0.0101,
+          0.0172
+        ],
+        "sig": false,
+        "post_mean_treated": 0.0115
+      }
+    },
+    "panelB_timing_blur": {
+      "B1": {
+        "label": "이벤트시간 [-12,-1]v[1,12]",
+        "n": 367,
+        "DiD": 0.0485,
+        "ci": [
+          0.0197,
+          0.0805
+        ],
+        "sig": true
+      },
+      "B2": {
+        "label": "달력연도 사후=딜연도",
+        "n": 362,
+        "DiD": 0.0439,
+        "ci": [
+          0.0146,
+          0.0746
+        ],
+        "sig": true,
+        "ratio_to_B1": 0.905
+      },
+      "B3": {
+        "label": "달력연도 딜연도제외",
+        "n": 335,
+        "DiD": 0.0434,
+        "ci": [
+          0.0041,
+          0.0829
+        ],
+        "sig": true,
+        "ratio_to_B1": 0.895
+      }
+    },
+    "panelC_contamination_months": 6.34,
+    "deal_month_counts": [
+      84,
+      24,
+      34,
+      21,
+      34,
+      27,
+      27,
+      23,
+      22,
+      25,
+      23,
+      35
+    ],
+    "equivalence_annual": {
+      "SESOI": 0.046,
+      "ci": [
+        -0.0101,
+        0.0172
+      ],
+      "holds": true,
+      "margin": [
+        0.0359,
+        0.0288
+      ],
+      "knife_edge": false
+    },
+    "jan_bunching_ratio": 2.66
+  },
+  "prediction": "월별에서 유의한 무행동 효과가 집계 주기 증가에 따라 감쇠·소멸하고, 달력연도 창에서 채용률 DiD도 감쇠한다",
+  "verdict": "PanelA 무채용비중: 월 -0.0460✓ → 분기 -0.0264✓ → 반기 -0.0122✗ → 연간 +0.0030✗, 등가성 성립(δ=0.0460). PanelB 반증: 채용률은 달력연도에서도 거의 감쇠하지 않음(B2/B1=0.905, 여전히 유의) — 연간 비가시성은 '집계 일반'이 아니라 '외연마진 지표에 특정'된다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i01_timeagg.py",
+  "sha256_16": "5034e7c9878a359a",
+  "seed": 42,
+  "runtime_s": 26.2,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "prediction_refuted_part": "PanelB: 채용률 DiD의 달력연도 감쇠는 10%에 불과 — 타이밍 흐림 감쇠 예측은 반증됨",
+  "flag_for_I14": "딜 월분포 1월 84건(2.66배 초과) — 날짜 대치 의심"
+}

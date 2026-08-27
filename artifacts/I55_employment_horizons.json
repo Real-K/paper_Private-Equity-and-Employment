@@ -1,0 +1,40 @@
+{
+ "id": "I-55-EMP",
+ "title": "고용 gradient — rel_log 지평별",
+ "status": "PARTIAL",
+ "estimates": {
+  "h12": {
+   "observed": -0.0564,
+   "null_mean": 0.1426,
+   "null_sd": 0.0688,
+   "RI_p": 0.9975,
+   "z": -2.89,
+   "n_treated": 295,
+   "n_placebo": 1392,
+   "sig": false
+  },
+  "h24": {
+   "observed": -0.0208,
+   "null_mean": 0.1692,
+   "null_sd": 0.1177,
+   "RI_p": 0.9485,
+   "z": -1.61,
+   "n_treated": 251,
+   "n_placebo": 1169,
+   "sig": false
+  },
+  "h36": {
+   "observed": -0.1199,
+   "null_mean": 0.2798,
+   "null_sd": 0.1468,
+   "RI_p": 0.995,
+   "z": -2.72,
+   "n_treated": 210,
+   "n_placebo": 980,
+   "sig": false
+  }
+ },
+ "note": "원고의 rel_log 측도(사전 6개월 평균 대비 +k개월 수준, 대조 로그차 평균 차감). I-55 의 Δlog 평균고용(창 대 창)과 측도가 다르므로 수치는 직접 비교 불가.",
+ "code": "P014_upgrade_package/harness30/(inline, 원장 §41-3)",
+ "seed": 42
+}

@@ -1,0 +1,87 @@
+{
+  "id": "I-58",
+  "title": "설계 교정 감사 — 상태균형 매칭의 이득 검증",
+  "status": "GO",
+  "n": 286,
+  "estimates": {
+    "panelA_common_sample": {
+      "n_common": 286,
+      "current_full": {
+        "observed": 0.4827,
+        "n": 301,
+        "null_mean": 0.1239,
+        "null_sd": 0.1636,
+        "RI_p": 0.0165,
+        "z": 2.19,
+        "sig": true
+      },
+      "balanced_full": {
+        "observed": 0.7101,
+        "n": 286,
+        "null_mean": 0.1013,
+        "null_sd": 0.1509,
+        "RI_p": 0.0005,
+        "z": 4.04,
+        "sig": true
+      },
+      "current_common": {
+        "observed": 0.4698,
+        "n": 286,
+        "null_mean": 0.106,
+        "null_sd": 0.176,
+        "RI_p": 0.018,
+        "z": 2.07,
+        "sig": true
+      },
+      "balanced_common": {
+        "observed": 0.7101,
+        "n": 286,
+        "null_mean": 0.0962,
+        "null_sd": 0.1568,
+        "RI_p": 0.0005,
+        "z": 3.91,
+        "sig": true
+      }
+    },
+    "panelB_state_balance": {
+      "current": {
+        "treated_S_mean": -0.3522,
+        "control_S_mean": -0.3452,
+        "mean_gap": -0.007,
+        "normalized_difference": -0.0362,
+        "corr_treated_control_S": 0.5558
+      },
+      "balanced": {
+        "treated_S_mean": -0.3517,
+        "control_S_mean": -0.3501,
+        "mean_gap": -0.0017,
+        "normalized_difference": -0.0078,
+        "corr_treated_control_S": 0.8605
+      }
+    },
+    "panelD_decomposition": {
+      "current": {
+        "eff": 0.4698,
+        "own": 0.8425,
+        "control_mean": 0.295,
+        "n": 286
+      },
+      "balanced": {
+        "eff": 0.7101,
+        "own": 0.8425,
+        "control_mean": 0.0056,
+        "n": 286
+      }
+    },
+    "n_draws": 2000
+  },
+  "prediction": "상태균형 매칭의 이득이 표본 구성이 아니라 설계에서 오는가",
+  "verdict": "[A] 공통표본(286)에서도 현행 +0.4698(z 2.07, p 0.0180) vs 상태균형 +0.7101(z 3.91, p 0.0005) — 표본 구성이 아니라 **설계**가 차이를 만든다. [B] 처치−대조 상태 ND 가 -0.036 → -0.008 로 개선. [D] 계수 변화 분해: 처치 자기변화 기울기 +0.0000, 대조군 평균 기울기 -0.2894 → 변화는 주로 대조군 쪽에서 온다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i58_design_audit.py",
+  "sha256_16": "e48198afd57ca2a7",
+  "seed": 42,
+  "runtime_s": 45.5,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

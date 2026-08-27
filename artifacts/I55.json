@@ -1,0 +1,128 @@
+{
+  "id": "I-55",
+  "title": "재배치 가설 — 채용·이직·총유량의 상태 gradient",
+  "status": "PARTIAL",
+  "n": 301,
+  "estimates": {
+    "panelAB_by_outcome": {
+      "hire": {
+        "observed": 0.4827,
+        "n_treated": 301,
+        "n_placebo": 1373,
+        "null_mean": 0.1173,
+        "null_sd": 0.1664,
+        "null_ci": [
+          -0.2041,
+          0.4592
+        ],
+        "RI_p_upper": 0.0175,
+        "RI_p_lower": 0.983,
+        "excess": 0.3655,
+        "z": 2.2,
+        "sig_positive": true,
+        "sig_negative": false
+      },
+      "sep": {
+        "observed": 0.2128,
+        "n_treated": 298,
+        "n_placebo": 1380,
+        "null_mean": 0.1161,
+        "null_sd": 0.1475,
+        "null_ci": [
+          -0.1723,
+          0.4069
+        ],
+        "RI_p_upper": 0.2534,
+        "RI_p_lower": 0.7471,
+        "excess": 0.0967,
+        "z": 0.66,
+        "sig_positive": false,
+        "sig_negative": false
+      },
+      "gross": {
+        "observed": 0.2807,
+        "n_treated": 303,
+        "n_placebo": 1397,
+        "null_mean": 0.0927,
+        "null_sd": 0.1338,
+        "null_ci": [
+          -0.1705,
+          0.3485
+        ],
+        "RI_p_upper": 0.0815,
+        "RI_p_lower": 0.919,
+        "excess": 0.188,
+        "z": 1.41,
+        "sig_positive": false,
+        "sig_negative": false
+      },
+      "net": {
+        "observed": 0.0834,
+        "n_treated": 305,
+        "n_placebo": 1405,
+        "null_mean": 0.0466,
+        "null_sd": 0.0689,
+        "null_ci": [
+          -0.0878,
+          0.1831
+        ],
+        "RI_p_upper": 0.3013,
+        "RI_p_lower": 0.6992,
+        "excess": 0.0369,
+        "z": 0.54,
+        "sig_positive": false,
+        "sig_negative": false
+      },
+      "emp": {
+        "observed": -0.0292,
+        "n_treated": 305,
+        "n_placebo": 1405,
+        "null_mean": 0.085,
+        "null_sd": 0.0512,
+        "null_ci": [
+          -0.0158,
+          0.1836
+        ],
+        "RI_p_upper": 0.9875,
+        "RI_p_lower": 0.013,
+        "excess": -0.1142,
+        "z": -2.23,
+        "sig_positive": false,
+        "sig_negative": true
+      }
+    },
+    "panelC_accounting": {
+      "hire_gradient": 0.4827,
+      "sep_gradient": 0.2128,
+      "net_gradient": 0.0834,
+      "emp_gradient": -0.0292,
+      "hire_minus_sep": 0.2699
+    },
+    "panelD_separation_state": {
+      "결과 Δlog 채용률 · 상태 사전이직률": {
+        "treated": 0.5172,
+        "placebo": 0.2466,
+        "diff": 0.2706,
+        "n_treated": 298,
+        "n_placebo": 1361
+      },
+      "결과 Δlog 고용 · 상태 사전이직률": {
+        "treated": -0.0142,
+        "placebo": 0.0576,
+        "diff": -0.0717,
+        "n_treated": 300,
+        "n_placebo": 1389
+      }
+    },
+    "n_draws": 2000
+  },
+  "prediction": "저활동 기업에서 채용만 늘고 고용이 안 느는 이유가 이직 동반 증가(재배치)인가",
+  "verdict": "채용률 gradient +0.4827 (RI p 0.0175 ✓) 인데 고용 gradient -0.0292 (RI p 상 0.988) 로 부재. **이직률 gradient +0.2128** (귀무 +0.1161, z 0.66, RI p 상 0.2534) → 이직에서는 미검출. 채용 증가가 고용으로 이어지지 않는 이유는 이 자료로 특정되지 않는다. 총유량 gradient +0.2807 (RI p 상 0.0815).",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i55_reallocation.py",
+  "sha256_16": "2cfc89c5d0ccf2e6",
+  "seed": 42,
+  "runtime_s": 40.9,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

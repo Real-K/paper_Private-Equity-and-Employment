@@ -1,0 +1,162 @@
+{
+  "id": "I-57",
+  "title": "두 번째 추정량(hazard) + 재배치 쌍대비",
+  "status": "GO",
+  "n": 289,
+  "estimates": {
+    "panelA_hazard_triple": {
+      "연속 S": {
+        "coef": 0.4104,
+        "se": 0.2798,
+        "HR": 1.5074,
+        "HR_ci": [
+          0.871,
+          2.6087
+        ],
+        "z": 1.47,
+        "sig": false,
+        "n_cells": 1199
+      },
+      "상위3분위": {
+        "coef": 119104761499916.36,
+        "se": 0.0621,
+        "HR": Infinity,
+        "HR_ci": [
+          Infinity,
+          Infinity
+        ],
+        "z": 1918410049077480.2,
+        "sig": true,
+        "n_cells": 1199
+      }
+    },
+    "panelB_outcomes": {
+      "hire": {
+        "observed": 0.7101,
+        "n": 286,
+        "null_mean": 0.1006,
+        "null_sd": 0.1576,
+        "null_ci": [
+          -0.1922,
+          0.4233
+        ],
+        "RI_p_upper": 0.0005,
+        "RI_p_lower": 1.0,
+        "RI_p_two_sided": 0.001,
+        "z": 3.87,
+        "excess": 0.6095,
+        "sig": true
+      },
+      "sep": {
+        "observed": 0.1788,
+        "n": 281,
+        "null_mean": 0.0074,
+        "null_sd": 0.147,
+        "null_ci": [
+          -0.2754,
+          0.2948
+        ],
+        "RI_p_upper": 0.1174,
+        "RI_p_lower": 0.8831,
+        "RI_p_two_sided": 0.2349,
+        "z": 1.17,
+        "excess": 0.1713,
+        "sig": false
+      },
+      "churn": {
+        "observed": 0.3816,
+        "n": 288,
+        "null_mean": 0.0181,
+        "null_sd": 0.1179,
+        "null_ci": [
+          -0.2081,
+          0.2536
+        ],
+        "RI_p_upper": 0.001,
+        "RI_p_lower": 0.9995,
+        "RI_p_two_sided": 0.002,
+        "z": 3.08,
+        "excess": 0.3635,
+        "sig": true
+      },
+      "emp": {
+        "observed": -0.058,
+        "n": 289,
+        "null_mean": 0.0796,
+        "null_sd": 0.053,
+        "null_ci": [
+          -0.0251,
+          0.178
+        ],
+        "RI_p_upper": 0.997,
+        "RI_p_lower": 0.0035,
+        "RI_p_two_sided": 0.007,
+        "z": -2.6,
+        "excess": -0.1376,
+        "sig": true
+      }
+    },
+    "panelC_paired": {
+      "채용 − 고용": {
+        "observed": 0.7536,
+        "n": 286,
+        "null_mean": 0.0232,
+        "null_sd": 0.1602,
+        "null_ci": [
+          -0.2848,
+          0.3413
+        ],
+        "RI_p_upper": 0.0005,
+        "RI_p_lower": 1.0,
+        "RI_p_two_sided": 0.001,
+        "z": 4.56,
+        "excess": 0.7304,
+        "sig": true
+      },
+      "채용 − 이직": {
+        "observed": 0.5746,
+        "n": 279,
+        "null_mean": 0.1511,
+        "null_sd": 0.2035,
+        "null_ci": [
+          -0.2474,
+          0.553
+        ],
+        "RI_p_upper": 0.0215,
+        "RI_p_lower": 0.979,
+        "RI_p_two_sided": 0.043,
+        "z": 2.08,
+        "excess": 0.4235,
+        "sig": true
+      },
+      "churn − 고용": {
+        "observed": 0.4539,
+        "n": 288,
+        "null_mean": -0.075,
+        "null_sd": 0.1263,
+        "null_ci": [
+          -0.3233,
+          0.1672
+        ],
+        "RI_p_upper": 0.0005,
+        "RI_p_lower": 1.0,
+        "RI_p_two_sided": 0.001,
+        "z": 4.19,
+        "excess": 0.5289,
+        "sig": true
+      }
+    },
+    "n_treated": 289,
+    "n_placebo": 1246,
+    "n_draws": 2000
+  },
+  "prediction": "방법론이 다른 두 번째 추정량이 같은 답을 주는가 · 재배치가 쌍대비에서 지지되는가",
+  "verdict": "[A] hazard 삼중교호(확정 지표): 연속 1.5074 [0.871, 2.6087] · 3분위 inf [inf, inf]. [B] 채용 +0.7101(p상 0.001) vs 고용 -0.0580(p양측 0.007, z -2.6). [C] ★ 쌍대비 채용−고용 +0.7536 (귀무 +0.0232, z 4.56, p상 0.0005) — 재배치 서사가 쌍대비에서 직접 지지된다.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i57_reallocation2.py",
+  "sha256_16": "64b7adc3790218f4",
+  "seed": 42,
+  "runtime_s": 66.4,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

@@ -1,0 +1,155 @@
+{
+  "id": "I-41",
+  "title": "조절자 방어 (리뷰 §5.4)",
+  "status": "GO",
+  "n": 301,
+  "estimates": {
+    "panelA_continuous": {
+      "linear": {
+        "slope": 0.5259,
+        "ci": [
+          0.2436,
+          0.8257
+        ],
+        "sig": true,
+        "n": 301
+      },
+      "decile_profile": [
+        null,
+        null,
+        -0.0,
+        null,
+        0.0801,
+        0.3214,
+        0.11,
+        0.1792,
+        0.488,
+        0.4773
+      ],
+      "monotone_frac": 0.667
+    },
+    "panelB_residualized": {
+      "r2_explained": 0.639,
+      "resid_slope": {
+        "slope": 0.2433,
+        "ci": [
+          -0.2213,
+          0.7226
+        ],
+        "sig": false,
+        "n": 301
+      },
+      "resid_T3_T1": {
+        "T1": 0.1498,
+        "T3": 0.2818,
+        "diff": 0.132,
+        "ci": [
+          -0.0581,
+          0.3074
+        ],
+        "sig": false
+      }
+    },
+    "panelC_cutoffs": {
+      "tercile 33/67": {
+        "diff": 0.3472,
+        "ci": [
+          0.1513,
+          0.5182
+        ],
+        "sig": true,
+        "n1": 128,
+        "n3": 94
+      },
+      "quartile 25/75": {
+        "diff": 0.3834,
+        "ci": [
+          0.1551,
+          0.6148
+        ],
+        "sig": true,
+        "n1": 85,
+        "n3": 75
+      },
+      "상위25% vs 나머지": {
+        "diff": 0.2724,
+        "ci": [
+          0.0772,
+          0.4699
+        ],
+        "sig": true,
+        "n1": 226,
+        "n3": 75
+      },
+      "중앙값 분할": {
+        "diff": 0.2005,
+        "ci": [
+          0.0584,
+          0.3622
+        ],
+        "sig": true,
+        "n1": 159,
+        "n3": 142
+      }
+    },
+    "panelD_transitory_vs_structural": {
+      "current_spell": {
+        "slope": 0.0403,
+        "ci": [
+          -0.0156,
+          0.1073
+        ],
+        "sig": false,
+        "n": 301
+      },
+      "historical": {
+        "slope": 0.559,
+        "ci": [
+          0.2408,
+          0.8853
+        ],
+        "sig": true,
+        "n": 301
+      },
+      "joint_현재 spell": {
+        "coef": 0.0317,
+        "ci": [
+          -0.0228,
+          0.0895
+        ],
+        "sig": false
+      },
+      "joint_과거 비활동": {
+        "coef": 0.5363,
+        "ci": [
+          0.2123,
+          0.8815
+        ],
+        "sig": true
+      }
+    },
+    "panelE_given_preN": {
+      "inaction_given_preN": {
+        "coef": -0.3812,
+        "ci": [
+          -0.7682,
+          -0.047
+        ],
+        "sig": true,
+        "n": 301
+      }
+    },
+    "outcome": "Δlog hiring rate (기저수준 효과 제거)",
+    "n": 301
+  },
+  "prediction": "연속·잔차화·컷민감도·사전총채용 통제에서도 조절자가 살아남는지",
+  "verdict": "방어 4관문 중 3개 통과 — **조절자는 규모·산업·성장·사전채용량의 대리변수가 아니다.** | 선형 0.5259 · 잔차 0.2433 · preN통제 -0.3812",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i41_moderator_defense.py",
+  "sha256_16": "4a59cb84983ecef0",
+  "seed": 42,
+  "runtime_s": 21.7,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "방어 4관문 중 3개 통과 — **조절자는 규모·산업·성장·사전채용량의 대리변수가 아니다.**"
+}

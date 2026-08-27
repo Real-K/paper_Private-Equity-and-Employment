@@ -1,0 +1,96 @@
+{
+  "id": "I-19c",
+  "title": "지배권 이전 dose 기울기 + PE 위치",
+  "status": "PARTIAL",
+  "n": 1115,
+  "estimates": {
+    "panelA_sidak": {
+      "전체": {
+        "DiD": -0.0052,
+        "p": 0.4259,
+        "sidak_p": 0.9642,
+        "survives": false,
+        "T3T1_sidak_p": 0.7831,
+        "T3T1_survives": false
+      },
+      "① 과반취득(<50→≥50)": {
+        "DiD": -0.0178,
+        "p": 0.0361,
+        "sidak_p": 0.1982,
+        "survives": false,
+        "T3T1_sidak_p": 1.0,
+        "T3T1_survives": false
+      },
+      "② 법인 인수": {
+        "DiD": -0.0109,
+        "p": 0.1202,
+        "sidak_p": 0.5364,
+        "survives": false,
+        "T3T1_sidak_p": 0.0816,
+        "T3T1_survives": false
+      },
+      "③ 개인·異姓(비가족)": {
+        "DiD": 0.0059,
+        "p": 0.3606,
+        "sidak_p": 0.9317,
+        "survives": false,
+        "T3T1_sidak_p": 0.4464,
+        "T3T1_survives": false
+      },
+      "④ 개인·同姓(가족승계)": {
+        "DiD": -0.0018,
+        "p": 0.782,
+        "sidak_p": 0.9999,
+        "survives": false,
+        "T3T1_sidak_p": 0.9763,
+        "T3T1_survives": false
+      },
+      "⑤ 지분변화 상위3분위": {
+        "DiD": -0.0167,
+        "p": 0.0109,
+        "sidak_p": 0.0634,
+        "survives": false,
+        "T3T1_sidak_p": 0.7046,
+        "T3T1_survives": false
+      }
+    },
+    "panelB_own_dose": {
+      "slope_per_pct": -8e-06,
+      "ci": [
+        -0.0006,
+        0.0006
+      ],
+      "sig": false,
+      "intercept": -0.0052,
+      "n": 798,
+      "stake_median": 51.0
+    },
+    "panelC_pe_on_gradient": {
+      "pe_stake_median": 26.81,
+      "predicted_from_OWN": -0.0055,
+      "pe_actual": -0.0335,
+      "pe_ci": [
+        -0.0559,
+        -0.0129
+      ],
+      "premium": -0.0281,
+      "premium_ci": [
+        -0.0617,
+        0.005
+      ],
+      "premium_sig": false,
+      "n_pe": 317
+    }
+  },
+  "prediction": "지배권 이전 크기에 대한 연속 기울기(단일 검정)와 그 위에서의 PE 위치로 'PE 고유' 대 '지배권 이전 일반'을 가른다",
+  "verdict": "Šidák 생존 없음 | OWN dose 기울기 -8e-06/%p [-0.0006, 0.0006]✗ (n=798) | PE 예측 -0.0055 vs 실측 -0.0335, 프리미엄 -0.0281[-0.0617, 0.005]✗ | 연속 기울기 무유의 → 지배권 이전 크기로 효과가 설명되지 않는다. 하위유형 중 Šidák 생존: 없음.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i19c_dose_gradient.py",
+  "sha256_16": "d856016615831d82",
+  "seed": 42,
+  "runtime_s": 57.4,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "연속 기울기 무유의 → 지배권 이전 크기로 효과가 설명되지 않는다. 하위유형 중 Šidák 생존: 없음.",
+  "why_single_test": "I-19b 하위유형 6종은 다중검정 문제가 있어 Šidák 보정 결과를 함께 낸다. 연속 기울기는 단일 검정이라 그 문제가 없다."
+}

@@ -1,0 +1,54 @@
+{
+ "id": "I-59",
+ "title": "분모 오염 검정 (채용건수 vs 채용률)",
+ "status": "OK",
+ "estimates": {
+  "lN": {
+   "label": "★ Δlog 채용건수 (분자만)",
+   "observed": 0.6315,
+   "n": 286,
+   "null_mean": 0.1795,
+   "null_sd": 0.1765,
+   "excess": 0.452,
+   "z": 2.56,
+   "p_upper": 0.007,
+   "p_two": 0.014
+  },
+  "lE": {
+   "label": "Δlog 고용 (분모만)",
+   "observed": -0.058,
+   "n": 289,
+   "null_mean": 0.0789,
+   "null_sd": 0.0539,
+   "excess": -0.1369,
+   "z": -2.54,
+   "p_upper": 0.9935,
+   "p_two": 0.014
+  },
+  "lrate": {
+   "label": "Δlog 채용률 (비율)",
+   "observed": 0.7101,
+   "n": 286,
+   "null_mean": 0.1012,
+   "null_sd": 0.1579,
+   "excess": 0.6089,
+   "z": 3.86,
+   "p_upper": 0.0005,
+   "p_two": 0.001
+  },
+  "lN_ctrlE": {
+   "label": "★ Δlog 채용건수 | Δlog고용 통제",
+   "observed": 0.6957,
+   "n": 286,
+   "null_mean": 0.0363,
+   "null_sd": 0.1572,
+   "excess": 0.6594,
+   "z": 4.2,
+   "p_upper": 0.001,
+   "p_two": 0.002
+  }
+ },
+ "n_treated": 289,
+ "n_placebo": 1246,
+ "note": "채용률 gradient 가 분자에서 오는지 분모에서 오는지 판별"
+}

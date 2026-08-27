@@ -1,0 +1,513 @@
+{
+  "id": "I-47",
+  "title": "상태변수 확정 (FWL 정합 조정 + 위약)",
+  "status": "GO",
+  "n": 301,
+  "estimates": {
+    "panelA_fwl_adjusted": {
+      "dormancy": {
+        "slope_raw": {
+          "slope": 0.5259,
+          "ci": [
+            0.2436,
+            0.8257
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "slope_adj_fwl": {
+          "slope": 0.3522,
+          "ci": [
+            -0.0792,
+            0.8285
+          ],
+          "n": 301,
+          "sig": false
+        },
+        "tercile_raw": {
+          "diff": 0.3472,
+          "ci": [
+            0.1644,
+            0.5349
+          ],
+          "n_hi": 94,
+          "n_lo": 128,
+          "sig": true
+        },
+        "tercile_adj": {
+          "diff": 0.093,
+          "ci": [
+            -0.0942,
+            0.2702
+          ],
+          "n_hi": 100,
+          "n_lo": 100,
+          "sig": false
+        },
+        "quartile_raw": {
+          "diff": 0.3834,
+          "ci": [
+            0.1551,
+            0.6148
+          ],
+          "n_hi": 75,
+          "n_lo": 85,
+          "sig": true
+        },
+        "quartile_adj": {
+          "diff": 0.0794,
+          "ci": [
+            -0.1086,
+            0.2705
+          ],
+          "n_hi": 75,
+          "n_lo": 76,
+          "sig": false
+        },
+        "median_raw": {
+          "diff": 0.2005,
+          "ci": [
+            0.0402,
+            0.3473
+          ],
+          "n_hi": 142,
+          "n_lo": 159,
+          "sig": true
+        },
+        "median_adj": {
+          "diff": 0.0888,
+          "ci": [
+            -0.0555,
+            0.2428
+          ],
+          "n_hi": 150,
+          "n_lo": 151,
+          "sig": false
+        },
+        "top25_vs_rest_raw": {
+          "diff": 0.2724,
+          "ci": [
+            0.0965,
+            0.4687
+          ],
+          "n_hi": 75,
+          "n_lo": 226,
+          "sig": true
+        },
+        "top25_vs_rest_adj": {
+          "diff": 0.0449,
+          "ci": [
+            -0.1333,
+            0.209
+          ],
+          "n_hi": 75,
+          "n_lo": 226,
+          "sig": false
+        }
+      },
+      "neg_log_volume": {
+        "slope_raw": {
+          "slope": 0.1275,
+          "ci": [
+            0.0685,
+            0.1878
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "slope_adj_fwl": {
+          "slope": 0.1578,
+          "ci": [
+            0.0201,
+            0.2908
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "tercile_raw": {
+          "diff": 0.384,
+          "ci": [
+            0.1676,
+            0.5888
+          ],
+          "n_hi": 96,
+          "n_lo": 101,
+          "sig": true
+        },
+        "tercile_adj": {
+          "diff": 0.1132,
+          "ci": [
+            -0.0603,
+            0.2926
+          ],
+          "n_hi": 100,
+          "n_lo": 100,
+          "sig": false
+        },
+        "quartile_raw": {
+          "diff": 0.4801,
+          "ci": [
+            0.2544,
+            0.7179
+          ],
+          "n_hi": 72,
+          "n_lo": 77,
+          "sig": true
+        },
+        "quartile_adj": {
+          "diff": 0.1326,
+          "ci": [
+            -0.0771,
+            0.3238
+          ],
+          "n_hi": 75,
+          "n_lo": 76,
+          "sig": false
+        },
+        "median_raw": {
+          "diff": 0.2977,
+          "ci": [
+            0.1504,
+            0.434
+          ],
+          "n_hi": 150,
+          "n_lo": 151,
+          "sig": true
+        },
+        "median_adj": {
+          "diff": 0.1801,
+          "ci": [
+            0.0314,
+            0.3287
+          ],
+          "n_hi": 150,
+          "n_lo": 151,
+          "sig": true
+        },
+        "top25_vs_rest_raw": {
+          "diff": 0.3434,
+          "ci": [
+            0.142,
+            0.5484
+          ],
+          "n_hi": 72,
+          "n_lo": 229,
+          "sig": true
+        },
+        "top25_vs_rest_adj": {
+          "diff": 0.1035,
+          "ci": [
+            -0.0777,
+            0.2745
+          ],
+          "n_hi": 75,
+          "n_lo": 226,
+          "sig": false
+        }
+      },
+      "neg_log_rate": {
+        "slope_raw": {
+          "slope": 0.4964,
+          "ci": [
+            0.136,
+            0.8965
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "slope_adj_fwl": {
+          "slope": 0.565,
+          "ci": [
+            0.2098,
+            0.9676
+          ],
+          "n": 301,
+          "sig": true
+        },
+        "tercile_raw": {
+          "diff": 0.1676,
+          "ci": [
+            -0.0289,
+            0.3618
+          ],
+          "n_hi": 100,
+          "n_lo": 100,
+          "sig": false
+        },
+        "tercile_adj": {
+          "diff": 0.2153,
+          "ci": [
+            0.0259,
+            0.3915
+          ],
+          "n_hi": 100,
+          "n_lo": 100,
+          "sig": true
+        },
+        "quartile_raw": {
+          "diff": 0.2308,
+          "ci": [
+            0.0132,
+            0.4692
+          ],
+          "n_hi": 75,
+          "n_lo": 76,
+          "sig": true
+        },
+        "quartile_adj": {
+          "diff": 0.2151,
+          "ci": [
+            0.0297,
+            0.4248
+          ],
+          "n_hi": 75,
+          "n_lo": 76,
+          "sig": true
+        },
+        "median_raw": {
+          "diff": 0.1592,
+          "ci": [
+            0.0111,
+            0.3213
+          ],
+          "n_hi": 150,
+          "n_lo": 151,
+          "sig": true
+        },
+        "median_adj": {
+          "diff": 0.1879,
+          "ci": [
+            0.0313,
+            0.332
+          ],
+          "n_hi": 150,
+          "n_lo": 151,
+          "sig": true
+        },
+        "top25_vs_rest_raw": {
+          "diff": 0.0084,
+          "ci": [
+            -0.1724,
+            0.1985
+          ],
+          "n_hi": 75,
+          "n_lo": 226,
+          "sig": false
+        },
+        "top25_vs_rest_adj": {
+          "diff": 0.1259,
+          "ci": [
+            -0.0381,
+            0.3011
+          ],
+          "n_hi": 75,
+          "n_lo": 226,
+          "sig": false
+        }
+      }
+    },
+    "panelB_iqr_effect": {
+      "dormancy": {
+        "iqr": 0.4167,
+        "effect_per_iqr_raw": 0.2191,
+        "effect_per_iqr_adj": 0.1468,
+        "ci_per_iqr_adj": [
+          -0.033,
+          0.3452
+        ]
+      },
+      "neg_log_volume": {
+        "iqr": 1.626,
+        "effect_per_iqr_raw": 0.2073,
+        "effect_per_iqr_adj": 0.2566,
+        "ci_per_iqr_adj": [
+          0.0327,
+          0.4728
+        ]
+      },
+      "neg_log_rate": {
+        "iqr": 0.2819,
+        "effect_per_iqr_raw": 0.1399,
+        "effect_per_iqr_adj": 0.1593,
+        "ci_per_iqr_adj": [
+          0.0591,
+          0.2727
+        ]
+      }
+    },
+    "panelC_far_window": {
+      "n": 256,
+      "dormancy": {
+        "slope_raw": {
+          "slope": 0.3921,
+          "ci": [
+            0.0627,
+            0.7404
+          ],
+          "n": 256,
+          "sig": true
+        },
+        "slope_adj_fwl": {
+          "slope": 0.2932,
+          "ci": [
+            -0.2222,
+            0.835
+          ],
+          "n": 256,
+          "sig": false
+        },
+        "tercile_adj": {
+          "diff": 0.0181,
+          "ci": [
+            -0.1708,
+            0.2095
+          ],
+          "n_hi": 85,
+          "n_lo": 85,
+          "sig": false
+        }
+      },
+      "neg_log_volume": {
+        "slope_raw": {
+          "slope": 0.0927,
+          "ci": [
+            0.0237,
+            0.1631
+          ],
+          "n": 256,
+          "sig": true
+        },
+        "slope_adj_fwl": {
+          "slope": 0.0822,
+          "ci": [
+            -0.093,
+            0.2413
+          ],
+          "n": 256,
+          "sig": false
+        },
+        "tercile_adj": {
+          "diff": 0.0842,
+          "ci": [
+            -0.0955,
+            0.2705
+          ],
+          "n_hi": 85,
+          "n_lo": 85,
+          "sig": false
+        }
+      },
+      "neg_log_rate": {
+        "slope_raw": {
+          "slope": 0.304,
+          "ci": [
+            -0.0558,
+            0.6966
+          ],
+          "n": 256,
+          "sig": false
+        },
+        "slope_adj_fwl": {
+          "slope": 0.2518,
+          "ci": [
+            -0.2014,
+            0.6512
+          ],
+          "n": 256,
+          "sig": false
+        },
+        "tercile_adj": {
+          "diff": 0.1062,
+          "ci": [
+            -0.0865,
+            0.2955
+          ],
+          "n_hi": 85,
+          "n_lo": 85,
+          "sig": false
+        }
+      }
+    },
+    "panelD_untreated_placebo_fwl": {
+      "n_pseudo": 1335,
+      "n_clusters": 289,
+      "dormancy": {
+        "slope": 0.0406,
+        "ci": [
+          -0.1362,
+          0.2291
+        ],
+        "sig": false
+      },
+      "neg_log_volume": {
+        "slope": 0.0158,
+        "ci": [
+          -0.0282,
+          0.0627
+        ],
+        "sig": false
+      },
+      "neg_log_rate": {
+        "slope": -0.0004,
+        "ci": [
+          -0.1697,
+          0.1672
+        ],
+        "sig": false
+      }
+    },
+    "panelE_alternative_states": {
+      "neg_log_separation_rate": {
+        "slope_raw": {
+          "slope": 0.4914,
+          "ci": [
+            -0.0032,
+            0.9395
+          ],
+          "n": 301,
+          "sig": false
+        },
+        "slope_adj_fwl": {
+          "slope": 0.5536,
+          "ci": [
+            0.0779,
+            1.0047
+          ],
+          "n": 301,
+          "sig": true
+        }
+      },
+      "neg_net_inflow": {
+        "slope_raw": {
+          "slope": 0.2911,
+          "ci": [
+            -0.0967,
+            0.6203
+          ],
+          "n": 301,
+          "sig": false
+        },
+        "slope_adj_fwl": {
+          "slope": 0.2025,
+          "ci": [
+            -0.1871,
+            0.5096
+          ],
+          "n": 301,
+          "sig": false
+        }
+      }
+    },
+    "winner": "neg_log_rate",
+    "n": 301
+  },
+  "prediction": "공변량을 FWL 정합으로 제거해도 어떤 상태변수가 반응을 예측하는가",
+  "verdict": "FWL 정합 조정에서 살아남는 상태변수는 **neg_log_rate** 이다. 휴면 조정 기울기 +0.3522[-0.0792, 0.8285]✗ vs 사전 채용률 +0.5650[0.2098, 0.9676]✓. 미처치 위약은 세 변수 모두 0 근처 (휴면 +0.0406 · 물량 +0.0158 · 채용률 -0.0004) — 이질성은 기계적이 아니다. [−36,−25] 창에서도 채용률 조정 기울기 +0.2518✗.",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i47_state_final.py",
+  "sha256_16": "5b52a8954ca84ac4",
+  "seed": 42,
+  "runtime_s": 23.9,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24"
+}

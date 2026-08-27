@@ -1,0 +1,286 @@
+{
+  "id": "I-25",
+  "title": "사전 관성수준 조절 (평균회귀 차단)",
+  "status": "GO",
+  "n": 308,
+  "estimates": {
+    "panelA_naive": {
+      "T1 저관성": {
+        "n_ev": 128,
+        "zero_DiD": -0.0182,
+        "zero_ci": [
+          -0.0482,
+          0.0095
+        ],
+        "zero_n": 128,
+        "hire_DiD": -0.0102,
+        "hire_ci": [
+          -0.0628,
+          0.0395
+        ],
+        "hire_n": 128,
+        "pp_mean": 0.028
+      },
+      "T2 중간": {
+        "n_ev": 80,
+        "zero_DiD": -0.0381,
+        "zero_ci": [
+          -0.0748,
+          -0.002
+        ],
+        "zero_n": 80,
+        "hire_DiD": 0.0666,
+        "hire_ci": [
+          0.0185,
+          0.1171
+        ],
+        "hire_n": 80,
+        "pp_mean": 0.2385
+      },
+      "T3 고관성": {
+        "n_ev": 100,
+        "zero_DiD": -0.1026,
+        "zero_ci": [
+          -0.1519,
+          -0.058
+        ],
+        "zero_n": 100,
+        "hire_DiD": 0.1299,
+        "hire_ci": [
+          0.0633,
+          0.1999
+        ],
+        "hire_n": 100,
+        "pp_mean": 0.6383
+      },
+      "T3−T1 무채용비중": {
+        "diff": -0.0844,
+        "ci": [
+          -0.1333,
+          -0.0279
+        ],
+        "sig": true,
+        "n1": 128,
+        "n3": 100
+      },
+      "T3−T1 채용률": {
+        "diff": 0.1401,
+        "ci": [
+          0.0577,
+          0.2255
+        ],
+        "sig": true,
+        "n1": 128,
+        "n3": 100
+      }
+    },
+    "panelB_samebin": {
+      "T1 저관성": {
+        "n_ev": 128,
+        "zero_DiD": -0.0152,
+        "zero_ci": [
+          -0.0459,
+          0.015
+        ],
+        "zero_n": 112,
+        "hire_DiD": -0.0017,
+        "hire_ci": [
+          -0.0665,
+          0.0578
+        ],
+        "hire_n": 113,
+        "pp_mean": 0.028,
+        "equivalence_vs_T3": {
+          "SESOI": 0.111,
+          "holds": true,
+          "margin": [
+            0.0651,
+            0.096
+          ],
+          "knife_edge": false,
+          "benchmark": "T3 효과크기 0.1110"
+        },
+        "equivalence_vs_overall": {
+          "SESOI": 0.046,
+          "holds": true,
+          "margin": [
+            0.0001,
+            0.031
+          ],
+          "knife_edge": true,
+          "benchmark": "전체 효과크기 0.0460"
+        },
+        "hire_equivalence_vs_T3": {
+          "SESOI": 0.1369,
+          "holds": true,
+          "margin": [
+            0.0704,
+            0.0791
+          ],
+          "knife_edge": false,
+          "benchmark": "T3 채용효과 0.1369"
+        }
+      },
+      "T2 중간": {
+        "n_ev": 80,
+        "zero_DiD": -0.0208,
+        "zero_ci": [
+          -0.0588,
+          0.0221
+        ],
+        "zero_n": 66,
+        "hire_DiD": 0.0345,
+        "hire_ci": [
+          -0.0346,
+          0.0993
+        ],
+        "hire_n": 67,
+        "pp_mean": 0.2385
+      },
+      "T3 고관성": {
+        "n_ev": 100,
+        "zero_DiD": -0.111,
+        "zero_ci": [
+          -0.1615,
+          -0.0588
+        ],
+        "zero_n": 92,
+        "hire_DiD": 0.1369,
+        "hire_ci": [
+          0.0658,
+          0.2124
+        ],
+        "hire_n": 92,
+        "pp_mean": 0.6383
+      },
+      "T3−T1 무채용비중": {
+        "diff": -0.0958,
+        "ci": [
+          -0.1594,
+          -0.0361
+        ],
+        "sig": true,
+        "n1": 112,
+        "n3": 92
+      },
+      "T3−T1 채용률": {
+        "diff": 0.1387,
+        "ci": [
+          0.0505,
+          0.2406
+        ],
+        "sig": true,
+        "n1": 113,
+        "n3": 92
+      },
+      "claim_ceiling": "T1 에 대해 주장 가능: 'T3 만한 효과를 배제한다'(등가성 성립). 주장 불가: 'T1 에 효과가 없다' — 전체 효과크기 0.0460 기준 하단 여유 0.0001 로 knife-edge."
+    },
+    "panelC_balance": {
+      "T1 저관성": {
+        "treated": 0.028,
+        "ctrl_all": 0.1668,
+        "ctrl_samebin": 0.0272,
+        "gap_all": -0.1388,
+        "event_retention_samebin": 0.883
+      },
+      "T2 중간": {
+        "treated": 0.2385,
+        "ctrl_all": 0.2691,
+        "ctrl_samebin": 0.2482,
+        "gap_all": -0.0305,
+        "event_retention_samebin": 0.85
+      },
+      "T3 고관성": {
+        "treated": 0.6383,
+        "ctrl_all": 0.5224,
+        "ctrl_samebin": 0.6654,
+        "gap_all": 0.1159,
+        "event_retention_samebin": 0.92
+      }
+    },
+    "panelD_hazard_triple": {
+      "treated": {
+        "coef": 0.1644,
+        "se": 0.0368,
+        "HR": 1.1787,
+        "HR_ci": [
+          1.0967,
+          1.2668
+        ],
+        "p": 7.8e-06
+      },
+      "post": {
+        "coef": -0.076,
+        "se": 0.0191,
+        "HR": 0.9268,
+        "HR_ci": [
+          0.8927,
+          0.9622
+        ],
+        "p": 7.09e-05
+      },
+      "tp": {
+        "coef": 0.103,
+        "se": 0.0461,
+        "HR": 1.1085,
+        "HR_ci": [
+          1.0127,
+          1.2133
+        ],
+        "p": 0.0255
+      },
+      "tr_hi": {
+        "coef": -0.3229,
+        "se": 0.0703,
+        "HR": 0.7241,
+        "HR_ci": [
+          0.6309,
+          0.831
+        ],
+        "p": 4.33e-06
+      },
+      "po_hi": {
+        "coef": 0.068,
+        "se": 0.0359,
+        "HR": 1.0703,
+        "HR_ci": [
+          0.9976,
+          1.1483
+        ],
+        "p": 0.0582
+      },
+      "tp_hi": {
+        "coef": 0.1857,
+        "se": 0.0844,
+        "HR": 1.204,
+        "HR_ci": [
+          1.0205,
+          1.4205
+        ],
+        "p": 0.0277
+      },
+      "HR_lowmid": 1.1085,
+      "HR_high": 1.3347,
+      "diff_sig": true,
+      "n_cells": 3919,
+      "n_firm_months": 41303,
+      "n_ev_fe": 308
+    },
+    "tercile_cuts": [
+      0.0833,
+      0.3333
+    ],
+    "n_used": 308,
+    "attrition_note": "사전-사전 창 [-24,-13] 요구로 379 -> 308 (71 소실). 패널이 짧은 기업(후기 딜·신설)이 선택적으로 빠질 수 있어 외적타당성 제약. 미검증."
+  },
+  "prediction": "관성이 심했던 기업일수록 효과가 크고 이미 활발한 기업은 0/음. 사전-사전 측정 + 동일 bin 대조로 평균회귀 차단",
+  "verdict": "주사양(동일bin) T3−T1 무채용비중 -0.0958[-0.1594, -0.0361]✓ (n 112/92) | naive -0.0844✓ | hazard 고관성 HR 1.3347 vs 1.1085, 차이 1.204[1.0205, 1.4205]✓ | 동일 bin 사양에서도 조절이 살아남음 — 평균회귀 인공물 아님",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i25_pre_inertia.py",
+  "sha256_16": "81b0bbb5458fb618",
+  "seed": 42,
+  "runtime_s": 25.8,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "동일 bin 사양에서도 조절이 살아남음 — 평균회귀 인공물 아님"
+}

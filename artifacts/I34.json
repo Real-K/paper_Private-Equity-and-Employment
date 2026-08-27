@@ -1,0 +1,117 @@
+{
+  "id": "I-34",
+  "title": "외연/내연 마진 분해 (비율 대체)",
+  "status": "PARTIAL",
+  "n": 379,
+  "estimates": {
+    "panelA_levels": {
+      "pre_p": 0.7382,
+      "pre_i": 0.0551,
+      "p_extensive": {
+        "DiD": 0.0443,
+        "ci": [
+          0.0237,
+          0.0647
+        ],
+        "n": 364,
+        "sig": true
+      },
+      "i_intensive": {
+        "DiD": 0.0048,
+        "ci": [
+          0.0003,
+          0.0102
+        ],
+        "n": 364,
+        "sig": true
+      }
+    },
+    "panelB_log": {
+      "dlog_p": {
+        "DiD": 0.0999,
+        "ci": [
+          0.0525,
+          0.147
+        ],
+        "n": 358,
+        "sig": true
+      },
+      "dlog_i": {
+        "DiD": 0.0656,
+        "ci": [
+          0.0127,
+          0.1207
+        ],
+        "n": 358,
+        "sig": true
+      },
+      "dlog_total": 0.1655,
+      "extensive_share_log": 0.604
+    },
+    "panelC_by_inertia": {
+      "T1저관성": {
+        "p": {
+          "DiD": 0.019,
+          "ci": [
+            -0.0108,
+            0.0466
+          ],
+          "n": 130,
+          "sig": false
+        },
+        "i": {
+          "DiD": -0.0022,
+          "ci": [
+            -0.0068,
+            0.0021
+          ],
+          "n": 130,
+          "sig": false,
+          "equivalence": {
+            "SESOI": 0.0055,
+            "holds": false,
+            "margin": [
+              -0.0013,
+              0.0034
+            ],
+            "knife": true
+          }
+        }
+      },
+      "T3고관성": {
+        "p": {
+          "DiD": 0.1081,
+          "ci": [
+            0.0616,
+            0.1577
+          ],
+          "n": 101,
+          "sig": true
+        },
+        "i": {
+          "DiD": 0.0166,
+          "ci": [
+            0.0028,
+            0.0364
+          ],
+          "n": 101,
+          "sig": true
+        }
+      }
+    },
+    "retired_statistic": {
+      "name": "외연 비중 71%",
+      "reason": "집계 비율 Σ(i0·Δp)/Σ(Δ(p·i)) 가 분모 상쇄로 폭발 (I-33 재계산 −4.35 [−23.6, +19.2]). 원고 사용 금지."
+    }
+  },
+  "prediction": "비율 대신 성분별 DiD 로 '외연은 움직이고 내연은 불변'을 보인다",
+  "verdict": "Δp 0.0443[0.0237, 0.0647]✓ (사전 p=0.738) | Δi 0.0048[0.0003, 0.0102]✓ 등가성 미성립 | log 분해 외연 0.0999 내연 0.0656 | 분해 판별 불가",
+  "kill_met": false,
+  "code": "P014_upgrade_package/harness30/i34_margin_decomp.py",
+  "sha256_16": "646b052e0ce41e68",
+  "seed": 42,
+  "runtime_s": 20.5,
+  "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
+  "date": "2026-08-24",
+  "conclusion": "분해 판별 불가"
+}
