@@ -220,7 +220,8 @@ the unwinsorized gradient of {L['E02']['value']}, not to the winsorized headline
 interval on the headline gradient is a bootstrap clustered on treated firms; the bracketed range on
 the null row is the placebo distribution, not a confidence interval. The placebo *p* for the gradient
 is upper-tail because the hypothesis is directional, as are the *p*-values of the alternative
-hiring-gradient specifications in Section 6.2; Table 4's *p*-values are two-sided. Table 4
+hiring-gradient specifications in Section 6.2; Table 4's *p*-values are two-sided. For reference, the
+corresponding two-sided placebo *p*-value for the headline gradient is {L['E01m']['value']}. Table 4
 applies the same estimator to the other flow outcomes."""
 
 # ───────── Table 4 : 유량 결과대상 + 쌍대비 (리뷰 5 §27 — Table 3 에서 분리) ─────────
@@ -239,8 +240,9 @@ T[4] = f"""### Table 4. The hiring response is not matched by net employment gro
 | Hiring − separations | {L['D10e']['value']} | *p* = {L['D10f']['value']} | — |
 
 *Notes.* The state, the matching cells, the estimator and the placebo null are identical to Table 3;
-only the outcome changes. *p*-values are two-sided because the employment result runs against the
-direction of the hiring result. Panel B reports contrasts formed within event, which net out the
+only the outcome changes. *p*-values in this table are two-sided because these cross-outcome gradients and paired
+contrasts were not assigned directional alternatives; hiring-gradient specifications in Table 3 and
+Section 6.2 use the upper tail. Panel B reports contrasts formed within event, which net out the
 component common to the two outcomes and are correspondingly more precise than differencing two
 separately estimated gradients. The separation gradient is positive but not detected, so the
 gross-flow reading rests on the churn and paired-contrast rows and we do not claim the separation
@@ -253,7 +255,7 @@ the other outcomes' bands, and Table 3 reports its primary standardized distance
 T[5] = f"""### Table 5. Observed transaction characteristics add little detectable explanatory power
 
 {EST_HD}
-| **Panel A. Individual comparisons (common sample, n = 301)** | | | |
+| **Panel A. Individual comparisons (available sample by characteristic)** | | | |
 | Control transfer: buyout − growth, unadjusted | {L['C65']['value']} | {L['C65']['ci95']} | 301 |
 | Control transfer: buyout − growth, covariate-adjusted | {L['C66']['value']} | {L['C66']['ci95']} | 301 |
 | Acquired stake: slope per percentage point, adjusted | {L['C69']['value']} | {L['C69']['ci95']} | {L['C69']['n']} |
@@ -273,14 +275,17 @@ T[5] = f"""### Table 5. Observed transaction characteristics add little detectab
 | Pre-deal hiring state, adjusted terciles | **{L['C84a']['value']}** | **{L['C84a']['ci95']}** | — |
 
 *Notes.* The outcome throughout is the change in the log hiring rate, the same as Table 3. Panel A
-holds the sample fixed at the 301 events for which every variable is observed, so the rows are
-mutually comparable; the appendix reports each comparison on its own maximal sample. Covariate
+reports each comparison on the available sample for that characteristic: the buyout and
+sponsor-experience comparisons use 301 events, the stake comparisons 181, and the sponsor
+leave-one-out test 189. Panel B provides the like-for-like joint comparison on the 180 events for
+which all deal variables are observed, and Appendix E reports each comparison on its own maximal
+sample. Covariate
 adjustment residualises the event-level response on the pre-deal hiring state, size, growth, age, industry
 and deal year — all measured before the transaction — which removes composition and narrows the
 intervals by 2 to 10 percent. It matters here: buyout targets are less active before the deal than growth
 targets, by {L['C64']['value']} on the share of no-hire months, so part of the unadjusted deal-type
-difference is the state gradient rather than the deal type. None of the adjusted comparisons is
-distinguishable from zero. The
+difference is the state gradient rather than the deal type. None of the standard positive transaction contrasts is
+detected; the sponsor leave-one-out coefficient is negative and is discussed below and in Appendix E. The
 stake is the sum of private equity holders' common-share stakes in the shareholder register at the
 entry year; the transaction-level percentage-acquired field is not used because its distribution is
 massed at 100% and its upper tercile is empty. Panel B regresses the event-level response on a

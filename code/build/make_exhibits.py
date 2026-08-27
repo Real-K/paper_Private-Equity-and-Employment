@@ -160,8 +160,8 @@ xlo = min(ci[0] for _, _, ci, _ in ROWS)
 a.set_xlim(xlo - 0.04, xhi + 0.13)
 fig.suptitle("Figure 3. Pre-deal hiring state produces the clearest detectable heterogeneity",
              fontsize=10.2, y=1.0, x=.008, ha="left")
-fig.text(.008, -0.10, "All rows are covariate-adjusted contrasts between discrete groups on the common "
-         "sample, so the state rows here (for example +0.215 across terciles) are not on the same\nscale "
+fig.text(.008, -0.10, "All rows are covariate-adjusted contrasts between discrete groups, each on the available sample for that "
+         "comparison (181–301 events), so the state rows here (for example +0.215 across terciles) are not on the same\nscale "
          "as the continuous state gradient of 0.710 in Figure 1(b), which is a slope per unit of the "
          "state index estimated on the state-balanced design.", fontsize=7.6, color="0.4", ha="left")
 fig.tight_layout(); SAVE(fig, "figure3_what_predicts"); plt.close(fig); print("saved figure3_what_predicts.png / figure3_what_predicts.pdf")

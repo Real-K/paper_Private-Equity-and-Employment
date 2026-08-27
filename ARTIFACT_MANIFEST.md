@@ -56,7 +56,7 @@ Aggregate result files in `artifacts/`. Each is the JSON written by one pipeline
 | `I57_levels.json` | `5d1968ab781ff148` | 932 | `` | 수준 결과대상 회계 정합 | OK | 4 |
 | `I58.json` | `8e2e54ce180fab92` | 2,509 | `i58_design_audit.py` | 설계 교정 감사 — 상태균형 매칭의 이득 검증 | GO | 19 |
 | `I58_control_contamination.json` | `01d679757aa751c7` | 659 | `` | 반사실 오염 진단 | OK | 6 |
-| `I59.json` | `530a4c2d2a1c8af5` | 1,126 | `` | 분모 오염 검정 (채용건수 vs 채용률) | OK | 10 |
+| `I59.json` | `530a4c2d2a1c8af5` | 1,126 | `` | 분모 오염 검정 (채용건수 vs 채용률) | OK | 11 |
 | `I60.json` | `4613c9d41fff2fc1` | 2,275 | `i60_speccurve.py` | 교정 설계 사양곡선 | GO | 24 |
 | `I61.json` | `fbd921816ffd5a02` | 3,720 | `i61_gradient_pretrend.py` | 상태별 사전추세 (리뷰4 §8 · 리뷰3 MC2-3) | GO | 9 |
 | `I62.json` | `2cc8309e0f530966` | 3,274 | `i62_power3.py` | 검정력 라운드 3 — 결합검정·사전추세 기울기·매칭 변형 | GO | 5 |

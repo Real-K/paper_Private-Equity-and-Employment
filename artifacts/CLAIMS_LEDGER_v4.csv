@@ -349,3 +349,4 @@ E08c,T3,Upper-tail placebo p for the log1p gradient (featured).,0.002,,,harness3
 E06a,T3,"Upper-tail placebo p, state measured over months -36/-25 (featured).",0.1789,,,harness30/out/I66.json,estimates.panelB_post_early_state.p_upper,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
 D07d,T3,"Upper-tail placebo p, log hire count (featured).",0.007,,,harness30/out/I59.json,estimates.lN.p_upper,,,GO
 D08d,T3,"Upper-tail placebo p, hire count controlling for the change in employment.",0.001,,,harness30/out/I59.json,estimates.lN_ctrlE.p_upper,,,GO
+E01m,T3,Two-sided placebo p for the headline gradient (reference only; the featured upper-tail p is 0.0005).,0.001,,286,harness30/out/I59.json,estimates.lrate.p_two,,,GO
