@@ -129,6 +129,7 @@ def ri(T, P, tag, wins=(5, 95)):
     o = {"observed": round(obs, 4), "n": n_t, "n_placebo": len(P),
          "null_mean": round(float(null.mean()), 4), "null_sd": round(sd, 4), "null_ci": qci(null),
          "p_two_sided": round(float(min(1.0, 2*min(p_hi, p_lo))), 4),
+         "p_upper": round(float(p_hi), 4),      # 방향 가설(양의 gradient)용 상단꼬리 p — 본문 §6.2 는 이 값을 쓴다
          "z": round(float((obs-null.mean())/sd), 2), "excess": round(float(obs-null.mean()), 4),
          "sig": bool(min(p_hi, p_lo) < 0.025)}
     ex = obs - null.mean(); lo, hi = ex - 1.96*sd, ex + 1.96*sd

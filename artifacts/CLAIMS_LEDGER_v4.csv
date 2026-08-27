@@ -201,11 +201,11 @@ D06a,T1,"Normalized difference in the state, corrected design.",-0.0078,,,harnes
 D07,T4,Gradient in the log number of hires (numerator only).,0.6315,,286,harness30/out/I59.json,estimates.lN.observed,,,OK
 D07a,T4,Null mean for the log hire count.,0.1795,,,harness30/out/I59.json,estimates.lN.null_mean,,,OK
 D07b,T4,"Standardized distance, log hire count.",2.56,,,harness30/out/I59.json,estimates.lN.z,,,OK
-D07c,T4,"Two-sided randomization p, log hire count.",0.014,,,harness30/out/I59.json,estimates.lN.p_two,,,OK
+D07c,T4,"Two-sided randomization p, log hire count. (two-sided; reported for reference, not featured)",0.014,,,harness30/out/I59.json,estimates.lN.p_two,,,OK
 D08,T4,Log hire count controlling for the change in employment.,0.6957,,286,harness30/out/I59.json,estimates.lN_ctrlE.observed,,,OK
 D08a,T4,"Null mean, hire count controlling employment.",0.0363,,,harness30/out/I59.json,estimates.lN_ctrlE.null_mean,,,OK
 D08b,T4,"Standardized distance, hire count controlling employment.",4.2,,,harness30/out/I59.json,estimates.lN_ctrlE.z,,,OK
-D08c,T4,"Two-sided randomization p, hire count controlling employment.",0.002,,,harness30/out/I59.json,estimates.lN_ctrlE.p_two,,,OK
+D08c,T4,"Two-sided randomization p, hire count controlling employment. (two-sided; reported for reference, not featured)",0.002,,,harness30/out/I59.json,estimates.lN_ctrlE.p_two,,,OK
 D09,T4,"Hiring-rate gradient, corrected design.",0.7101,,286,harness30/out/I57.json,estimates.panelB_outcomes.hire.observed,P014_upgrade_package/harness30/i57_reallocation2.py,64b7adc3790218f4,GO
 D09a,T4,"Churn gradient, corrected design.",0.3816,,288,harness30/out/I57.json,estimates.panelB_outcomes.churn.observed,P014_upgrade_package/harness30/i57_reallocation2.py,64b7adc3790218f4,GO
 D09b,T4,"Standardized distance, churn.",3.08,,,harness30/out/I57.json,estimates.panelB_outcomes.churn.z,P014_upgrade_package/harness30/i57_reallocation2.py,64b7adc3790218f4,GO
@@ -309,20 +309,20 @@ S03,T1,Baseline matched design: first deal month.,2016-12,,379,harness30/out/I65
 S04,T1,Baseline matched design: last deal month.,2026-06,,379,harness30/out/I65.json,estimates.panelG_period.baseline_last_deal_month,P014_upgrade_package/harness30/i65_bootci_reuse.py,7375940003805922,GO
 S05,T1,Primary gradient sample: first deal month.,2017-11,,286,harness30/out/I65.json,estimates.panelG_period.gradient_first_deal_month,P014_upgrade_package/harness30/i65_bootci_reuse.py,7375940003805922,GO
 S06,T1,Primary gradient sample: last deal month.,2025-05,,286,harness30/out/I65.json,estimates.panelG_period.gradient_last_deal_month,P014_upgrade_package/harness30/i65_bootci_reuse.py,7375940003805922,GO
-H06,T7,Pre-deal gradient with a non-overlapping state window (months -36/-25).,-0.0777,,250,harness30/out/I66.json,estimates.panelA_pretrend_early_state.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-H06a,T7,Placebo null mean for the non-overlapping pre-deal gradient.,0.0993,"[-0.1573, 0.3721]",,harness30/out/I66.json,estimates.panelA_pretrend_early_state.null_mean,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-H06b,T7,Excess of the non-overlapping pre-deal gradient over its null.,-0.177,"[-0.4394, 0.0854]",250,harness30/out/I66.json,estimates.panelA_pretrend_early_state.excess_ci,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-H06c,T7,Two-sided p for the non-overlapping pre-deal gradient.,0.1919,,,harness30/out/I66.json,estimates.panelA_pretrend_early_state.p_two_sided,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-H06d,T7,Equivalence: the non-overlapping pre-deal excess interval lies inside +/-0.7101.,True,,,harness30/out/I66.json,estimates.panelA_pretrend_early_state.equiv_vs_effect_0710,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E06,T4,"Post-deal gradient with the state measured over months -36/-25, corrected design.",0.2675,"[-0.144, 0.3977]",238,harness30/out/I66.json,estimates.panelB_post_early_state.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E07,T4,"Gradient in asinh(hires/employment), retaining zero-hire windows.",0.2062,"[0.0654, 0.2951]",289,harness30/out/I66.json,estimates.panelC_asinh.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E07a,T4,Two-sided p for the asinh gradient.,0.002,,,harness30/out/I66.json,estimates.panelC_asinh.p_two_sided,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E07b,T4,Standardized distance for the asinh gradient.,3.08,,,harness30/out/I66.json,estimates.panelC_asinh.z,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E08,T4,"Gradient in log1p(hires/employment), retaining zero-hire windows.",0.1623,"[0.0575, 0.2336]",289,harness30/out/I66.json,estimates.panelD_log1p.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E08a,T4,Two-sided p for the log1p gradient.,0.004,,,harness30/out/I66.json,estimates.panelD_log1p.p_two_sided,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E08b,T4,Standardized distance for the log1p gradient.,3.24,,,harness30/out/I66.json,estimates.panelD_log1p.z,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E09,T4,Events lost to the positive-hiring requirement of the log specification.,3,,289,harness30/out/I66.json,estimates.panelE_positivity_selection.n_dropped_by_positivity,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
-E09a,T4,Share of events lost to the positive-hiring requirement.,0.0104,,,harness30/out/I66.json,estimates.panelE_positivity_selection.share_dropped,P014_upgrade_package/harness30/i66_pretrend_zeros.py,9d5e0ff1b4d5e0a1,GO
+H06,T7,Pre-deal gradient with a non-overlapping state window (months -36/-25).,-0.0777,,250,harness30/out/I66.json,estimates.panelA_pretrend_early_state.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+H06a,T7,Placebo null mean for the non-overlapping pre-deal gradient.,0.0993,"[-0.1573, 0.3721]",,harness30/out/I66.json,estimates.panelA_pretrend_early_state.null_mean,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+H06b,T7,Excess of the non-overlapping pre-deal gradient over its null.,-0.177,"[-0.4394, 0.0854]",250,harness30/out/I66.json,estimates.panelA_pretrend_early_state.excess_ci,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+H06c,T7,Two-sided p for the non-overlapping pre-deal gradient.,0.1919,,,harness30/out/I66.json,estimates.panelA_pretrend_early_state.p_two_sided,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+H06d,T7,Equivalence: the non-overlapping pre-deal excess interval lies inside +/-0.7101.,True,,,harness30/out/I66.json,estimates.panelA_pretrend_early_state.equiv_vs_effect_0710,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E06,T4,"Post-deal gradient with the state measured over months -36/-25, corrected design.",0.2675,"[-0.144, 0.3977]",238,harness30/out/I66.json,estimates.panelB_post_early_state.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E07,T4,"Gradient in asinh(hires/employment), retaining zero-hire windows.",0.2062,"[0.0654, 0.2951]",289,harness30/out/I66.json,estimates.panelC_asinh.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E07a,T4,"Two-sided p for the asinh gradient. (two-sided; reported for reference, not featured)",0.002,,,harness30/out/I66.json,estimates.panelC_asinh.p_two_sided,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E07b,T4,Standardized distance for the asinh gradient.,3.08,,,harness30/out/I66.json,estimates.panelC_asinh.z,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E08,T4,"Gradient in log1p(hires/employment), retaining zero-hire windows.",0.1623,"[0.0575, 0.2336]",289,harness30/out/I66.json,estimates.panelD_log1p.observed,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E08a,T4,"Two-sided p for the log1p gradient. (two-sided; reported for reference, not featured)",0.004,,,harness30/out/I66.json,estimates.panelD_log1p.p_two_sided,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E08b,T4,Standardized distance for the log1p gradient.,3.24,,,harness30/out/I66.json,estimates.panelD_log1p.z,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E09,T4,Events lost to the positive-hiring requirement of the log specification.,3,,289,harness30/out/I66.json,estimates.panelE_positivity_selection.n_dropped_by_positivity,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E09a,T4,Share of events lost to the positive-hiring requirement.,0.0104,,,harness30/out/I66.json,estimates.panelE_positivity_selection.share_dropped,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
 C90n,T4,"Relative employment gradient at 12 months, corrected design.",-0.0316,"[-0.2853, 0.003]",291,harness30/out/I67.json,estimates.horizons.h12.observed,P014_upgrade_package/harness30/i67_emp_horizons.py,7a45b2ddbf3d9bac,GO
 C90nz,T4,"Standardized distance, relative employment at 12 months.",-1.92,,,harness30/out/I67.json,estimates.horizons.h12.z,P014_upgrade_package/harness30/i67_emp_horizons.py,7a45b2ddbf3d9bac,GO
 C90np,T4,"Two-sided p, relative employment at 12 months.",0.041,,,harness30/out/I67.json,estimates.horizons.h12.p_two_sided,P014_upgrade_package/harness30/i67_emp_horizons.py,7a45b2ddbf3d9bac,GO
@@ -344,3 +344,8 @@ S07,T1,Baseline matched events with a complete +1..+12 outcome window.,364,,379,
 S08,T1,Baseline matched events whose post-deal window is not yet complete (deals closing after May 2025).,15,,379,harness30/out/I69.json,estimates.panelB_windows.post_window_incomplete,P014_upgrade_package/harness30/i69_sample_flow.py,44729d87d1d671cd,OK
 S09,T1,Last deal month with a complete post-deal window.,2025-05,,,harness30/out/I69.json,estimates.panelB_windows.last_deal_month_with_post_window,P014_upgrade_package/harness30/i69_sample_flow.py,44729d87d1d671cd,OK
 S10,T1,Events in the conventional (state-unbalanced) heterogeneity design; not a stage of the sample flow.,301,,301,harness30/out/I69.json,estimates.panelC_dates.conventional_design_n,P014_upgrade_package/harness30/i69_sample_flow.py,44729d87d1d671cd,OK
+E07c,T3,Upper-tail placebo p for the asinh gradient (featured; directional hypothesis).,0.001,,,harness30/out/I66.json,estimates.panelC_asinh.p_upper,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E08c,T3,Upper-tail placebo p for the log1p gradient (featured).,0.002,,,harness30/out/I66.json,estimates.panelD_log1p.p_upper,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+E06a,T3,"Upper-tail placebo p, state measured over months -36/-25 (featured).",0.1789,,,harness30/out/I66.json,estimates.panelB_post_early_state.p_upper,P014_upgrade_package/harness30/i66_pretrend_zeros.py,bbc7a9f1f1a32a8b,GO
+D07d,T3,"Upper-tail placebo p, log hire count (featured).",0.007,,,harness30/out/I59.json,estimates.lN.p_upper,,,GO
+D08d,T3,"Upper-tail placebo p, hire count controlling for the change in employment.",0.001,,,harness30/out/I59.json,estimates.lN_ctrlE.p_upper,,,GO

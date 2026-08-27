@@ -160,7 +160,8 @@ outcome. The decomposition rows in Panel B are estimated without winsorization a
 the unwinsorized gradient of 0.837, not to the winsorized headline in Panel A. The
 interval on the headline gradient is a bootstrap clustered on treated firms; the bracketed range on
 the null row is the placebo distribution, not a confidence interval. The placebo *p* for the gradient
-is upper-tail because the hypothesis is directional; Table 4's *p*-values are two-sided. Table 4
+is upper-tail because the hypothesis is directional, as are the *p*-values of the alternative
+hiring-gradient specifications in Section 6.2; Table 4's *p*-values are two-sided. Table 4
 applies the same estimator to the other flow outcomes.
 
 ---
@@ -188,10 +189,8 @@ separately estimated gradients. The separation gradient is positive but not dete
 gross-flow reading rests on the churn and paired-contrast rows and we do not claim the separation
 channel. Relative employment measures log employment at the stated horizon against the mean of
 months −6 to −1, differenced against controls; the twenty-four-month estimate is not individually
-detected. The hiring-row null is re-estimated alongside the other outcomes' nulls, so its standardized
-distance (3.87, Figure 2) differs from Table 3's 3.96 only through Monte Carlo variation between
-independent sets of 2,000 placebo draws (null SD 0.158 against 0.154); the point estimate is
-identical.
+detected. The hiring row repeats the Table 3 estimate; its placebo band here is re-estimated alongside
+the other outcomes' bands, and Table 3 reports its primary standardized distance.
 
 ---
 

@@ -15,6 +15,7 @@
         0.3721
       ],
       "p_two_sided": 0.1919,
+      "p_upper": 0.9045,
       "z": -1.32,
       "excess": -0.177,
       "sig": false,
@@ -37,6 +38,7 @@
         0.4058
       ],
       "p_two_sided": 0.3578,
+      "p_upper": 0.1789,
       "z": 0.92,
       "excess": 0.1269,
       "sig": false,
@@ -59,6 +61,7 @@
         0.1432
       ],
       "p_two_sided": 0.002,
+      "p_upper": 0.001,
       "z": 3.08,
       "excess": 0.1802,
       "sig": true,
@@ -81,6 +84,7 @@
         0.1073
       ],
       "p_two_sided": 0.004,
+      "p_upper": 0.002,
       "z": 3.24,
       "excess": 0.1456,
       "sig": true,
@@ -107,9 +111,9 @@
   "verdict": "사전추세 -0.0777 (p2 0.1919); 초기 state 본 추정 0.2675 (p2 0.3578); asinh 0.2062, log1p 0.1623; 양수요건 탈락 3건.",
   "kill_met": false,
   "code": "P014_upgrade_package/harness30/i66_pretrend_zeros.py",
-  "sha256_16": "9d5e0ff1b4d5e0a1",
+  "sha256_16": "bbc7a9f1f1a32a8b",
   "seed": 42,
-  "runtime_s": 57.8,
+  "runtime_s": 54.4,
   "treated_sample": "p014_treated_sample_v2_expanded.csv (752/379)",
   "date": "2026-08-24"
 }

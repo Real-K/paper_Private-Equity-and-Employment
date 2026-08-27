@@ -56,14 +56,14 @@ Aggregate result files in `artifacts/`. Each is the JSON written by one pipeline
 | `I57_levels.json` | `5d1968ab781ff148` | 932 | `` | 수준 결과대상 회계 정합 | OK | 4 |
 | `I58.json` | `8e2e54ce180fab92` | 2,509 | `i58_design_audit.py` | 설계 교정 감사 — 상태균형 매칭의 이득 검증 | GO | 19 |
 | `I58_control_contamination.json` | `01d679757aa751c7` | 659 | `` | 반사실 오염 진단 | OK | 6 |
-| `I59.json` | `530a4c2d2a1c8af5` | 1,126 | `` | 분모 오염 검정 (채용건수 vs 채용률) | OK | 8 |
+| `I59.json` | `530a4c2d2a1c8af5` | 1,126 | `` | 분모 오염 검정 (채용건수 vs 채용률) | OK | 10 |
 | `I60.json` | `4613c9d41fff2fc1` | 2,275 | `i60_speccurve.py` | 교정 설계 사양곡선 | GO | 24 |
 | `I61.json` | `fbd921816ffd5a02` | 3,720 | `i61_gradient_pretrend.py` | 상태별 사전추세 (리뷰4 §8 · 리뷰3 MC2-3) | GO | 9 |
 | `I62.json` | `2cc8309e0f530966` | 3,274 | `i62_power3.py` | 검정력 라운드 3 — 결합검정·사전추세 기울기·매칭 변형 | GO | 5 |
 | `I63.json` | `45c1d11886ffd02b` | 3,214 | `i63_sample_expansion.py` | 표본 확대 — 탈락 계측과 회수 레버 | GO | 7 |
 | `I64.json` | `ed1df01b02ecb3f4` | 1,914 | `i64_pretrend_honest.py` | 사전추세 — 12개월 해상도 · 위약 상대 RI · gradient HonestDiD | GO | 8 |
 | `I65.json` | `3da372c82a53ce5d` | 2,832 | `i65_bootci_reuse.py` | 교정 설계 gradient 의 부트스트랩 CI 와 대조군 공유 진단 | GO | 17 |
-| `I66.json` | `e0338c3d7cd2892d` | 2,950 | `i66_pretrend_zeros.py` | 비중첩 사전추세와 0 채용 창을 살린 강건성 | PARTIAL | 14 |
+| `I66.json` | `e0989cbf57ae976f` | 3,048 | `i66_pretrend_zeros.py` | 비중첩 사전추세와 0 채용 창을 살린 강건성 | PARTIAL | 17 |
 | `I67.json` | `67e86ce7fe5489c8` | 1,963 | `i67_emp_horizons.py` | 교정 설계에서의 상대고용 경로 | GO | 9 |
 | `I68.json` | `3b75315a55917528` | 3,316 | `i68_hiring_rate_es.py` | 분기 채용률 이벤트 경로 (Figure 1a 용) | GO | 8 |
 | `I69.json` | `9eea16a0120a0bda` | 2,230 | `i69_sample_flow.py` | 표본 흐름과 날짜 사실의 정본 | OK | 4 |

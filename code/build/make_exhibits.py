@@ -219,7 +219,8 @@ for i, (lab, r, flip) in enumerate(ROWS5):
     a0.plot([mu], [y], "|", ms=13, color="0.35", zorder=2)
     a0.plot([obs], [y], "o", ms=8.5, color=col, zorder=4)
     xa = max(obs, mu + 1.96 * sd)          # 점이 귀무 띠 안이면 띠 밖으로 밀어 겹침 방지
-    a0.annotate(f"{obs:+.3f}  (z {r['z']:+.2f})", xy=(xa, y), xytext=(11, 0),
+    a0.annotate(f"{obs:+.3f}" if lab.startswith("Hiring") else f"{obs:+.3f}  (z {r['z']:+.2f})",   # hiring z lives in Table 3
+                xy=(xa, y), xytext=(11, 0),
                 textcoords="offset points", va="center", fontsize=8.4, color=col)
 a0.set_yticks(range(len(ROWS5)))
 a0.set_yticklabels([r[0] for r in ROWS5][::-1], fontsize=9)
@@ -247,11 +248,8 @@ a1.set_title("(b) Within-event contrasts", fontsize=10.4, loc="left")
 a1.spines[["top", "right", "left"]].set_visible(False); a1.tick_params(axis="y", length=0)
 fig.suptitle("Figure 2. The hiring response is not matched by net employment growth",
              fontsize=10.2, y=1.03, x=.008, ha="left")
-i60m = J("I60")["estimates"]["specs"]["winsor_5_95"]
-fig.text(.008, -0.09, f"The hiring row re-estimates its placebo null alongside the other three outcomes; its standardized "
-         f"distance ({PBo['hire']['z']:+.2f}) differs from the {i60m['z']:.2f} of Table 3 only through Monte Carlo\n"
-         f"variation between independent sets of 2,000 placebo draws (null SD {PBo['hire']['null_sd']:.3f} against "
-         f"{i60m['null_sd']:.3f}); the point estimate is identical.", fontsize=7.6, color="0.4", ha="left")
+fig.text(.008, -0.075, "The hiring row repeats the Table 3 estimate; its placebo band is re-estimated alongside the other three outcomes, "
+         "and Table 3 reports its primary standardized distance (3.96).", fontsize=7.6, color="0.4", ha="left")
 SAVE(fig, "figure2_turnover"); plt.close(fig); print("saved figure2_turnover.png / figure2_turnover.pdf")
 
 # ════════════ Appendix Figure A1 — 집계주기 감쇠 ════════════
