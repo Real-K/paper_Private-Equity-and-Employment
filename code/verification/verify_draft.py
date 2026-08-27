@@ -146,8 +146,15 @@ for v, why in [(752,"sample"),(379,"sample"),(1895,"sample"),(48853,"sample"),(7
 TARGETS = sys.argv[1:] or ["DRAFT_v4_0.md", "DRAFT_v4_IRFA.md", "DRAFT_v4_PBFJ.md",
                            "ONLINE_APPENDIX_v4_0.md"]
 ALLBAD = []; ALLSTALE = []
-for _t in TARGETS:
-  txt = open(f"{P}/manuscript/{_t}", encoding="utf-8").read()
+def _figcap():
+    """캡션 블록은 코드 안에만 있어 검증기가 보지 못했다 (2026-08-27 리뷰 9). 수치도 여기서 대조한다."""
+    import ast
+    for node in ast.walk(ast.parse(open(f"{D}/make_submission.py", encoding="utf-8").read())):
+        if isinstance(node, ast.Assign) and any(getattr(t, "id", "") == "FIGCAP" for t in node.targets):
+            return ast.literal_eval(node.value)
+    return ""
+ITEMS = [(_t, open(f"{P}/manuscript/{_t}", encoding="utf-8").read()) for _t in TARGETS] + [("FIGCAP@make_submission", _figcap())]
+for _t, txt in ITEMS:
   prose = txt.split("## References")[0]
   prose = re.sub(r"^#{1,6} .*$", "", prose, flags=re.M)   # 제목행 제외 (절 번호)
   prose = re.sub(r"\|.*\|", "", prose)                    # 표 행 제외 (표는 기계 생성)
@@ -166,5 +173,5 @@ for _t in TARGETS:
   ALLBAD += [(_t, n) for n in bad]; ALLSTALE += [(_t, n, why) for n, why in stale]
 print(f"\n제외한 폐기 산출물 {len(_skipped)}개 · 폐기 원장행 {len(DEAD)}개 "
       f"(원장 {len(LIVE)}행 유효)")
-print(f"총평: 검증 {len(TARGETS)}개 문서 · 미확인 수치 {len(ALLBAD)}건 · 폐기 수치 {len(ALLSTALE)}건")
+print(f"총평: 검증 {len(ITEMS)}개 대상(문서 {len(TARGETS)} + 캡션) · 미확인 수치 {len(ALLBAD)}건 · 폐기 수치 {len(ALLSTALE)}건")
 sys.exit(1 if (ALLBAD or ALLSTALE) else 0)
